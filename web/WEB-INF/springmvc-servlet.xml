@@ -32,6 +32,7 @@
             <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"></bean>
         </mvc:message-converters>
     </mvc:annotation-driven>
+    <mvc:annotation-driven/>
     <!-- JDBC Template配置-->
     <!--dbcp数据库连接池-->
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
@@ -61,12 +62,12 @@
         </property>
     </bean>
     <!--拦截器-->
-    <mvc:interceptors>
-        <mvc:interceptor>
-            <mvc:mapping path="/interceptor.action"/>
-            <bean class="cn.caipengbo.interceptor.ActionInterceptor"></bean>
-        </mvc:interceptor>
-    </mvc:interceptors>
+    <!--<mvc:interceptors>-->
+        <!--<mvc:interceptor>-->
+            <!--<mvc:mapping path="/interceptor.action"/>-->
+            <!--<bean class="cn.caipengbo.interceptor.ActionInterceptor"></bean>-->
+        <!--</mvc:interceptor>-->
+    <!--</mvc:interceptors>-->
     
     <!-- 视图解析器 解析jsp视图-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

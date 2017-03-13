@@ -32,6 +32,7 @@
             <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"></bean>
         </mvc:message-converters>
     </mvc:annotation-driven>
+    <mvc:annotation-driven/>
     <!-- JDBC Template配置-->
     <!--dbcp数据库连接池-->
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">

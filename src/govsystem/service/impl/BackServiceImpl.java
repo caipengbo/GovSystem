@@ -2,14 +2,16 @@ package govsystem.service.impl;
 
 import govsystem.dao.UserDao;
 import govsystem.domain.User;
+import govsystem.formbean.backform.ModifyUserForm;
 import govsystem.service.BackService;
+import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * Description:
+ * Description:后台业务实现
  * Created by Myth on 3/12/2017.
  */
 @Service
@@ -22,4 +24,28 @@ public class BackServiceImpl implements BackService {
     public List<User> listUsers() {
         return userDao.listAllUser();
     }
+
+    @Override
+    public boolean deleteUserById(long uid) {
+        return userDao.deleteUserById(uid);
+    }
+
+    @Override
+    public boolean modifyUser(ModifyUserForm modifyUserForm) {
+        User user = new User();
+        try {
+            BeanUtils.copyProperties(user,modifyUserForm);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        if (modifyUserForm.getPassword() == null) {
+            System.out.println("提交的表单重置密码为空");
+            userDao.updateExceptPsw(user);
+        } else {
+            userDao.updateAll(user);
+        }
+        return false;
+    }
+
 }

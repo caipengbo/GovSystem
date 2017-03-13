@@ -1,6 +1,7 @@
 package govsystem.service;
 
 import govsystem.domain.User;
+import govsystem.formbean.backform.ModifyUserForm;
 
 import java.util.List;
 
@@ -15,4 +16,18 @@ public interface BackService {
      * @return 用户List
      */
     List<User> listUsers();
+
+    /**
+     * 根据用户id删除用户
+     * @param uid
+     * @return
+     */
+    boolean deleteUserById(long uid);
+
+    /**
+     * 根据提交的表单内容（表单里是否有密码）修改用户信息
+     * @param modifyUserForm
+     * @return
+     */
+    boolean modifyUser(ModifyUserForm modifyUserForm);
 }

@@ -18,10 +18,10 @@ public interface UserDao {
 
     /**
      * 删除用户
-     * @param user
+     * @param uid
      * @return 成功返回true
      */
-    boolean del(User user);
+    boolean deleteUserById(long uid);
 
     /**
      * 根据用户名和密码查找用户
@@ -32,11 +32,18 @@ public interface UserDao {
     User searchUser(String username,String password);
 
     /**
-     * 修改用户
+     * 修改用户信息(根据Uid查找用户)
      * @param user
      * @return 成功返回true
      */
-    boolean update(User user);
+    boolean updateAll(User user);
+
+    /**
+     * 修改除了密码之外的用户信息(根据Uid查找用户)
+     * @param user
+     * @return 成功返回true
+     */
+    boolean updateExceptPsw(User user);
 
     /**
      * 列出所有用户信息

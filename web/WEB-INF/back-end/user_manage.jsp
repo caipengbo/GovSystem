@@ -11,7 +11,7 @@
             <span>用户名：</span>
             <span><input class="easyui-searchbox" data-options="prompt:'请输入用户名...',searcher:doSearch" style="width:250px"></span>
         </div>
-        <table id="data_grid" title="所有商品" class="easyui-datagrid" style="width:900px;height:340px"
+        <table id="data_grid" title="用户" class="easyui-datagrid" style="width:900px;height:370px"
                data-options="
 		url:'getUsersToJson.action',
 		method:'post',
@@ -23,14 +23,13 @@
 		pagination:true
 		">
             <thead>
-            <tr>
-                <!-- cname,tname,small_unit,big_unit,cnum,ccost,csticker_price,cunit_value  -->
+            <tr
                 <th field="uid" width="80">用户ID</th>
                 <th field="username"  width="50">用户名</th>
                 <th field="name" width="60">姓名</th>
                 <th field="birthday"  width="60">出生年月</th>
-                <th field="identifycode"  width="60">身份证</th>
-                <th field="indetityflag"  width="40">是否实名</th>
+                <th field="identityCode"  width="60">身份证</th>
+                <th data-options="field:'identityFlag',width:'30', formatter:format">是否实名</th>
             </tr>
             </thead>
         </table>
@@ -42,24 +41,37 @@
     <!-- 修改对话框 -->
     <div id="modifydlg" class="easyui-dialog" style="width:400px;height:298px;padding:10px 20px"
          closed="true" buttons="#modifydlg-buttons">
-        <form id="modify_account" method="post" action="">
+        <form id="modify_user" method="post" action="modifyUser.action">
             <div class="dlg_body">
-                <div>
-                    <input id="aid" type="hidden" name="aid">
-                    <span><input class="easyui-textbox" name="aitem"  label="账目记录：" labelPosition="top" data-options="multiline:true" style="width:200px;height:100px"></span>
+                <%--uid username password name birthday identitycode identityflag--%>
+                <div style="margin-bottom:20px">
+                    <%--隐藏的uid--%>
+                    <input id="uid" type="hidden" name="uid">
+                    <input class="easyui-textbox" data-options="required:true,disabled:true"
+                           name="username" label="用户名" style="width:75%;">
                 </div>
-                <div>
-                    <span><input class="easyui-numberbox"  label="账目金额：" labelPosition="left" name="aitem_money" data-options="precision:0,width:'185px'" required=true></span>
+
+                <div style="margin-bottom:20px">
+                    <input class="easyui-passwordbox" label="重设密码" name="password" iconWidth="28" style="width:75%;">
                 </div>
+
+                <div style="margin-bottom:20px">
+                    <input id="birthday" data-options="required:true" class="easyui-datebox" label="生日" name="birthday" style="width:75%;">
+                </div>
+
+                <div style="margin-bottom:20px">
+                        <input id="identitycode"  class="easyui-textbox" label="身份证号" name="identityCode" style="width:75%;">
+                </div>
+
                 <div>
-                    <input type="radio" name="isrepay" value="0">未归还</input>
-                    <input type="radio" name="isrepay" value="1">已归还</input>
+                    <input type="radio" name="identityFlag" value="0">未认证</input>
+                    <input type="radio" name="identityFlag" value="1">认证</input>
                 </div>
             </div>
         </form>
     </div> <!-- 修改对话框结束-->
     <div id="modifydlg-buttons">
-        <a href="#" class="easyui-linkbutton" iconCls="icon-ok" onclick="modifyAccount()">确认</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-ok" onclick="modifyUser()">确认</a>
         <a href="#" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#modifydlg').dialog('close')">取消</a>
     </div>
 </div>
@@ -81,6 +93,14 @@
             });
         }
     });
+    //格式化表格显示
+    function format(val,row,index){
+        if (row.identityFlag == 0)
+            return "<span style='color:red'>未认证×</span>";
+        else
+            return "<span style='color:green'>已认证√</span>";
+    }
+
     function doSearch(value,name){
         if (name == "all")
             name="";
@@ -89,20 +109,53 @@
             tname: name
         });
     }
+    //弹出修改对话框
+    function popModifyDlg(){
+        var row = $('#data_grid').datagrid('getSelected');
+        if (row){
+            $('#modifydlg').dialog('open').dialog('setTitle','修改用户');
+            $('#modify_user').form('load',row);
+        }
+    }
+    //修改用户
+    function modifyUser(){
+        $('#modify_user').form('submit',{
+            onSubmit: function(){
+                return $(this).form('validate');
+            },
+            success: function(result){
+                $('#modifydlg').dialog('close');
+                if (result.msg == "success"){
+                    $('#data_grid').datagrid('reload');
+                    $.messager.alert('成功','已成功修改！','info');
+                } else {
+                    $.messager.alert('失败','修改失败，请查看修改的信息是否符合规范！','error');
+                }
+            }
+        });
+    }
     //删除
     function deleteUser(){
         var row = $('#data_grid').datagrid('getSelected');
         if (row){
             $.messager.confirm('删除', '确定删除该条用户吗?', function(r){
                 if (r){
-                    $.post('deleteUserById.action',{uid:row.uid},function(result){
-                        if (result == true){
-                            $('#data_grid').datagrid('reload');
-                            $.messager.alert('成功','该用户已经成功删除！','info');
-                        } else {
-                            $.messager.alert('失败','删除失败！','error');
+                    $.ajax({
+                        type:'POST',
+                        url:'deleteUserById.action',
+                        data:JSON.stringify(row),
+                        dataType:'json',
+                        contentType:'application/json',
+                        success:function(result){
+                            if (result.msg == 'success'){
+                                $('#data_grid').datagrid('reload');
+                                $.messager.alert('成功','该用户已经成功删除！','info');
+                            } else {
+                                $.messager.alert('失败','删除失败！','error');
+                            }
                         }
-                    },'json');
+                    });
+
                 }
             });
         }

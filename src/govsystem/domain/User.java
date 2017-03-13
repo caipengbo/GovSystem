@@ -12,8 +12,8 @@ public class User {
     private String password;
     private String name;
     private String birthday;
-    private String identifyCode;
-    private int indetityFlag;
+    private String identityCode;
+    private int identityFlag;
 
     public long getUid() {
         return uid;
@@ -55,19 +55,19 @@ public class User {
         this.birthday = birthday;
     }
 
-    public String getIdentifyCode() {
-        return identifyCode;
+    public String getIdentityCode() {
+        return identityCode;
     }
 
-    public void setIdentifyCode(String identifyCode) {
-        this.identifyCode = identifyCode;
+    public void setIdentityCode(String identityCode) {
+        this.identityCode = identityCode;
     }
 
-    public int getIndetityFlag() {
-        return indetityFlag;
+    public int getIdentityFlag() {
+        return identityFlag;
     }
 
-    public void setIndetityFlag(int indetityFlag) {
-        this.indetityFlag = indetityFlag;
+    public void setIdentityFlag(int identityFlag) {
+        this.identityFlag = identityFlag;
     }
 }

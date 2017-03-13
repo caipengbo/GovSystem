@@ -1,6 +1,7 @@
 package govsystem.controller;
 
 import govsystem.domain.User;
+import govsystem.formbean.backform.ModifyUserForm;
 import govsystem.service.BackService;
 import net.sf.json.JSONObject;
 import org.springframework.stereotype.Controller;
@@ -35,8 +36,28 @@ public class JsonController {
     }
     //根据接收的JSON数据删除 DataGrid选中的用户
     @RequestMapping("/deleteUserById")
-    public boolean deleteUserById(@RequestBody String uid) {
-        System.out.println(uid);
-        return false;
+    @ResponseBody
+    public Map<String,String> deleteUserById(@RequestBody User user) {
+        long uid = 0;
+        Map<String,String > map = new HashMap<String,String >();
+        uid = user.getUid();
+        if (backService.deleteUserById(uid)) {
+            map.put("msg","success");
+        } else {
+            map.put("msg","error");
+        }
+        return map;
+    }
+    //根据接收的JSON数据修改DataGrid选中的用户
+    @RequestMapping("/modifyUser")
+    @ResponseBody
+    public Map<String,String> modifyUser(ModifyUserForm modifyUserForm) {
+        Map<String,String > map = new HashMap<String,String >();
+        if (backService.modifyUser(modifyUserForm)) {
+            map.put("msg","success");
+        } else {
+            map.put("msg","error");
+        }
+        return map;
     }
 }

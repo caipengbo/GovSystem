@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 import javax.annotation.Resource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -31,8 +30,8 @@ public class UseDaoImpl implements UserDao {
             user.setPassword(rs.getString("password"));
             user.setName(rs.getString("name"));
             user.setBirthday(rs.getString("birthday"));
-            user.setIdentifyCode(rs.getString("identifycode"));
-            user.setIndetityFlag(rs.getInt("indetityflag"));
+            user.setIdentityCode(rs.getString("identitycode"));
+            user.setIdentityFlag(rs.getInt("identityflag"));
             return user;
         }
 
@@ -54,9 +53,19 @@ public class UseDaoImpl implements UserDao {
     }
 
     @Override
-    public boolean del(User user) {
-        return false;
+    public boolean deleteUserById(long uid) {
+        String sql = "delete from tb_user where uid=?";
+
+        int affectedNum = jdbcTemplate.update(sql,uid);
+
+        if (affectedNum != 0) {
+                return true;
+        } else {
+                return false;
+        }
+
     }
+
 
     @Override
     public User searchUser(String username, String password) {
@@ -71,13 +80,36 @@ public class UseDaoImpl implements UserDao {
     }
 
     @Override
-    public boolean update(User user) {
-        return false;
+    public boolean updateAll(User user) {
+        String sql = "";
+        int effectedNum = 0;
+        sql = "update tb_user set username=?,password=?,name=?,birthday=?,identitycode=?,identityflag=? where uid=?";
+        effectedNum = jdbcTemplate.update(sql,user.getUsername(),user.getPassword(),user.getName(),
+                user.getBirthday(), user.getIdentityCode(),user.getIdentityFlag(),user.getUid());
+        if (effectedNum == 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    @Override
+    public boolean updateExceptPsw(User user) {
+        String sql = "";
+        int effectedNum = 0;
+        sql = "update tb_user set username=?,name=?,birthday=?,identitycode=?,identityflag=? where uid=?";
+        effectedNum = jdbcTemplate.update(sql,user.getUsername(),user.getName(),
+                user.getBirthday(), user.getIdentityCode(),user.getIdentityFlag(),user.getUid());
+        if (effectedNum == 0) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     @Override
     public List<User> listAllUser() {
-        List<User> userList = new ArrayList<>();
+        List<User> userList;
         String sql = "select * from tb_user";
         try {
             userList = jdbcTemplate.query(sql, new UserRowMapper());
