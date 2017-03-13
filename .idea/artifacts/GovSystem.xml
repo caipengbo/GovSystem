@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="GovSystem">
+    <output-path>$PROJECT_DIR$/out/artifacts/GovSystem</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="GovSystem/web/Web" />
+      <element id="javaee-facet-resources" facet="GovSystem/web/Web2" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="GovSystem" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="json-lib-2.3-jdk15" />
+          <element id="library" level="project" name="spring-jdbc-4.3.6.RELEASE" />
+          <element id="library" level="project" name="spring-mvc-4.3.6" />
+          <element id="library" level="module" name="JUnit4" module-name="GovSystem" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
