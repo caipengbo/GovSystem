@@ -8,8 +8,8 @@
 <div class="easyui-panel" id="view_position">
     <div id="show_datagrid">
         <div style="margin-bottom:10px;margin-left:200px">
-            <span>用户名：</span>
-            <span><input class="easyui-searchbox" data-options="prompt:'请输入用户名...',searcher:doSearch" style="width:250px"></span>
+            <span>用户ID：</span>
+            <span><input class="easyui-searchbox" data-options="prompt:'请输入用户ID号...',searcher:doSearch" style="width:250px"></span>
         </div>
         <table id="data_grid" title="用户" class="easyui-datagrid" style="width:900px;height:370px"
                data-options="
@@ -23,13 +23,13 @@
 		pagination:true
 		">
             <thead>
-            <tr
-                <th field="uid" width="80">用户ID</th>
-                <th field="username"  width="50">用户名</th>
-                <th field="name" width="60">姓名</th>
-                <th field="birthday"  width="60">出生年月</th>
-                <th field="identityCode"  width="60">身份证</th>
-                <th data-options="field:'identityFlag',width:'30', formatter:format">是否实名</th>
+            <tr>
+            <th field="uid" width="80">用户ID</th>
+            <th field="username"  width="50">用户名</th>
+            <th field="name" width="60">姓名</th>
+            <th field="birthday"  width="60">出生年月</th>
+            <th field="identityCode"  width="60">身份证</th>
+            <th data-options="field:'identityFlag',width:'30', formatter:format">是否实名</th>
             </tr>
             </thead>
         </table>
@@ -47,12 +47,12 @@
                 <div style="margin-bottom:20px">
                     <%--隐藏的uid--%>
                     <input id="uid" type="hidden" name="uid">
-                    <input class="easyui-textbox" data-options="required:true,disabled:true"
+                    <input id="username" class="easyui-textbox" data-options="readonly:true"
                            name="username" label="用户名" style="width:75%;">
                 </div>
 
                 <div style="margin-bottom:20px">
-                    <input class="easyui-passwordbox" label="重设密码" name="password" iconWidth="28" style="width:75%;">
+                    <input id="name" data-options="required:true" class="easyui-textbox" label="姓名" name="name" style="width:75%;">
                 </div>
 
                 <div style="margin-bottom:20px">
@@ -60,7 +60,7 @@
                 </div>
 
                 <div style="margin-bottom:20px">
-                        <input id="identitycode"  class="easyui-textbox" label="身份证号" name="identityCode" style="width:75%;">
+                    <input id="identitycode"  class="easyui-textbox" label="身份证号" name="identityCode" style="width:75%;">
                 </div>
 
                 <div>
@@ -100,13 +100,9 @@
         else
             return "<span style='color:green'>已认证√</span>";
     }
-
-    function doSearch(value,name){
-        if (name == "all")
-            name="";
+    function doSearch(value){
         $('#data_grid').datagrid('load',{
-            cname: value,
-            tname: name
+            uid: value
         });
     }
     //弹出修改对话框
@@ -119,11 +115,15 @@
     }
     //修改用户
     function modifyUser(){
+        //注意form提交与下面ajax提交的返回的json结果的不同
         $('#modify_user').form('submit',{
             onSubmit: function(){
                 return $(this).form('validate');
             },
+            contentType:'application/json',
             success: function(result){
+                // 接收的是json串
+                result=eval("("+result+")");
                 $('#modifydlg').dialog('close');
                 if (result.msg == "success"){
                     $('#data_grid').datagrid('reload');
@@ -147,6 +147,7 @@
                         dataType:'json',
                         contentType:'application/json',
                         success:function(result){
+                        //  接收的是json对象
                             if (result.msg == 'success'){
                                 $('#data_grid').datagrid('reload');
                                 $.messager.alert('成功','该用户已经成功删除！','info');
@@ -155,7 +156,6 @@
                             }
                         }
                     });
-
                 }
             });
         }

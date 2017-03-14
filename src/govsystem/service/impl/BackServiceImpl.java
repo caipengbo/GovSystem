@@ -39,13 +39,11 @@ public class BackServiceImpl implements BackService {
             e.printStackTrace();
             return false;
         }
-        if (modifyUserForm.getPassword() == null) {
-            System.out.println("提交的表单重置密码为空");
-            userDao.updateExceptPsw(user);
+        if (userDao.updateExceptPsw(user)) {
+            return true;
         } else {
-            userDao.updateAll(user);
+            return false;
         }
-        return false;
     }
 
 }

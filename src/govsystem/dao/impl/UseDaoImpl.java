@@ -98,8 +98,13 @@ public class UseDaoImpl implements UserDao {
         String sql = "";
         int effectedNum = 0;
         sql = "update tb_user set username=?,name=?,birthday=?,identitycode=?,identityflag=? where uid=?";
-        effectedNum = jdbcTemplate.update(sql,user.getUsername(),user.getName(),
-                user.getBirthday(), user.getIdentityCode(),user.getIdentityFlag(),user.getUid());
+        try {
+            effectedNum = jdbcTemplate.update(sql,user.getUsername(),user.getName(),
+                    user.getBirthday(), user.getIdentityCode(),user.getIdentityFlag(),user.getUid());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         if (effectedNum == 0) {
             return false;
         } else {

@@ -7,7 +7,6 @@ package govsystem.formbean.backform;
 public class ModifyUserForm {
     private long uid;
     private String username;
-    private String password;
     private String name;
     private String birthday;
     private String identityCode;
@@ -27,14 +26,6 @@ public class ModifyUserForm {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public String getName() {
