@@ -5,18 +5,18 @@ package govsystem.formbean.backform;
  * Created by Myth on 3/13/2017.
  */
 public class ModifyUserForm {
-    private long uid;
+    private int uid;
     private String username;
     private String name;
     private String birthday;
     private String identityCode;
     private int identityFlag;
 
-    public long getUid() {
+    public int getUid() {
         return uid;
     }
 
-    public void setUid(long uid) {
+    public void setUid(int uid) {
         this.uid = uid;
     }
 

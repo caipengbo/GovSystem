@@ -53,7 +53,7 @@ public class UseDaoImpl implements UserDao {
     }
 
     @Override
-    public boolean deleteUserById(long uid) {
+    public boolean deleteUserById(int uid) {
         String sql = "delete from tb_user where uid=?";
 
         int affectedNum = jdbcTemplate.update(sql,uid);
@@ -113,12 +113,16 @@ public class UseDaoImpl implements UserDao {
     }
 
     @Override
-    public List<User> listAllUser() {
+    public List<User> listUser(String username) {
         List<User> userList;
-        String sql = "select * from tb_user";
+        if (username == null) {
+            username = "";
+        }
+        String sql = "select * from tb_user where username like '"+ username + "%'";
         try {
             userList = jdbcTemplate.query(sql, new UserRowMapper());
         } catch (Exception e) {
+            e.printStackTrace();
             return null;
         }
         return  userList;

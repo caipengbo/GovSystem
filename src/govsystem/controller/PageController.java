@@ -23,4 +23,8 @@ public class PageController {
     public String toJsp1() {
         return "back-end/user_manage";
     }
+    @RequestMapping("/jsp2")
+    public String toJsp2() {
+        return "back-end/news_manage";
+    }
 }

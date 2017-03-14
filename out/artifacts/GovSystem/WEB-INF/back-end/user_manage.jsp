@@ -8,8 +8,8 @@
 <div class="easyui-panel" id="view_position">
     <div id="show_datagrid">
         <div style="margin-bottom:10px;margin-left:200px">
-            <span>用户ID：</span>
-            <span><input class="easyui-searchbox" data-options="prompt:'请输入用户ID号...',searcher:doSearch" style="width:250px"></span>
+            <span>用户名：</span>
+            <span><input class="easyui-searchbox" data-options="prompt:'请输入用户名...',searcher:doSearch" style="width:250px"></span>
         </div>
         <table id="data_grid" title="用户" class="easyui-datagrid" style="width:900px;height:370px"
                data-options="
@@ -102,7 +102,7 @@
     }
     function doSearch(value){
         $('#data_grid').datagrid('load',{
-            uid: value
+            username: value
         });
     }
     //弹出修改对话框

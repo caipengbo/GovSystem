@@ -1,5 +1,6 @@
 package govsystem.controller;
 
+import govsystem.domain.News;
 import govsystem.domain.User;
 import govsystem.formbean.backform.ModifyUserForm;
 import govsystem.service.BackService;
@@ -26,8 +27,8 @@ public class JsonController {
     //将用户信息传至DataGrid
     @RequestMapping("/getUsersToJson")
     @ResponseBody
-    public Object getUsersToJson () {
-        List<User> users = backService.listUsers();
+    public Object getUsersToJson (String username) {
+        List<User> users = backService.listUsers(username);
         Map<String, Object> jsonMap = new HashMap<String, Object>();
         jsonMap.put("rows", users);
         jsonMap.put("total", users.size());
@@ -38,7 +39,7 @@ public class JsonController {
     @RequestMapping("/deleteUserById")
     @ResponseBody
     public Map<String,String> deleteUserById(@RequestBody User user) {
-        long uid = 0;
+        int uid = 0;
         Map<String,String > map = new HashMap<String,String >();
         uid = user.getUid();
         if (backService.deleteUserById(uid)) {
@@ -59,5 +60,17 @@ public class JsonController {
             map.put("msg","error");
         }
         return map;
+    }
+
+    //将新闻传至DataGrid
+    @RequestMapping("/getNewsToJson")
+    @ResponseBody
+    public Object getNewsToJson (Integer nid) {
+        List<News> news = backService.listNews(nid);
+        Map<String, Object> jsonMap = new HashMap<String, Object>();
+        jsonMap.put("rows", news);
+        jsonMap.put("total", news.size());
+        JSONObject jsonObject = JSONObject.fromObject(jsonMap);
+        return jsonObject;
     }
 }

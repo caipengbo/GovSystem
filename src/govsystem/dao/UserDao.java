@@ -21,7 +21,7 @@ public interface UserDao {
      * @param uid
      * @return 成功返回true
      */
-    boolean deleteUserById(long uid);
+    boolean deleteUserById(int uid);
 
     /**
      * 根据用户名和密码查找用户
@@ -46,8 +46,9 @@ public interface UserDao {
     boolean updateExceptPsw(User user);
 
     /**
-     * 列出所有用户信息
-     * @return User列表
+     * 根据username列出用户
+     * @param username（username为空时，列出所有用户）
+     * @return
      */
-    List<User> listAllUser();
+    List<User> listUser(String username);
 }
