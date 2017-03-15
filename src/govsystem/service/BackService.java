@@ -2,6 +2,7 @@ package govsystem.service;
 
 import govsystem.domain.News;
 import govsystem.domain.User;
+import govsystem.formbean.backform.AddNewsForm;
 import govsystem.formbean.backform.ModifyNewsForm;
 import govsystem.formbean.backform.ModifyUserForm;
 
@@ -40,6 +41,13 @@ public interface BackService {
      * @return
      */
     List<News> listNews(Integer nid);
+
+    /**
+     * 添加新闻
+     * @param addNewsForm
+     * @return
+     */
+    boolean addNews(AddNewsForm addNewsForm);
 
     /**
      * 根据id删除新闻

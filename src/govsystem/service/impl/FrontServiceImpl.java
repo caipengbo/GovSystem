@@ -35,7 +35,10 @@ public class FrontServiceImpl implements FrontService {
 
     @Override
     public User login(LoginForm loginForm) {
-        User user = userDao.searchUser(loginForm.getUsername(),loginForm.getPassword());
+        User user = new User();
+        user.setUsername(loginForm.getUsername());
+        user.setPassword(loginForm.getPassword());
+        user = userDao.search(user);
         if (user != null) {
             return user;
         } else {

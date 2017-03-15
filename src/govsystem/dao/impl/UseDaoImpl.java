@@ -53,7 +53,8 @@ public class UseDaoImpl implements UserDao {
     }
 
     @Override
-    public boolean deleteUserById(int uid) {
+    public boolean delete(User user) {
+        int uid = user.getUid();
         String sql = "delete from tb_user where uid=?";
 
         int affectedNum = jdbcTemplate.update(sql,uid);
@@ -68,9 +69,10 @@ public class UseDaoImpl implements UserDao {
 
 
     @Override
-    public User searchUser(String username, String password) {
+    public User search(User user) {
+        String username = user.getUsername();
+        String password = user.getPassword();
         String sql = "select * from tb_user where username=? and password=?";
-        User user = new User();
         try {
             user = jdbcTemplate.queryForObject(sql, new UserRowMapper(), username, password);
         } catch (Exception e) {
@@ -80,31 +82,16 @@ public class UseDaoImpl implements UserDao {
     }
 
     @Override
-    public boolean updateAll(User user) {
+    public boolean update(User user) {
         String sql = "";
         int effectedNum = 0;
         sql = "update tb_user set username=?,password=?,name=?,birthday=?,identitycode=?,identityflag=? where uid=?";
-        effectedNum = jdbcTemplate.update(sql,user.getUsername(),user.getPassword(),user.getName(),
-                user.getBirthday(), user.getIdentityCode(),user.getIdentityFlag(),user.getUid());
-        if (effectedNum == 0) {
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-    @Override
-    public boolean updateExceptPsw(User user) {
-        String sql = "";
-        int effectedNum = 0;
-        sql = "update tb_user set username=?,name=?,birthday=?,identitycode=?,identityflag=? where uid=?";
         try {
-            effectedNum = jdbcTemplate.update(sql,user.getUsername(),user.getName(),
-                    user.getBirthday(), user.getIdentityCode(),user.getIdentityFlag(),user.getUid());
+            effectedNum = jdbcTemplate.update(sql, user.getUsername(), user.getPassword(), user.getName(),
+                    user.getBirthday(), user.getIdentityCode(), user.getIdentityFlag(), user.getUid());
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         if (effectedNum == 0) {
             return false;
         } else {
@@ -112,8 +99,10 @@ public class UseDaoImpl implements UserDao {
         }
     }
 
+
     @Override
-    public List<User> listUser(String username) {
+    public List<User> list(User user) {
+        String username = user.getUsername();
         List<User> userList;
         if (username == null) {
             username = "";

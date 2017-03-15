@@ -4,6 +4,7 @@ import govsystem.dao.NewsDao;
 import govsystem.dao.UserDao;
 import govsystem.domain.News;
 import govsystem.domain.User;
+import govsystem.formbean.backform.AddNewsForm;
 import govsystem.formbean.backform.ModifyNewsForm;
 import govsystem.formbean.backform.ModifyUserForm;
 import govsystem.service.BackService;
@@ -27,12 +28,16 @@ public class BackServiceImpl implements BackService {
 
     @Override
     public List<User> listUsers(String username) {
-        return userDao.listUser(username);
+        User user = new User();
+        user.setUsername(username);
+        return userDao.list(user);
     }
 
     @Override
     public boolean deleteUserById(int uid) {
-        return userDao.deleteUserById(uid);
+        User user = new User();
+        user.setUid(uid);
+        return userDao.delete(user);
     }
 
     @Override
@@ -44,7 +49,7 @@ public class BackServiceImpl implements BackService {
             e.printStackTrace();
             return false;
         }
-        if (userDao.updateExceptPsw(user)) {
+        if (userDao.update(user)) {
             return true;
         } else {
             return false;
@@ -53,17 +58,57 @@ public class BackServiceImpl implements BackService {
 
     @Override
     public List<News> listNews(Integer nid) {
-        return newsDao.listNews(nid);
+        News news = new News();
+        if (nid == null) {
+            news.setNid(-1);
+        } else {
+            news.setNid(nid.intValue());
+        }
+        return newsDao.list(news);
+    }
+
+    @Override
+    public boolean addNews(AddNewsForm addNewsForm) {
+        News news = new News();
+        try {
+            BeanUtils.copyProperties(news,addNewsForm);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        news.setApplyNum(0);
+        news.setLookedNum(0);
+        news.setMessageNum(0);
+        //TODO 发布人外键
+        news.setAid(1);
+        if (newsDao.add(news)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
     public boolean deleteNewsById(int nid) {
-        return false;
+        News news = new News();
+        news.setNid(nid);
+        return newsDao.delete(news);
     }
 
     @Override
     public boolean modifyNews(ModifyNewsForm modifyNewsForm) {
-        return false;
+        News news = new News();
+        try {
+            BeanUtils.copyProperties(news,modifyNewsForm);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        if (newsDao.update(news)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }

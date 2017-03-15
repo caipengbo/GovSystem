@@ -5,7 +5,7 @@ import govsystem.domain.User;
 import java.util.List;
 
 /**
- * Description:
+ * Description: 用户DAO
  * Created by Myth on 3/12/2017.
  */
 public interface UserDao {
@@ -18,37 +18,31 @@ public interface UserDao {
 
     /**
      * 删除用户
-     * @param uid
+     * @param user
      * @return 成功返回true
      */
-    boolean deleteUserById(int uid);
+    boolean delete(User user);
 
     /**
-     * 根据用户名和密码查找用户
-     * @param username
-     * @param password
-     * @return 找到返回User对象，否则返回null
+     * 查找用户(根据用户名和密码)
+     * @param user
+     * @return
      */
-    User searchUser(String username,String password);
+    User search(User user);
+
+    /**
+     * 根据username列出用户
+     * @param user（username为空时，列出所有用户）
+     * @return
+     */
+    List<User> list(User user);
 
     /**
      * 修改用户信息(根据Uid查找用户)
      * @param user
      * @return 成功返回true
      */
-    boolean updateAll(User user);
+    boolean update(User user);
 
-    /**
-     * 修改除了密码之外的用户信息(根据Uid查找用户)
-     * @param user
-     * @return 成功返回true
-     */
-    boolean updateExceptPsw(User user);
 
-    /**
-     * 根据username列出用户
-     * @param username（username为空时，列出所有用户）
-     * @return
-     */
-    List<User> listUser(String username);
 }

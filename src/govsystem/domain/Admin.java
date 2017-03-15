@@ -1,7 +1,5 @@
 package govsystem.domain;
 
-import java.util.Date;
-
 /**
  * Description: 管理员类
  * Created by Myth on 3/12/2017.
@@ -11,8 +9,8 @@ public class Admin {
     private String username;
     private String password;
     private String name;
-    private Date birthday;
-    private int privilege; //权限 ，1（超级管理员） ，2（普通管理员）
+    private String birthday;
+    private int privilege; //权限 ，0（超级管理员） ，1（普通管理员）
 
     public long getAid() {
         return aid;
@@ -46,11 +44,11 @@ public class Admin {
         this.name = name;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 

@@ -2,6 +2,8 @@ package govsystem.controller;
 
 import govsystem.domain.News;
 import govsystem.domain.User;
+import govsystem.formbean.backform.AddNewsForm;
+import govsystem.formbean.backform.ModifyNewsForm;
 import govsystem.formbean.backform.ModifyUserForm;
 import govsystem.service.BackService;
 import net.sf.json.JSONObject;
@@ -72,5 +74,42 @@ public class JsonController {
         jsonMap.put("total", news.size());
         JSONObject jsonObject = JSONObject.fromObject(jsonMap);
         return jsonObject;
+    }
+    @RequestMapping("/addNews")
+    @ResponseBody
+    public Map<String,String> addNews(AddNewsForm addNewsForm) {
+        Map<String,String > map = new HashMap<String,String >();
+        if (backService.addNews(addNewsForm)) {
+            map.put("msg","success");
+        } else {
+            map.put("msg","error");
+        }
+        return map;
+    }
+
+    //根据接收的JSON数据删除 DataGrid选中的用户
+    @RequestMapping("/deleteNewsById")
+    @ResponseBody
+    public Map<String,String> deleteNewsById(@RequestBody News news) {
+        int nid = 0;
+        Map<String,String > map = new HashMap<String,String >();
+        nid = news.getNid();
+        if (backService.deleteNewsById(nid)) {
+            map.put("msg","success");
+        } else {
+            map.put("msg","error");
+        }
+        return map;
+    }
+    @RequestMapping("/modifyNews")
+    @ResponseBody
+    public Map<String,String> modifyNews(ModifyNewsForm modifyNewsForm) {
+        Map<String,String > map = new HashMap<String,String >();
+        if (backService.modifyNews(modifyNewsForm)) {
+            map.put("msg","success");
+        } else {
+            map.put("msg","error");
+        }
+        return map;
     }
 }
