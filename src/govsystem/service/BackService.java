@@ -1,5 +1,6 @@
 package govsystem.service;
 
+import govsystem.domain.Message;
 import govsystem.domain.News;
 import govsystem.domain.User;
 import govsystem.formbean.backform.AddNewsForm;
@@ -62,5 +63,26 @@ public interface BackService {
      * @return
      */
     boolean modifyNews(ModifyNewsForm modifyNewsForm);
+
+    /**
+     * 列出新闻对应的留言
+     * @param nid
+     * @return
+     */
+    List<Message> listMessage(Integer nid);
+
+    /**
+     * 列出可以查看该新闻的用户
+     * @param nid 新闻id
+     * @return
+     */
+    List<User> listLookedUser(Integer nid);
+
+    /**
+     * 列出可以申请该新闻的用户
+     * @param nid 新闻id
+     * @return
+     */
+    List<User> listApplyUser(Integer nid);
 
 }

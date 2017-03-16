@@ -1,5 +1,6 @@
 package govsystem.controller;
 
+import govsystem.domain.Message;
 import govsystem.domain.News;
 import govsystem.domain.User;
 import govsystem.formbean.backform.AddNewsForm;
@@ -111,5 +112,38 @@ public class JsonController {
             map.put("msg","error");
         }
         return map;
+    }
+
+    @RequestMapping("/getMessageToJson")
+    @ResponseBody
+    public Object getMessageToJson (Integer nid) {
+        List<Message> messageList = backService.listMessage(nid);
+        Map<String, Object> jsonMap = new HashMap<String, Object>();
+        jsonMap.put("rows", messageList);
+        jsonMap.put("total", messageList.size());
+        JSONObject jsonObject = JSONObject.fromObject(jsonMap);
+        return jsonObject;
+    }
+
+    @RequestMapping("/getLookedUserToJson")
+    @ResponseBody
+    public Object getLookedUserToJson (Integer nid) {
+        List<User> userList = backService.listLookedUser(nid);
+        Map<String, Object> jsonMap = new HashMap<String, Object>();
+        jsonMap.put("rows", userList);
+        jsonMap.put("total", userList.size());
+        JSONObject jsonObject = JSONObject.fromObject(jsonMap);
+        return jsonObject;
+    }
+
+    @RequestMapping("/getApplyUserToJson")
+    @ResponseBody
+    public Object getApplyUserToJson (Integer nid) {
+        List<User> userList = backService.listApplyUser(nid);
+        Map<String, Object> jsonMap = new HashMap<String, Object>();
+        jsonMap.put("rows", userList);
+        jsonMap.put("total", userList.size());
+        JSONObject jsonObject = JSONObject.fromObject(jsonMap);
+        return jsonObject;
     }
 }

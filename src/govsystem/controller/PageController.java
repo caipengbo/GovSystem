@@ -4,19 +4,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * Description: 页面跳转用的Controller
+ * Description: 页面跳转用的Controller 测试专用
  * Created by Myth on 3/12/2017.
  */
 @Controller
 public class PageController {
     @RequestMapping("/toregist")
     public String toRegist(){
-        System.out.println("jump to regist");
+        System.out.println("Jump to regist");
         return "/front-end/regist";
     }
     @RequestMapping("/tologin")
     public String toLogin(){
-        System.out.println("jump to login");
+        System.out.println("Jump to login");
         return "/front-end/login";
     }
     @RequestMapping("/jsp1")
@@ -26,5 +26,9 @@ public class PageController {
     @RequestMapping("/jsp2")
     public String toJsp2() {
         return "back-end/news_manage";
+    }
+    @RequestMapping("/jsp3")
+    public String toJsp3() {
+        return "back-end/index";
     }
 }

@@ -49,6 +49,7 @@
                     <input id="uid" type="hidden" name="uid">
                     <input id="username" class="easyui-textbox" data-options="readonly:true"
                            name="username" label="用户名" style="width:75%;">
+                    <input id="password" type="hidden" name="password">
                 </div>
 
                 <div style="margin-bottom:20px">

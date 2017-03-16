@@ -1,7 +1,10 @@
 package govsystem.service.impl;
 
+import govsystem.dao.MessageDao;
 import govsystem.dao.NewsDao;
 import govsystem.dao.UserDao;
+import govsystem.dao.UserNewsDao;
+import govsystem.domain.Message;
 import govsystem.domain.News;
 import govsystem.domain.User;
 import govsystem.formbean.backform.AddNewsForm;
@@ -15,7 +18,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * Description:后台业务实现
+ * Description:后台业务实现(包括用户、新闻、留言等等)
  * Created by Myth on 3/12/2017.
  */
 @Service
@@ -25,6 +28,10 @@ public class BackServiceImpl implements BackService {
     private UserDao userDao;
     @Resource
     private NewsDao newsDao;
+    @Resource
+    private MessageDao messageDao;
+    @Resource
+    private UserNewsDao userNewsDao;
 
     @Override
     public List<User> listUsers(String username) {
@@ -109,6 +116,39 @@ public class BackServiceImpl implements BackService {
         } else {
             return false;
         }
+    }
+
+    @Override
+    public List<Message> listMessage(Integer nid) {
+        News news = new News();
+        if (nid == null) {
+            return null;
+        } else {
+            news.setNid(nid.intValue());
+        }
+        return messageDao.list(news);
+    }
+
+    @Override
+    public List<User> listLookedUser(Integer nid) {
+        News news = new News();
+        if (nid == null) {
+            return null;
+        } else {
+            news.setNid(nid.intValue());
+        }
+        return userNewsDao.listLookedUsers(news);
+    }
+
+    @Override
+    public List<User> listApplyUser(Integer nid) {
+        News news = new News();
+        if (nid == null) {
+            return null;
+        } else {
+            news.setNid(nid.intValue());
+        }
+        return userNewsDao.listApplyUsers(news);
     }
 
 }
