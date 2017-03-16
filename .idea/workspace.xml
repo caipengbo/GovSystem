@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ac1c8b1-5305-4e80-838f-00319e572fbe" name="Default" comment="初步完成新闻管理功能">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/cn/caipengbo/action/GetFormParam.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/cn/caipengbo/action/Hello.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/cn/caipengbo/action/Hello2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/cn/caipengbo/action/Json.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/cn/caipengbo/controller/StudentController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/cn/caipengbo/dao/StudentDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/cn/caipengbo/dao/StudentDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/cn/caipengbo/dao/StudentDaoImpl2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/cn/caipengbo/domain/Student.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/cn/caipengbo/interceptor/ActionInterceptor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/cn/caipengbo/service/StudentService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GovSystem/cn/caipengbo/action/GetFormParam.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GovSystem/cn/caipengbo/action/Hello.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GovSystem/cn/caipengbo/action/Hello2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GovSystem/cn/caipengbo/action/Json.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GovSystem/cn/caipengbo/controller/StudentController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GovSystem/cn/caipengbo/dao/StudentDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GovSystem/cn/caipengbo/dao/StudentDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GovSystem/cn/caipengbo/dao/StudentDaoImpl2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GovSystem/cn/caipengbo/domain/Student.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GovSystem/cn/caipengbo/interceptor/ActionInterceptor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GovSystem/cn/caipengbo/service/StudentService.class" afterPath="" />
+    <list default="true" id="3ac1c8b1-5305-4e80-838f-00319e572fbe" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/govsystem/controller/JsonController.class" afterPath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/govsystem/controller/JsonController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/govsystem/controller/PageController.class" afterPath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/govsystem/controller/PageController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/govsystem/dao/impl/UseDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/govsystem/dao/impl/UseDaoImpl.class" />
@@ -45,10 +23,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/back-end/user_manage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/back-end/user_manage.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/front-end/success.jsp" afterPath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/front-end/success.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/govsystem/controller/JsonController.java" afterPath="$PROJECT_DIR$/src/govsystem/controller/JsonController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/govsystem/controller/PageController.java" afterPath="$PROJECT_DIR$/src/govsystem/controller/PageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/govsystem/service/BackService.java" afterPath="$PROJECT_DIR$/src/govsystem/service/BackService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/govsystem/service/impl/BackServiceImpl.java" afterPath="$PROJECT_DIR$/src/govsystem/service/impl/BackServiceImpl.java" />
     </list>
     <ignored path="SpringMVC.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,26 +49,28 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3072">
               <caret line="144" column="46" selection-start-line="144" selection-start-column="46" selection-end-line="144" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="news_manage.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/news_manage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-196">
-              <caret line="195" column="8" selection-start-line="195" selection-start-column="8" selection-end-line="195" selection-end-column="8" />
               <folding>
-                <marker date="1489676680907" expanded="true" signature="8784:8797" ph="..." />
-                <marker date="1489676680907" expanded="true" signature="9983:9992" ph="..." />
-                <marker date="1489676680907" expanded="true" signature="10054:10065" ph="..." />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="news_manage.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/news_manage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="61">
+              <caret line="94" column="44" selection-start-line="94" selection-start-column="44" selection-end-line="94" selection-end-column="44" />
+              <folding>
+                <marker date="1489677534678" expanded="true" signature="8793:8806" ph="..." />
+                <marker date="1489677534678" expanded="true" signature="9992:10001" ph="..." />
+                <marker date="1489677534678" expanded="true" signature="10063:10074" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -131,8 +107,8 @@
       <file leaf-file-name="BackServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/govsystem/service/impl/BackServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2976">
-              <caret line="139" column="49" selection-start-line="139" selection-start-column="49" selection-end-line="139" selection-end-column="49" />
+            <state relative-caret-position="277">
+              <caret line="138" column="9" selection-start-line="138" selection-start-column="9" selection-end-line="138" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -143,7 +119,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1704">
               <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -153,7 +131,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="456">
               <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#620#621#0" expanded="false" />
+                <element signature="e#665#666#0" expanded="false" />
+                <element signature="e#723#724#0" expanded="false" />
+                <element signature="e#768#769#0" expanded="false" />
+                <element signature="e#826#827#0" expanded="false" />
+                <element signature="e#865#866#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,9 +149,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
               <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -176,7 +160,6 @@
             <state relative-caret-position="1104">
               <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <marker date="1489672952904" expanded="true" signature="1310:1350" ph="select * fro... tb_user_news" />
                 <marker date="1489672952904" expanded="true" signature="1310:1351" ph="select * fro... tb_user_news" />
                 <marker date="1489672952904" expanded="true" signature="1310:1412" ph="select * fro... tb_user_news" />
@@ -261,10 +244,10 @@
         <option value="$PROJECT_DIR$/src/govsystem/service/BackService.java" />
         <option value="$PROJECT_DIR$/src/govsystem/service/impl/BackServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/govsystem/controller/JsonController.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/back-end/news_manage.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/back-end/home.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/back-end/index.jsp" />
         <option value="$PROJECT_DIR$/src/govsystem/controller/BackEndPageController.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/back-end/news_manage.jsp" />
       </list>
     </option>
   </component>
@@ -957,7 +940,7 @@
       <workItem from="1489557442607" duration="21082000" />
       <workItem from="1489588566783" duration="4078000" />
       <workItem from="1489638896363" duration="13607000" />
-      <workItem from="1489674921704" duration="2113000" />
+      <workItem from="1489674921704" duration="2986000" />
     </task>
     <task id="LOCAL-00001" summary="修改用户功能">
       <created>1489416762194</created>
@@ -987,7 +970,14 @@
       <option name="project" value="LOCAL" />
       <updated>1489584334703</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="基本完成新闻管理功能（还差一些小功能）">
+      <created>1489677139644</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1489677139644</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1014,7 +1004,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181143000" />
+    <option name="totallyTimeSpent" value="182016000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1038,7 +1028,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961586" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1104,7 +1094,8 @@
     <MESSAGE value="完成用户修改功能" />
     <MESSAGE value="完成显示新闻功能" />
     <MESSAGE value="初步完成新闻管理功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="初步完成新闻管理功能" />
+    <MESSAGE value="基本完成新闻管理功能（还差一些小功能）" />
+    <option name="LAST_COMMIT_MESSAGE" value="基本完成新闻管理功能（还差一些小功能）" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1483,7 +1474,6 @@
         <state relative-caret-position="1104">
           <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
             <marker date="1489672952904" expanded="true" signature="1310:1350" ph="select * fro... tb_user_news" />
             <marker date="1489672952904" expanded="true" signature="1310:1351" ph="select * fro... tb_user_news" />
             <marker date="1489672952904" expanded="true" signature="1310:1412" ph="select * fro... tb_user_news" />
@@ -1496,9 +1486,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1506,15 +1494,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1704">
           <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/service/impl/BackServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2976">
-          <caret line="139" column="49" selection-start-line="139" selection-start-column="49" selection-end-line="139" selection-end-column="49" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1530,7 +1512,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3072">
           <caret line="144" column="46" selection-start-line="144" selection-start-column="46" selection-end-line="144" selection-end-column="46" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1538,18 +1522,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#620#621#0" expanded="false" />
+            <element signature="e#665#666#0" expanded="false" />
+            <element signature="e#723#724#0" expanded="false" />
+            <element signature="e#768#769#0" expanded="false" />
+            <element signature="e#826#827#0" expanded="false" />
+            <element signature="e#865#866#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/news_manage.jsp">
+    <entry file="file://$PROJECT_DIR$/src/govsystem/controller/BackEndPageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-196">
-          <caret line="195" column="8" selection-start-line="195" selection-start-column="8" selection-end-line="195" selection-end-column="8" />
+        <state relative-caret-position="432">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
           <folding>
-            <marker date="1489676680907" expanded="true" signature="8784:8797" ph="..." />
-            <marker date="1489676680907" expanded="true" signature="9983:9992" ph="..." />
-            <marker date="1489676680907" expanded="true" signature="10054:10065" ph="..." />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1564,21 +1562,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/controller/BackEndPageController.java">
+    <entry file="file://$PROJECT_DIR$/src/govsystem/service/impl/BackServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="277">
+          <caret line="138" column="9" selection-start-line="138" selection-start-column="9" selection-end-line="138" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/home.jsp">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/news_manage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="61">
+          <caret line="94" column="44" selection-start-line="94" selection-start-column="44" selection-end-line="94" selection-end-column="44" />
+          <folding>
+            <marker date="1489677534678" expanded="true" signature="8793:8806" ph="..." />
+            <marker date="1489677534678" expanded="true" signature="9992:10001" ph="..." />
+            <marker date="1489677534678" expanded="true" signature="10063:10074" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
