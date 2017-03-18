@@ -31,4 +31,8 @@ public class PageController {
     public String toJsp3() {
         return "back-end/index";
     }
+    @RequestMapping("/jsp4")
+    public String toJsp4() {
+        return "back-end/admin_manage";
+    }
 }

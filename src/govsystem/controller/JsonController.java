@@ -1,5 +1,6 @@
 package govsystem.controller;
 
+import govsystem.domain.Admin;
 import govsystem.domain.Message;
 import govsystem.domain.News;
 import govsystem.domain.User;
@@ -145,5 +146,92 @@ public class JsonController {
         jsonMap.put("total", userList.size());
         JSONObject jsonObject = JSONObject.fromObject(jsonMap);
         return jsonObject;
+    }
+    @RequestMapping("/allowApply")
+    @ResponseBody
+    public Map<String,String> allowApply(Integer nid,Integer uid) {
+        Map<String,String > map = new HashMap<String,String >();
+        if (backService.allowApply(nid,uid)) {
+            map.put("msg","success");
+        } else {
+            map.put("msg","error");
+        }
+        return map;
+    }
+    @RequestMapping("/refuseApply")
+    @ResponseBody
+    public Map<String,String> refuseApply(Integer nid,Integer uid) {
+        Map<String,String > map = new HashMap<String,String>();
+        if (backService.refuseApply(nid,uid)) {
+            map.put("msg","success");
+        } else {
+            map.put("msg","error");
+        }
+        return map;
+    }
+    @RequestMapping("/refuseView")
+    @ResponseBody
+    public Map<String,String> refuseView(Integer nid,Integer uid) {
+        Map<String,String > map = new HashMap<String,String>();
+        if (backService.refuseView(nid,uid)) {
+            map.put("msg","success");
+        } else {
+            map.put("msg","error");
+        }
+        return map;
+    }
+    @RequestMapping("/deleteMessage")
+    @ResponseBody
+    public Map<String,String> deleteMessage(@RequestBody Message message) {
+        Map<String,String > map = new HashMap<String,String>();
+        if (backService.deleteMessage(message)) {
+            map.put("msg","success");
+        } else {
+            map.put("msg","error");
+        }
+        return map;
+    }
+    @RequestMapping("/getAdminToJson")
+    @ResponseBody
+    public Object getAdminToJson() {
+        List<Admin> userList = backService.listAdmin();
+        Map<String, Object> jsonMap = new HashMap<String, Object>();
+        jsonMap.put("rows", userList);
+        jsonMap.put("total", userList.size());
+        JSONObject jsonObject = JSONObject.fromObject(jsonMap);
+        return jsonObject;
+    }
+    @RequestMapping("/addAdmin")
+    @ResponseBody
+    public Map<String,String> addAdmin(Admin admin) {
+        Map<String,String> map = new HashMap<String,String>();
+        if (backService.addAdmin(admin)) {
+            map.put("msg","success");
+        } else {
+            map.put("msg","error");
+        }
+        return map;
+    }
+    @RequestMapping("/modifyAdmin")
+    @ResponseBody
+    public Map<String,String> modifyAdmin(Admin admin) {
+        Map<String,String > map = new HashMap<String,String >();
+        if (backService.modifyAdmin(admin)) {
+            map.put("msg","success");
+        } else {
+            map.put("msg","error");
+        }
+        return map;
+    }
+    @RequestMapping("/deleteAdminById")
+    @ResponseBody
+    public Map<String,String> deleteAdminById(@RequestBody Admin admin) {
+        Map<String,String > map = new HashMap<String,String >();
+        if (backService.deleteAdminById(admin.getAid())) {
+            map.put("msg","success");
+        } else {
+            map.put("msg","error");
+        }
+        return map;
     }
 }

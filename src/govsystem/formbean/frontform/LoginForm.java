@@ -7,7 +7,6 @@ package govsystem.formbean.frontform;
 public class LoginForm {
     private String username;
     private String password;
-    private String captcha; //验证码
 
     public String getUsername() {
         return username;
@@ -25,18 +24,9 @@ public class LoginForm {
         this.password = password;
     }
 
-    public String getCaptcha() {
-        return captcha;
-    }
-
-    public void setCaptcha(String captcha) {
-        this.captcha = captcha;
-    }
 
     @Override
     public String toString() {
-
-        return "username:" + username + " password:" + password + " captcha:" +captcha;
-
+        return "username:" + username + " password:" + password;
     }
 }

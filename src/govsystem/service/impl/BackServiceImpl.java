@@ -1,9 +1,10 @@
 package govsystem.service.impl;
 
+import govsystem.dao.AdminDao;
 import govsystem.dao.MessageDao;
 import govsystem.dao.NewsDao;
 import govsystem.dao.UserDao;
-import govsystem.dao.UserNewsDao;
+import govsystem.domain.Admin;
 import govsystem.domain.Message;
 import govsystem.domain.News;
 import govsystem.domain.User;
@@ -31,7 +32,7 @@ public class BackServiceImpl implements BackService {
     @Resource
     private MessageDao messageDao;
     @Resource
-    private UserNewsDao userNewsDao;
+    private AdminDao adminDao;
 
     @Override
     public List<User> listUsers(String username) {
@@ -56,11 +57,7 @@ public class BackServiceImpl implements BackService {
             e.printStackTrace();
             return false;
         }
-        if (userDao.update(user)) {
-            return true;
-        } else {
-            return false;
-        }
+        return userDao.update(user);
     }
 
     @Override
@@ -88,11 +85,7 @@ public class BackServiceImpl implements BackService {
         news.setMessageNum(0);
         //TODO 发布人外键
         news.setAid(1);
-        if (newsDao.add(news)) {
-            return true;
-        } else {
-            return false;
-        }
+        return newsDao.add(news);
     }
 
     @Override
@@ -111,11 +104,7 @@ public class BackServiceImpl implements BackService {
             e.printStackTrace();
             return false;
         }
-        if (newsDao.update(news)) {
-            return true;
-        } else {
-            return false;
-        }
+        return newsDao.update(news);
     }
 
     @Override
@@ -137,7 +126,7 @@ public class BackServiceImpl implements BackService {
         } else {
             news.setNid(nid.intValue());
         }
-        return userNewsDao.listLookedUsers(news);
+        return newsDao.listLookedUsers(news);
     }
 
     @Override
@@ -148,7 +137,66 @@ public class BackServiceImpl implements BackService {
         } else {
             news.setNid(nid.intValue());
         }
-        return userNewsDao.listApplyUsers(news);
+        return newsDao.listApplyUsers(news);
     }
 
+    @Override
+    public boolean allowApply(Integer nid,Integer uid) {
+        if (nid == null || uid == null) {
+            return false;
+        }
+        News news = new News();
+        User user = new User();
+        news.setNid(nid);
+        user.setUid(uid);
+        return newsDao.allowApply(news,user);
+    }
+    @Override
+    public boolean refuseApply(Integer nid,Integer uid) {
+        if (nid == null || uid == null) {
+            return false;
+        }
+        News news = new News();
+        User user = new User();
+        news.setNid(nid);
+        user.setUid(uid);
+        return newsDao.refuseApply(news,user);
+    }
+    @Override
+    public boolean refuseView(Integer nid,Integer uid) {
+        if (nid == null || uid == null) {
+            return false;
+        }
+        News news = new News();
+        User user = new User();
+        news.setNid(nid);
+        user.setUid(uid);
+        return newsDao.refuseView(news, user);
+    }
+
+    @Override
+    public boolean deleteMessage(Message message) {
+        return message != null && messageDao.delete(message);
+    }
+
+    @Override
+    public List<Admin> listAdmin() {
+        return adminDao.list();
+    }
+
+    @Override
+    public boolean addAdmin(Admin admin) {
+        return adminDao.add(admin);
+    }
+
+    @Override
+    public boolean modifyAdmin(Admin admin) {
+        return adminDao.update(admin);
+    }
+    @Override
+    public boolean deleteAdminById(int aid) {
+        Admin admin = new Admin();
+        admin.setAid(aid);
+        return adminDao.delete(admin);
+    }
 }

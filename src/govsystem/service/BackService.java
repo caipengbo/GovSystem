@@ -1,5 +1,6 @@
 package govsystem.service;
 
+import govsystem.domain.Admin;
 import govsystem.domain.Message;
 import govsystem.domain.News;
 import govsystem.domain.User;
@@ -84,5 +85,61 @@ public interface BackService {
      * @return
      */
     List<User> listApplyUser(Integer nid);
+
+    /**
+     * 允许用户申请
+     * @param nid
+     * @param uid
+     * @return
+     */
+     boolean allowApply(Integer nid,Integer uid);
+    /**
+     * 拒绝用户申请
+     * @param nid
+     * @param uid
+     * @return
+     */
+     boolean refuseApply(Integer nid,Integer uid);
+    /**
+     * 拒绝用户查看
+     * @param nid
+     * @param uid
+     * @return
+     */
+     boolean refuseView(Integer nid,Integer uid);
+
+    /**
+     * 删除留言
+     * @param message
+     * @return
+     */
+     boolean deleteMessage(Message message);
+
+    /**
+     * 列出所有普通管理员
+     * @return
+     */
+    List<Admin> listAdmin();
+
+    /**
+     * 添加新管理员（默认是普通管理员，只有超级管理员可以添加）
+     * @param admin
+     * @return
+     */
+    boolean addAdmin(Admin admin);
+
+    /**
+     * 更新管理员信息
+     * @param admin
+     * @return
+     */
+    boolean modifyAdmin(Admin admin);
+
+    /**
+     * 根据id删除guan管理员
+     * @param aid
+     * @return 成功返回true
+     */
+    boolean deleteAdminById(int aid);
 
 }

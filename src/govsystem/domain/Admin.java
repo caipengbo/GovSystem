@@ -5,18 +5,18 @@ package govsystem.domain;
  * Created by Myth on 3/12/2017.
  */
 public class Admin {
-    private long aid;
+    private int aid;
     private String username;
     private String password;
     private String name;
     private String birthday;
     private int privilege; //权限 ，0（超级管理员） ，1（普通管理员）
 
-    public long getAid() {
+    public int getAid() {
         return aid;
     }
 
-    public void setAid(long aid) {
+    public void setAid(int aid) {
         this.aid = aid;
     }
 
