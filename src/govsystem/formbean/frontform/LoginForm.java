@@ -7,6 +7,15 @@ package govsystem.formbean.frontform;
 public class LoginForm {
     private String username;
     private String password;
+    private int isAdm;
+
+    public int getIsAdm() {
+        return isAdm;
+    }
+
+    public void setIsAdm(int isAdm) {
+        this.isAdm = isAdm;
+    }
 
     public String getUsername() {
         return username;

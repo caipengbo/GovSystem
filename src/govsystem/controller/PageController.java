@@ -19,6 +19,7 @@ public class PageController {
         System.out.println("Jump to login");
         return "/front-end/login";
     }
+
     @RequestMapping("/jsp1")
     public String toJsp1() {
         return "back-end/user_manage";
@@ -34,5 +35,9 @@ public class PageController {
     @RequestMapping("/jsp4")
     public String toJsp4() {
         return "back-end/admin_manage";
+    }
+    @RequestMapping("/jsp5")
+    public String toFrontIndex(){
+        return "/front-end/index";
     }
 }

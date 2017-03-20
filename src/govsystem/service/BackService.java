@@ -16,6 +16,7 @@ import java.util.List;
  * 1.用户管理； 2.新闻管理 3.留言管理 4.问卷管理
  */
 public interface BackService {
+
     /**
      * 列出用户
      * @param username 为空时，列出所有用户

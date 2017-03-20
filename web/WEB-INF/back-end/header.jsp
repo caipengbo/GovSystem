@@ -1,4 +1,4 @@
-<%--公共头部--%>
+<%--后端公共头部--%>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/style/easyui.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/style/icon.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/style/backend.css">

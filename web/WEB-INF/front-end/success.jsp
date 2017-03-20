@@ -5,6 +5,10 @@
     <title>成功</title>
 </head>
 <body>
- ${message}
+
+${message}<br>
+Model里面的 ${user.name} <br>
+Session里面的user${sessionScope.user.name} <br>
+Session里面的admin${sessionScope.admin.name} <br>
 </body>
 </html>

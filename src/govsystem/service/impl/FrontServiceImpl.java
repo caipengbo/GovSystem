@@ -1,6 +1,8 @@
 package govsystem.service.impl;
 
+import govsystem.dao.AdminDao;
 import govsystem.dao.UserDao;
+import govsystem.domain.Admin;
 import govsystem.domain.User;
 import govsystem.formbean.frontform.LoginForm;
 import govsystem.formbean.frontform.RegistForm;
@@ -20,6 +22,8 @@ public class FrontServiceImpl implements FrontService {
     //将UserDaoImpl注入UserDao
     @Resource
     private UserDao userDao;
+    @Resource
+    private AdminDao adminDao;
     @Override
     public User regist(RegistForm registForm) {
         User user = new User();
@@ -34,17 +38,27 @@ public class FrontServiceImpl implements FrontService {
     }
 
     @Override
-    public User login(LoginForm loginForm) {
+    public User loginUser(LoginForm loginForm) {
         User user = new User();
-        user.setUsername(loginForm.getUsername());
-        user.setPassword(loginForm.getPassword());
-        user = userDao.search(user);
-        if (user != null) {
-            return user;
-        } else {
+        try {
+            BeanUtils.copyProperties(user,loginForm);
+        } catch (Exception e) {
+            e.printStackTrace();
             return null;
         }
+        return userDao.search(user);
+    }
 
+    @Override
+    public Admin loginAdmin(LoginForm loginForm) {
+        Admin admin = new Admin();
+        try {
+            BeanUtils.copyProperties(admin,loginForm);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+        return adminDao.search(admin);
     }
 
     @Override

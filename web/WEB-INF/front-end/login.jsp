@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Myth
-  Date: 3/12/2017
-  Time: 2:06 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -16,9 +9,8 @@
         <br/>
         密码：<input type="password" name="password" value=""/>
         <br/>
-        验证码：<input type="text" name="captcha" value=""/> 1234
-        <br/>
-
+        用户<input type="radio" name="isAdm" value="0">
+        管理员<input type="radio" name="isAdm" value="1">
         <br/>
         <input type="submit" value="登录"/>
     </form>

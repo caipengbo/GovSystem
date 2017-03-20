@@ -1,5 +1,6 @@
 package govsystem.service;
 
+import govsystem.domain.Admin;
 import govsystem.domain.User;
 import govsystem.formbean.frontform.LoginForm;
 import govsystem.formbean.frontform.RegistForm;
@@ -24,9 +25,16 @@ public interface FrontService {
     /**
      * 用户登录
      * @param loginForm
-     * @return 登录成功返回User对象，否则，返回null
+     * @return 登录成功返回User，返回null
      */
-    User login(LoginForm loginForm);
+    User loginUser(LoginForm loginForm);
+
+    /**
+     *
+     * @param loginForm
+     * @return
+     */
+    Admin loginAdmin(LoginForm loginForm);
 
     /**
      * 用户设置个人信息
