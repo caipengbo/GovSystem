@@ -9,10 +9,11 @@ import govsystem.service.FrontService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,7 +22,6 @@ import java.util.Map;
  * Created by Myth on 3/12/2017.
  */
 @Controller
-@SessionAttributes("role")
 public class LoginController {
     @Resource
     private FrontService frontService;
@@ -45,9 +45,34 @@ public class LoginController {
 
     @RequestMapping("/login")
     @ResponseBody
-    public Map<String,String > login(LoginForm loginForm)  {
+    public Map<String,String > login(LoginForm loginForm,HttpSession httpSession)  {
+        Map<String,String > map = new HashMap<String,String >();
+        if (loginForm.getIsAdm() == 0) {
+            User user = frontService.loginUser(loginForm);
+            if (user != null) {
+                httpSession.setAttribute("role",user);
+                map.put("msg","success");
+                map.put("roleName","user");
+            } else {
+                map.put("msg","error");
+            }
+        } else {
+            Admin admin = frontService.loginAdmin(loginForm);
+            if (admin != null) {
+                httpSession.setAttribute("role",admin);
+                map.put("msg","success");
+                map.put("roleName","admin");
+            } else {
+                map.put("msg","error");
+            }
+        }
+
+        return map;
+    }
+    @RequestMapping("/loginExmple")
+    public ModelAndView loginExmple(LoginForm loginForm)  {
         ModelAndView modelAndView = new ModelAndView();
-        Map<String,String > map = new HashMap<String,String >();  // map里面 roleName -1失败，  0用户  1 管理员
+        Map<String,String > map = new HashMap<String,String >();
         if (loginForm.getIsAdm() == 0) {
             User user = frontService.loginUser(loginForm);
             if (user != null) {
@@ -67,7 +92,15 @@ public class LoginController {
                 map.put("msg","error");
             }
         }
+        modelAndView.setViewName("/front-end/success");
+        return modelAndView;
+    }
 
-        return map;
+    @RequestMapping("/logout")
+    public String logout(HttpServletRequest httpServletRequest)  {
+        HttpSession httpSession = httpServletRequest.getSession();
+        httpSession.removeAttribute("role");
+        httpSession.invalidate();
+        return "/front-end/success";
     }
 }
