@@ -39,10 +39,10 @@ public class UseDaoImpl implements UserDao {
 
     @Override
     public boolean add(User user) {
-        String sql = "insert into tb_user(username,password,name,birthday) " +
-                "values(?,?,?,?)";
+        String sql = "insert into tb_user(username,password,name) " +
+                "values(?,?,?)";
         int affectedNum = jdbcTemplate.update(sql,user.getUsername(),user.getPassword(),
-                user.getName(),user.getBirthday());
+                user.getName());
 
         if (affectedNum != 0) {
             return true;

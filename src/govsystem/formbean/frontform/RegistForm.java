@@ -8,7 +8,7 @@ public class RegistForm {
     private String username;
     private String password;
     private String name;
-    private String birthday;
+    //private String birthday;
 
     public String getUsername() {
         return username;
@@ -34,16 +34,9 @@ public class RegistForm {
         this.name = name;
     }
 
-    public String getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
-    }
 
     @Override
     public String toString() {
-        return "username:" + username + " name:" + name + " birthday:" + birthday;
+        return "username:" + username + " name:" + name;
     }
 }

@@ -11,7 +11,12 @@ Session里面的user${sessionScope.user.name} <br>
 Session里面的admin${sessionScope.admin.name} <br>
 -----------------------------------<br>
 <%
-    out.print("Jsp：Session："+((User)session.getAttribute("role")).toString());
+    if (session.getAttribute("role") == null) {
+        out.print("session里面已经没有东西啦");
+    } else {
+        out.print("Jsp：Session："+((User)session.getAttribute("role")).toString());
+    }
+
 %>
 </body>
 </html>
