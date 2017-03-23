@@ -1,13 +1,7 @@
 package govsystem.service.impl;
 
-import govsystem.dao.AdminDao;
-import govsystem.dao.MessageDao;
-import govsystem.dao.NewsDao;
-import govsystem.dao.UserDao;
-import govsystem.domain.Admin;
-import govsystem.domain.Message;
-import govsystem.domain.News;
-import govsystem.domain.User;
+import govsystem.dao.*;
+import govsystem.domain.*;
 import govsystem.formbean.backform.AddNewsForm;
 import govsystem.formbean.backform.ModifyNewsForm;
 import govsystem.formbean.backform.ModifyUserForm;
@@ -33,6 +27,8 @@ public class BackServiceImpl implements BackService {
     private MessageDao messageDao;
     @Resource
     private AdminDao adminDao;
+    @Resource
+    private QuestionDao questionDao;
 
 
     @Override
@@ -199,5 +195,25 @@ public class BackServiceImpl implements BackService {
         Admin admin = new Admin();
         admin.setAid(aid);
         return adminDao.delete(admin);
+    }
+
+    @Override
+    public List<Question> listQuestion() {
+        return questionDao.list();
+    }
+
+    @Override
+    public List<QuestionItem> listQuetionItem(Question question) {
+        return questionDao.listItem(question);
+    }
+
+    @Override
+    public boolean deleteQuestion(Question question) {
+        return questionDao.delete(question);
+    }
+
+    @Override
+    public boolean deleteQuestionItem(QuestionItem questionItem) {
+        return questionDao.deleteItem(questionItem);
     }
 }

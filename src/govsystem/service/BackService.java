@@ -1,9 +1,6 @@
 package govsystem.service;
 
-import govsystem.domain.Admin;
-import govsystem.domain.Message;
-import govsystem.domain.News;
-import govsystem.domain.User;
+import govsystem.domain.*;
 import govsystem.formbean.backform.AddNewsForm;
 import govsystem.formbean.backform.ModifyNewsForm;
 import govsystem.formbean.backform.ModifyUserForm;
@@ -142,5 +139,32 @@ public interface BackService {
      * @return 成功返回true
      */
     boolean deleteAdminById(int aid);
+
+    /**
+     * 列出所有问卷
+     * @return
+     */
+    List<Question> listQuestion();
+
+    /**
+     * 列出问卷对应的具体问题
+     * @param question
+     * @return
+     */
+    List<QuestionItem> listQuetionItem(Question question);
+
+    /**
+     * 删除问卷
+     * @param question
+     * @return
+     */
+    boolean deleteQuestion(Question question);
+
+    /**
+     * 删除问卷问题
+     * @param questionItem
+     * @return
+     */
+    boolean deleteQuestionItem(QuestionItem questionItem);
 
 }

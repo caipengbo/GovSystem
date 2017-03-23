@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ac1c8b1-5305-4e80-838f-00319e572fbe" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/govsystem/controller/LoginController.class" afterPath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/govsystem/controller/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GovSystem/govsystem/controller/LoginController.class" afterPath="$PROJECT_DIR$/out/production/GovSystem/govsystem/controller/LoginController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/govsystem/dao/impl/UseDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/govsystem/dao/impl/UseDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/govsystem/formbean/frontform/RegistForm.class" afterPath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/govsystem/formbean/frontform/RegistForm.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GovSystem/govsystem/dao/impl/UseDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/GovSystem/govsystem/dao/impl/UseDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GovSystem/govsystem/formbean/frontform/RegistForm.class" afterPath="$PROJECT_DIR$/out/production/GovSystem/govsystem/formbean/frontform/RegistForm.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/front-end/success.jsp" afterPath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/front-end/success.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/govsystem/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/govsystem/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/govsystem/dao/impl/UseDaoImpl.java" afterPath="$PROJECT_DIR$/src/govsystem/dao/impl/UseDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/govsystem/formbean/frontform/RegistForm.java" afterPath="$PROJECT_DIR$/src/govsystem/formbean/frontform/RegistForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/front-end/success.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/front-end/success.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/govsystem/controller/JsonController.java" afterPath="$PROJECT_DIR$/src/govsystem/controller/JsonController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/govsystem/service/BackService.java" afterPath="$PROJECT_DIR$/src/govsystem/service/BackService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/govsystem/service/impl/BackServiceImpl.java" afterPath="$PROJECT_DIR$/src/govsystem/service/impl/BackServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/govsystem/domain/Questionnaire.java" afterPath="$PROJECT_DIR$/src/govsystem/domain/Question.java" />
     </list>
     <ignored path="SpringMVC.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,117 +35,131 @@
       <file leaf-file-name="PageController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/govsystem/controller/PageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="11" column="30" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="30" />
+            <state relative-caret-position="216">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FrontEndPageController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/govsystem/controller/FrontEndPageController.java">
+      <file leaf-file-name="Question.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/govsystem/domain/Question.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+            <state relative-caret-position="1069">
+              <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
+              <folding>
+                <element signature="e#1390#1391#0" expanded="true" />
+                <element signature="e#1427#1428#0" expanded="true" />
+                <element signature="e#1459#1460#0" expanded="true" />
+                <element signature="e#1487#1488#0" expanded="true" />
+                <element signature="e#1514#1515#0" expanded="true" />
+                <element signature="e#1551#1552#0" expanded="true" />
+                <element signature="e#1583#1584#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JsonController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/govsystem/controller/JsonController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="258" column="36" selection-start-line="258" selection-start-column="22" selection-end-line="258" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BackServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/govsystem/service/impl/BackServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4344">
+              <caret line="210" column="33" selection-start-line="210" selection-start-column="19" selection-end-line="210" selection-end-column="33" />
+              <folding>
+                <element signature="e#5066#5067#0" expanded="true" />
+                <element signature="e#5107#5108#0" expanded="true" />
+                <element signature="e#5312#5313#0" expanded="true" />
+                <element signature="e#5363#5364#0" expanded="true" />
+                <element signature="e#5445#5446#0" expanded="true" />
+                <element signature="e#5504#5505#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="question.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/question.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+              <folding>
+                <marker date="1490262482859" expanded="true" signature="2341:2352" ph="..." />
+                <marker date="1490262482859" expanded="true" signature="3786:3795" ph="..." />
+                <marker date="1490262482859" expanded="true" signature="3856:3867" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuestionDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/govsystem/dao/impl/QuestionDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <marker date="1490262142539" expanded="true" signature="1863:1880" ph="select * fro... tb_news" />
+                <marker date="1490262142539" expanded="true" signature="1863:1888" ph="select * fro... tb_question" />
+                <marker date="1490262142539" expanded="true" signature="2340:2381" ph="select * fro... tb_news" />
+                <marker date="1490262142539" expanded="true" signature="2751:2791" ph="delete from " />
+                <marker date="1490262142539" expanded="true" signature="2817:2857" ph="delete from " />
+                <marker date="1490262142539" expanded="true" signature="2883:2918" ph="delete from " />
+                <marker date="1490262142539" expanded="true" signature="3637:3677" ph="delete from " />
+                <marker date="1490262142539" expanded="true" signature="3637:3686" ph="delete from " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/index.jsp">
+      <file leaf-file-name="news_manage.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/news_manage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5064">
-              <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="121" column="7" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
+            <state relative-caret-position="229">
+              <caret line="158" column="83" selection-start-line="158" selection-start-column="67" selection-end-line="158" selection-end-column="83" />
               <folding>
-                <marker date="1490190172964" expanded="true" signature="4492:4515" ph="..." />
+                <marker date="1489829824712" expanded="true" signature="9248:9261" ph="..." />
+                <marker date="1489829824712" expanded="true" signature="10423:10432" ph="..." />
+                <marker date="1489829824712" expanded="true" signature="10494:10505" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setting.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/setting.jsp">
+      <file leaf-file-name="NewsDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/govsystem/dao/impl/NewsDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/header.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="7" column="71" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="71" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/govsystem/controller/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="30" column="91" selection-start-line="30" selection-start-column="91" selection-end-line="30" selection-end-column="91" />
+            <state relative-caret-position="133">
+              <caret line="78" column="8" selection-start-line="78" selection-start-column="8" selection-end-line="98" selection-end-column="9" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/govsystem/dao/UserDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UseDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/govsystem/dao/impl/UseDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-              <folding>
-                <marker date="1490186593070" expanded="true" signature="1237:1315" ph="insert into tb_user... " />
-                <marker date="1490186593070" expanded="true" signature="1667:1685" ph="delete from " />
-                <marker date="1490186593070" expanded="true" signature="1667:1698" ph="delete from " />
-                <marker date="1490186593070" expanded="true" signature="1673:1685" ph="insert into tb_user... " />
-                <marker date="1490186593070" expanded="true" signature="2050:2103" ph="select count... tb_user" />
-                <marker date="1490186593070" expanded="true" signature="2432:2532" ph="update tb_us... " />
-                <marker date="1490186593070" expanded="true" signature="3173:3233" ph="select * fro... tb_user" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegistForm.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/govsystem/formbean/frontform/RegistForm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="39" column="56" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
-              <folding>
-                <element signature="e#353#354#0" expanded="true" />
-                <element signature="e#393#394#0" expanded="true" />
-                <element signature="e#724#725#0" expanded="true" />
-                <element signature="e#787#788#0" expanded="true" />
+                <marker date="1489827506162" expanded="true" signature="1942:2086" ph="insert into tb_news... " />
+                <marker date="1489827506162" expanded="true" signature="2643:2677" ph="delete from " />
+                <marker date="1489827506162" expanded="true" signature="2703:2739" ph="delete from " />
+                <marker date="1489827506162" expanded="true" signature="2765:2796" ph="delete from " />
+                <marker date="1489827506162" expanded="true" signature="3461:3544" ph="update tb_us... " />
+                <marker date="1489827506162" expanded="true" signature="4092:4112" ph="select * fro... tb_new" />
+                <marker date="1489827506162" expanded="true" signature="4092:4113" ph="select * fro... tb_news" />
+                <marker date="1489827506162" expanded="true" signature="4152:4184" ph="select * fro... tb_news" />
+                <marker date="1489827506162" expanded="true" signature="4597:4699" ph="select * fro... tb_user_news" />
+                <marker date="1489827506162" expanded="true" signature="5112:5213" ph="select * fro... tb_user_news" />
+                <marker date="1489827506162" expanded="true" signature="5623:5684" ph="update tb_us... " />
+                <marker date="1489827506162" expanded="true" signature="5623:5694" ph="update tb_us... " />
+                <marker date="1489827506162" expanded="true" signature="5720:5792" ph="update tb_ne... " />
+                <marker date="1489827506162" expanded="true" signature="6355:6391" ph="delete from " />
+                <marker date="1489827506162" expanded="true" signature="6355:6401" ph="delete from " />
+                <marker date="1489827506162" expanded="true" signature="6427:6477" ph="update tb_ne... " />
+                <marker date="1489827506162" expanded="true" signature="6465:6477" ph="delete from " />
+                <marker date="1489827506162" expanded="true" signature="7069:7115" ph="delete from " />
+                <marker date="1489827506162" expanded="true" signature="7141:7193" ph="update tb_ne... " />
               </folding>
             </state>
           </provider>
@@ -156,10 +171,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
+        <option value="HTML File" />
+        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Jsp File" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -179,12 +194,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/govsystem/service/impl/BackService.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/springmvc-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/cn/caipengbo/action/Test.java" />
-        <option value="$PROJECT_DIR$/src/govsystem/domain/User.java" />
-        <option value="$PROJECT_DIR$/src/govsystem/formbean/backform/ModifyUserForm.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/back-end/user_manage.jsp" />
         <option value="$PROJECT_DIR$/src/govsystem/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/back-end/news_centext.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/back-end/error.jsp" />
@@ -204,7 +213,6 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/back-end/news_manage.jsp" />
         <option value="$PROJECT_DIR$/src/govsystem/domain/Admin.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/back-end/admin_manage.jsp" />
-        <option value="$PROJECT_DIR$/src/govsystem/controller/JsonController.java" />
         <option value="$PROJECT_DIR$/src/govsystem/dao/AdminDao.java" />
         <option value="$PROJECT_DIR$/src/govsystem/dao/impl/AdminDaoImpl.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/back-end/success.sjp.jsp" />
@@ -212,11 +220,8 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/back-end/header.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/front-end/header.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/front-end/config.jsp" />
-        <option value="$PROJECT_DIR$/src/govsystem/controller/BackEndPageController.java" />
         <option value="$PROJECT_DIR$/src/govsystem/controller/PageController.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/front-end/news_view.jsp" />
-        <option value="$PROJECT_DIR$/src/govsystem/service/BackService.java" />
-        <option value="$PROJECT_DIR$/src/govsystem/service/impl/BackServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/govsystem/service/FrontService.java" />
         <option value="$PROJECT_DIR$/src/govsystem/service/impl/FrontServiceImpl.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/front-end/error.jsp" />
@@ -230,6 +235,16 @@
         <option value="$PROJECT_DIR$/src/govsystem/controller/FrontEndPageController.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/back-end/index.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/front-end/index.jsp" />
+        <option value="$PROJECT_DIR$/src/govsystem/domain/QuestionItem.java" />
+        <option value="$PROJECT_DIR$/src/govsystem/domain/Question.java" />
+        <option value="$PROJECT_DIR$/src/govsystem/controller/BackEndPageController.java" />
+        <option value="$PROJECT_DIR$/src/govsystem/service/BackService.java" />
+        <option value="$PROJECT_DIR$/src/govsystem/dao/QuestionDao.java" />
+        <option value="$PROJECT_DIR$/src/govsystem/dao/impl/QuestionImpl.java" />
+        <option value="$PROJECT_DIR$/src/govsystem/service/impl/BackServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/govsystem/controller/JsonController.java" />
+        <option value="$PROJECT_DIR$/src/govsystem/dao/impl/QuestionDaoImpl.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/back-end/question.jsp" />
       </list>
     </option>
   </component>
@@ -293,12 +308,197 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="back-end" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="govsystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="govsystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="govsystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="govsystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="govsystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -313,16 +513,16 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Java\IntellijProjects\SpringMVC\web\WEB-INF" />
+      <recent name="D:\Java\IntellijProjects\SpringMVC\web" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Java\IntellijProjects\GovSystem\web\frontcss" />
       <recent name="D:\Java\IntellijProjects\GovSystem\web\frontjs" />
       <recent name="D:\Java\IntellijProjects\GovSystem\web\WEB-INF\front-end" />
       <recent name="D:\Java\IntellijProjects\GovSystem\web" />
       <recent name="D:\Java\IntellijProjects\GovSystem\web\js" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Java\IntellijProjects\SpringMVC\web\WEB-INF" />
-      <recent name="D:\Java\IntellijProjects\SpringMVC\web" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.0.36">
@@ -773,12 +973,7 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
-      <method>
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="GovSystem" />
-        </option>
-      </method>
+      <method />
     </configuration>
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 8.0.36" />
@@ -826,7 +1021,8 @@
       <workItem from="1489996241024" duration="15117000" />
       <workItem from="1490088377782" duration="3214000" />
       <workItem from="1490104633032" duration="5498000" />
-      <workItem from="1490185660569" duration="6781000" />
+      <workItem from="1490185660569" duration="7012000" />
+      <workItem from="1490251258730" duration="10952000" />
     </task>
     <task id="LOCAL-00001" summary="修改用户功能">
       <created>1489416762194</created>
@@ -891,7 +1087,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490109712352</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="完成前端添加session的功能">
+      <created>1490194769673</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1490194769674</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -918,7 +1121,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241647000" />
+    <option name="totallyTimeSpent" value="252830000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -946,7 +1149,7 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961586" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21035598" sideWeight="0.49278352" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21035598" sideWeight="0.49278352" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24865156" sideWeight="0.5072165" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1012,7 +1215,8 @@
     <MESSAGE value="完成新闻管理与管理员管理功能" />
     <MESSAGE value="加入前端，完成部分登录功能" />
     <MESSAGE value="添加session出错误，正在修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加session出错误，正在修改" />
+    <MESSAGE value="完成前端添加session的功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成前端添加session的功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1130,8 +1334,38 @@
           <properties />
           <option name="timeStamp" value="210" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/govsystem/dao/impl/QuestionDaoImpl.java</url>
+          <line>97</line>
+          <properties />
+          <option name="timeStamp" value="222" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/govsystem/dao/impl/QuestionDaoImpl.java</url>
+          <line>99</line>
+          <properties />
+          <option name="timeStamp" value="223" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/govsystem/dao/impl/QuestionDaoImpl.java</url>
+          <line>90</line>
+          <properties />
+          <option name="timeStamp" value="224" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/govsystem/dao/impl/QuestionDaoImpl.java</url>
+          <line>88</line>
+          <properties />
+          <option name="timeStamp" value="225" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/govsystem/dao/impl/QuestionDaoImpl.java</url>
+          <line>89</line>
+          <properties />
+          <option name="timeStamp" value="227" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="219" />
+      <option name="time" value="228" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -1140,37 +1374,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/govsystem/domain/Suggestion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/news_context.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/dao/impl/UserNewsDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/govsystem/dao/impl/UserNewsDaoImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/govsystem/dao/UserNewsDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/govsystem/dao/NewsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/govsystem/dao/impl/MessageDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -1187,34 +1390,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/dao/impl/NewsDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="76" column="13" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
-          <folding>
-            <marker date="1489827506162" expanded="true" signature="1942:2086" ph="insert into tb_news... " />
-            <marker date="1489827506162" expanded="true" signature="2643:2677" ph="delete from " />
-            <marker date="1489827506162" expanded="true" signature="2703:2739" ph="delete from " />
-            <marker date="1489827506162" expanded="true" signature="2765:2796" ph="delete from " />
-            <marker date="1489827506162" expanded="true" signature="3461:3544" ph="update tb_us... " />
-            <marker date="1489827506162" expanded="true" signature="4092:4112" ph="select * fro... tb_new" />
-            <marker date="1489827506162" expanded="true" signature="4092:4113" ph="select * fro... tb_news" />
-            <marker date="1489827506162" expanded="true" signature="4152:4184" ph="select * fro... tb_news" />
-            <marker date="1489827506162" expanded="true" signature="4597:4699" ph="select * fro... tb_user_news" />
-            <marker date="1489827506162" expanded="true" signature="5112:5213" ph="select * fro... tb_user_news" />
-            <marker date="1489827506162" expanded="true" signature="5623:5684" ph="update tb_us... " />
-            <marker date="1489827506162" expanded="true" signature="5623:5694" ph="update tb_us... " />
-            <marker date="1489827506162" expanded="true" signature="5720:5792" ph="update tb_ne... " />
-            <marker date="1489827506162" expanded="true" signature="6355:6391" ph="delete from " />
-            <marker date="1489827506162" expanded="true" signature="6355:6401" ph="delete from " />
-            <marker date="1489827506162" expanded="true" signature="6427:6477" ph="update tb_ne... " />
-            <marker date="1489827506162" expanded="true" signature="6465:6477" ph="delete from " />
-            <marker date="1489827506162" expanded="true" signature="7069:7115" ph="delete from " />
-            <marker date="1489827506162" expanded="true" signature="7141:7193" ph="update tb_ne... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1268,13 +1443,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -1287,20 +1455,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/service/BackService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/service/impl/BackServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1324,7 +1478,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1367,18 +1520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/news_manage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="334" column="49" selection-start-line="334" selection-start-column="49" selection-end-line="334" selection-end-column="49" />
-          <folding>
-            <marker date="1489829824712" expanded="true" signature="9248:9261" ph="..." />
-            <marker date="1489829824712" expanded="true" signature="10423:10432" ph="..." />
-            <marker date="1489829824712" expanded="true" signature="10494:10505" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../JDK1.8.0_65/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
@@ -1393,13 +1534,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/controller/BackEndPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-context-4.3.6.RELEASE.jar!/org/springframework/ui/Model.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1411,7 +1545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="9" column="15" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1423,35 +1556,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/controller/JsonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3576">
-          <caret line="166" column="16" selection-start-line="166" selection-start-column="16" selection-end-line="166" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/formbean/frontform/te.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/govsystem/formbean/frontform/te.html" />
     <entry file="file://$PROJECT_DIR$/src/govsystem/formbean/frontform/SettingForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/controller/PageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1465,7 +1574,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/govsystem/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
+        <state relative-caret-position="672">
           <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
           <folding />
         </state>
@@ -1473,7 +1582,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/govsystem/dao/impl/UseDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
+        <state relative-caret-position="864">
           <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
             <marker date="1490186593070" expanded="true" signature="1237:1315" ph="insert into tb_user... " />
@@ -1489,20 +1598,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/govsystem/formbean/frontform/RegistForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
+        <state relative-caret-position="624">
           <caret line="39" column="56" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
           <folding>
-            <element signature="e#353#354#0" expanded="true" />
-            <element signature="e#393#394#0" expanded="true" />
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="false" />
+            <element signature="e#393#394#0" expanded="false" />
+            <element signature="e#724#725#0" expanded="false" />
+            <element signature="e#787#788#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/govsystem/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
+        <state relative-caret-position="408">
           <caret line="30" column="91" selection-start-line="30" selection-start-column="91" selection-end-line="30" selection-end-column="91" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1514,7 +1623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1522,7 +1630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1530,6 +1637,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="7" column="71" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/setting.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="31" column="53" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="121" column="7" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
+          <folding>
+            <marker date="1490190172964" expanded="true" signature="4492:4515" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1544,29 +1677,194 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/govsystem/controller/PageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="121" column="7" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
+        <state relative-caret-position="216">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/news_context.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/govsystem/domain/QuestionItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding>
-            <marker date="1490190172964" expanded="true" signature="4492:4515" ph="..." />
+            <element signature="e#280#281#0" expanded="true" />
+            <element signature="e#315#316#0" expanded="true" />
+            <element signature="e#345#346#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#396#397#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
+            <element signature="e#605#606#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/govsystem/dao/NewsDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5064">
-          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+        <state relative-caret-position="481">
+          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="37" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/setting.jsp">
+    <entry file="file://$PROJECT_DIR$/src/govsystem/domain/Question.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+        <state relative-caret-position="1069">
+          <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
+          <folding>
+            <element signature="e#1390#1391#0" expanded="true" />
+            <element signature="e#1427#1428#0" expanded="true" />
+            <element signature="e#1459#1460#0" expanded="true" />
+            <element signature="e#1487#1488#0" expanded="true" />
+            <element signature="e#1514#1515#0" expanded="true" />
+            <element signature="e#1551#1552#0" expanded="true" />
+            <element signature="e#1583#1584#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/govsystem/controller/BackEndPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+          <folding>
+            <element signature="e#640#641#0" expanded="true" />
+            <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#789#790#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/govsystem/service/BackService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="167" column="22" selection-start-line="167" selection-start-column="22" selection-end-line="167" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/govsystem/dao/QuestionDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/govsystem/controller/JsonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="258" column="36" selection-start-line="258" selection-start-column="22" selection-end-line="258" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/govsystem/service/impl/BackServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4344">
+          <caret line="210" column="33" selection-start-line="210" selection-start-column="19" selection-end-line="210" selection-end-column="33" />
+          <folding>
+            <element signature="e#5066#5067#0" expanded="true" />
+            <element signature="e#5107#5108#0" expanded="true" />
+            <element signature="e#5312#5313#0" expanded="true" />
+            <element signature="e#5363#5364#0" expanded="true" />
+            <element signature="e#5445#5446#0" expanded="true" />
+            <element signature="e#5504#5505#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/govsystem/dao/impl/NewsDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="78" column="8" selection-start-line="78" selection-start-column="8" selection-end-line="98" selection-end-column="9" />
+          <folding>
+            <marker date="1489827506162" expanded="true" signature="1942:2086" ph="insert into tb_news... " />
+            <marker date="1489827506162" expanded="true" signature="2643:2677" ph="delete from " />
+            <marker date="1489827506162" expanded="true" signature="2703:2739" ph="delete from " />
+            <marker date="1489827506162" expanded="true" signature="2765:2796" ph="delete from " />
+            <marker date="1489827506162" expanded="true" signature="3461:3544" ph="update tb_us... " />
+            <marker date="1489827506162" expanded="true" signature="4092:4112" ph="select * fro... tb_new" />
+            <marker date="1489827506162" expanded="true" signature="4092:4113" ph="select * fro... tb_news" />
+            <marker date="1489827506162" expanded="true" signature="4152:4184" ph="select * fro... tb_news" />
+            <marker date="1489827506162" expanded="true" signature="4597:4699" ph="select * fro... tb_user_news" />
+            <marker date="1489827506162" expanded="true" signature="5112:5213" ph="select * fro... tb_user_news" />
+            <marker date="1489827506162" expanded="true" signature="5623:5684" ph="update tb_us... " />
+            <marker date="1489827506162" expanded="true" signature="5623:5694" ph="update tb_us... " />
+            <marker date="1489827506162" expanded="true" signature="5720:5792" ph="update tb_ne... " />
+            <marker date="1489827506162" expanded="true" signature="6355:6391" ph="delete from " />
+            <marker date="1489827506162" expanded="true" signature="6355:6401" ph="delete from " />
+            <marker date="1489827506162" expanded="true" signature="6427:6477" ph="update tb_ne... " />
+            <marker date="1489827506162" expanded="true" signature="6465:6477" ph="delete from " />
+            <marker date="1489827506162" expanded="true" signature="7069:7115" ph="delete from " />
+            <marker date="1489827506162" expanded="true" signature="7141:7193" ph="update tb_ne... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/govsystem/dao/impl/QuestionDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1490262142539" expanded="true" signature="1863:1880" ph="select * fro... tb_news" />
+            <marker date="1490262142539" expanded="true" signature="1863:1888" ph="select * fro... tb_question" />
+            <marker date="1490262142539" expanded="true" signature="2340:2381" ph="select * fro... tb_news" />
+            <marker date="1490262142539" expanded="true" signature="2751:2791" ph="delete from " />
+            <marker date="1490262142539" expanded="true" signature="2817:2857" ph="delete from " />
+            <marker date="1490262142539" expanded="true" signature="2883:2918" ph="delete from " />
+            <marker date="1490262142539" expanded="true" signature="3637:3677" ph="delete from " />
+            <marker date="1490262142539" expanded="true" signature="3637:3686" ph="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/news_manage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="158" column="83" selection-start-line="158" selection-start-column="67" selection-end-line="158" selection-end-column="83" />
+          <folding>
+            <marker date="1489829824712" expanded="true" signature="9248:9261" ph="..." />
+            <marker date="1489829824712" expanded="true" signature="10423:10432" ph="..." />
+            <marker date="1489829824712" expanded="true" signature="10494:10505" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/question.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding>
+            <marker date="1490262482859" expanded="true" signature="2341:2352" ph="..." />
+            <marker date="1490262482859" expanded="true" signature="3786:3795" ph="..." />
+            <marker date="1490262482859" expanded="true" signature="3856:3867" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

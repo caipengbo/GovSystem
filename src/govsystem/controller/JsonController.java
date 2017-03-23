@@ -1,9 +1,6 @@
 package govsystem.controller;
 
-import govsystem.domain.Admin;
-import govsystem.domain.Message;
-import govsystem.domain.News;
-import govsystem.domain.User;
+import govsystem.domain.*;
 import govsystem.formbean.backform.AddNewsForm;
 import govsystem.formbean.backform.ModifyNewsForm;
 import govsystem.formbean.backform.ModifyUserForm;
@@ -147,6 +144,7 @@ public class JsonController {
         JSONObject jsonObject = JSONObject.fromObject(jsonMap);
         return jsonObject;
     }
+
     @RequestMapping("/allowApply")
     @ResponseBody
     public Map<String,String> allowApply(Integer nid,Integer uid) {
@@ -228,6 +226,58 @@ public class JsonController {
     public Map<String,String> deleteAdminById(@RequestBody Admin admin) {
         Map<String,String > map = new HashMap<String,String >();
         if (backService.deleteAdminById(admin.getAid())) {
+            map.put("msg","success");
+        } else {
+            map.put("msg","error");
+        }
+        return map;
+    }
+
+    @RequestMapping("/getQuetionToJson")
+    @ResponseBody
+    public Object getQuetionToJson () {
+        List<Question> userList = backService.listQuestion();
+        Map<String, Object> jsonMap = new HashMap<String, Object>();
+        jsonMap.put("rows", userList);
+        jsonMap.put("total", userList.size());
+        JSONObject jsonObject = JSONObject.fromObject(jsonMap);
+        return jsonObject;
+    }
+    @RequestMapping("/getQuetionItemToJson")
+    @ResponseBody
+    public Object getQuetionItemToJson (Integer qid) {
+        Question question = new Question();
+        question.setQid(qid);
+        List<QuestionItem> userList = backService.listQuetionItem(question);
+        Map<String, Object> jsonMap = new HashMap<String, Object>();
+        jsonMap.put("rows", userList);
+        jsonMap.put("total", userList.size());
+        JSONObject jsonObject = JSONObject.fromObject(jsonMap);
+        return jsonObject;
+    }
+
+    @RequestMapping("/deleteQuestion")
+    @ResponseBody
+    public Map<String,String> deleteQuestion(int qid) {
+        Question question = new Question();
+        question.setQid(qid);
+        Map<String,String > map = new HashMap<String,String >();
+        if (backService.deleteQuestion(question)) {
+            map.put("msg","success");
+        } else {
+            map.put("msg","error");
+        }
+        return map;
+    }
+
+    @RequestMapping("/deleteQuestionItem")
+    @ResponseBody
+    public Map<String,String> deleteQuestionItem(int qid,int no) {
+        QuestionItem questionItem = new QuestionItem();
+        questionItem.setQid(qid);
+        questionItem.setNo(no);
+        Map<String,String > map = new HashMap<String,String >();
+        if (backService.deleteQuestionItem(questionItem)) {
             map.put("msg","success");
         } else {
             map.put("msg","error");
