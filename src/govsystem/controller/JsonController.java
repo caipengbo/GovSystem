@@ -1,9 +1,7 @@
 package govsystem.controller;
 
 import govsystem.domain.*;
-import govsystem.formbean.backform.AddNewsForm;
-import govsystem.formbean.backform.ModifyNewsForm;
-import govsystem.formbean.backform.ModifyUserForm;
+import govsystem.formbean.backform.*;
 import govsystem.service.BackService;
 import net.sf.json.JSONObject;
 import org.springframework.stereotype.Controller;
@@ -284,4 +282,27 @@ public class JsonController {
         }
         return map;
     }
+    @RequestMapping("/addQuestion")
+    @ResponseBody
+    public Map<String,String> addQuestion(AddQuestionForm addQuestionForm) {
+        Map<String,String > map = new HashMap<String,String >();
+        if (backService.addQuestion(addQuestionForm)) {
+            map.put("msg","success");
+        } else {
+            map.put("msg","error");
+        }
+        return map;
+    }
+    @RequestMapping("/addQuestionItem")
+    @ResponseBody
+    public Map<String,String> addQuestionItem(AddQuestionItemForm addQuestionItemForm) {
+        Map<String,String > map = new HashMap<String,String >();
+        if (backService.addQuestionItem(addQuestionItemForm)) {
+            map.put("msg","success");
+        } else {
+            map.put("msg","error");
+        }
+        return map;
+    }
+
 }

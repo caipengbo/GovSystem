@@ -1,9 +1,7 @@
 package govsystem.service;
 
 import govsystem.domain.*;
-import govsystem.formbean.backform.AddNewsForm;
-import govsystem.formbean.backform.ModifyNewsForm;
-import govsystem.formbean.backform.ModifyUserForm;
+import govsystem.formbean.backform.*;
 
 import java.util.List;
 
@@ -166,5 +164,19 @@ public interface BackService {
      * @return
      */
     boolean deleteQuestionItem(QuestionItem questionItem);
+
+    /**
+     * 添加问卷
+     * @param addQuestionForm
+     * @return
+     */
+    boolean addQuestion(AddQuestionForm addQuestionForm);
+
+    /**
+     * 添加问卷 的问题
+     * @param addQuestionItemForm
+     * @return
+     */
+    boolean addQuestionItem(AddQuestionItemForm addQuestionItemForm);
 
 }

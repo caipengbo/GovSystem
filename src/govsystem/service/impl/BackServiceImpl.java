@@ -2,9 +2,7 @@ package govsystem.service.impl;
 
 import govsystem.dao.*;
 import govsystem.domain.*;
-import govsystem.formbean.backform.AddNewsForm;
-import govsystem.formbean.backform.ModifyNewsForm;
-import govsystem.formbean.backform.ModifyUserForm;
+import govsystem.formbean.backform.*;
 import govsystem.service.BackService;
 import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.stereotype.Service;
@@ -215,5 +213,21 @@ public class BackServiceImpl implements BackService {
     @Override
     public boolean deleteQuestionItem(QuestionItem questionItem) {
         return questionDao.deleteItem(questionItem);
+    }
+
+    @Override
+    public boolean addQuestion(AddQuestionForm addQuestionForm) {
+        Question question = new Question();
+        question.setAvailable(addQuestionForm.getAvailable());
+        question.setTitle(addQuestionForm.getTitle());
+        return questionDao.add(question);
+    }
+
+    @Override
+    public boolean addQuestionItem(AddQuestionItemForm addQuestionItemForm) {
+        QuestionItem questionItem = new QuestionItem();
+        questionItem.setQid(addQuestionItemForm.getQid());
+        questionItem.setContent(addQuestionItemForm.getContent());
+        return questionDao.addItem(questionItem);
     }
 }
