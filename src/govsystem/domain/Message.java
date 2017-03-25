@@ -6,7 +6,7 @@ package govsystem.domain;
  */
 public class Message {
     private int mid;
-    private String context; // 内容
+    private String content; // 内容
     private String postTime;    //发表时间
     private int uid;  //外键，发表人
     private int nid;  //对应的新闻
@@ -19,12 +19,12 @@ public class Message {
         this.mid = mid;
     }
 
-    public String getContext() {
-        return context;
+    public String getContent() {
+        return content;
     }
 
-    public void setContext(String context) {
-        this.context = context;
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public String getPostTime() {

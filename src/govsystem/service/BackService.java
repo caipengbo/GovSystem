@@ -179,4 +179,11 @@ public interface BackService {
      */
     boolean addQuestionItem(AddQuestionItemForm addQuestionItemForm);
 
+    /**
+     * 修改问卷
+     * @param question
+     * @return
+     */
+    boolean modifyQuestion(Question question);
+
 }

@@ -5,11 +5,11 @@ package govsystem.domain;
  * Created by Myth on 3/12/2017.
  */
 public class News {
-    // nid  title digest context posttime aid applynum  lookednum messagenum ispublic
+    // nid  title digest content posttime aid applynum  lookednum messagenum ispublic
     private int nid;
     private String title;   //标题
     private String digest;  //摘要
-    private String context; // 内容
+    private String content; // 内容
     private String postTime;    //发表时间
     private int aid;  //外键，发表人
 
@@ -50,12 +50,12 @@ public class News {
         this.digest = digest;
     }
 
-    public String getContext() {
-        return context;
+    public String getContent() {
+        return content;
     }
 
-    public void setContext(String context) {
-        this.context = context;
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public String getPostTime() {

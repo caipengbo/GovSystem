@@ -19,7 +19,7 @@ import java.util.Map;
  * Created by Myth on 3/12/2017.
  */
 @Controller
-public class JsonController {
+public class BackEndJsonController {
 
     @Resource
     private BackService backService;
@@ -298,6 +298,18 @@ public class JsonController {
     public Map<String,String> addQuestionItem(AddQuestionItemForm addQuestionItemForm) {
         Map<String,String > map = new HashMap<String,String >();
         if (backService.addQuestionItem(addQuestionItemForm)) {
+            map.put("msg","success");
+        } else {
+            map.put("msg","error");
+        }
+        return map;
+    }
+
+    @RequestMapping("/modifyQuestion")
+    @ResponseBody
+    public Map<String,String> modifyQuestion(Question question) {
+        Map<String,String > map = new HashMap<String,String >();
+        if (backService.modifyQuestion(question)) {
             map.put("msg","success");
         } else {
             map.put("msg","error");

@@ -230,4 +230,9 @@ public class BackServiceImpl implements BackService {
         questionItem.setContent(addQuestionItemForm.getContent());
         return questionDao.addItem(questionItem);
     }
+
+    @Override
+    public boolean modifyQuestion(Question question) {
+        return questionDao.modifyQuestion(question);
+    }
 }

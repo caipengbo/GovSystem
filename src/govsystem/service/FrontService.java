@@ -43,6 +43,7 @@ public interface FrontService {
      */
     User setting(SettingForm settingForm);
 
+
     /**
      *  列出所有新闻
      */
