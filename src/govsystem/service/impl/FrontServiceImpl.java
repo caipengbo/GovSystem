@@ -1,17 +1,19 @@
 package govsystem.service.impl;
 
 import govsystem.dao.AdminDao;
+import govsystem.dao.NewsDao;
 import govsystem.dao.UserDao;
 import govsystem.domain.Admin;
+import govsystem.domain.News;
 import govsystem.domain.User;
 import govsystem.formbean.frontform.LoginForm;
 import govsystem.formbean.frontform.RegistForm;
-import govsystem.formbean.frontform.SettingForm;
 import govsystem.service.FrontService;
 import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Description:
@@ -24,6 +26,9 @@ public class FrontServiceImpl implements FrontService {
     private UserDao userDao;
     @Resource
     private AdminDao adminDao;
+    @Resource
+    private NewsDao newsDao;
+
     @Override
     public User regist(RegistForm registForm) {
         User user = new User();
@@ -62,7 +67,16 @@ public class FrontServiceImpl implements FrontService {
     }
 
     @Override
-    public User setting(SettingForm settingForm) {
-        return null;
+    public boolean modifyUser(User user) {
+        return userDao.update(user);
     }
+
+    @Override
+    public List<News> listAllNews() {
+        News news = new News();
+        news.setNid(-1);
+        return newsDao.list(news);
+    }
+
+
 }

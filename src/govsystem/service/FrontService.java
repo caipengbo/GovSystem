@@ -1,10 +1,12 @@
 package govsystem.service;
 
 import govsystem.domain.Admin;
+import govsystem.domain.News;
 import govsystem.domain.User;
 import govsystem.formbean.frontform.LoginForm;
 import govsystem.formbean.frontform.RegistForm;
-import govsystem.formbean.frontform.SettingForm;
+
+import java.util.List;
 
 /**
  * 前台业务接口
@@ -36,18 +38,17 @@ public interface FrontService {
      */
     Admin loginAdmin(LoginForm loginForm);
 
+
     /**
-     * 用户设置个人信息
-     * @param settingForm
-     * @return 设置成功返回该对象，否则返回null
+     * 个人设置，修改用户
+     * @param user
+     * @return
      */
-    User setting(SettingForm settingForm);
-
-
+    boolean modifyUser(User user);
     /**
      *  列出所有新闻
      */
-//    void listAllNews();
+    List<News> listAllNews();
 //
 //    void listPublicNews();
 //    void listPrivateNews();

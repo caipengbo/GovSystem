@@ -5,4 +5,5 @@ package govsystem.formbean.frontform;
  * Created by Myth on 3/12/2017.
  */
 public class SettingForm {
+
 }

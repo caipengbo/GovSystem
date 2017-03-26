@@ -1,4 +1,4 @@
-<%--
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: Myth
   Date: 3/1/2017
@@ -11,7 +11,14 @@
     <title>View</title>
 </head>
 <body>
-${message}
-已经执行成功啦！！
+<%
+    List<String> stringList = (List<String>)request.getAttribute("list");
+    for(int i=0; i<stringList.size(); i++){
+        out.println(i + "->" + stringList.get(i)+"");
+    }
+
+%>
+
+
 </body>
 </html>

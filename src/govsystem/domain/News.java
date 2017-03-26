@@ -11,7 +11,8 @@ public class News {
     private String digest;  //摘要
     private String content; // 内容
     private String postTime;    //发表时间
-    private int aid;  //外键，发表人
+    private String name;  //外键，发表人
+    private int aid;
 
     public int getAid() {
         return aid;
@@ -19,6 +20,14 @@ public class News {
 
     public void setAid(int aid) {
         this.aid = aid;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     private int applyNum;   //申请查看的用户数目

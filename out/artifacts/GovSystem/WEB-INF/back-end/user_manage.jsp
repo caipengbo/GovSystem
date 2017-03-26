@@ -96,10 +96,13 @@
     });
     //格式化表格显示
     function format(val,row,index){
-        if (row.identityFlag == 0)
+        if (row.identityFlag == 0) {
             return "<span style='color:red'>未认证×</span>";
-        else
+        } else if (row.identityFlag == 1) {
             return "<span style='color:green'>已认证√</span>";
+        } else if (row.identityFlag == 2) {
+            return "<span style='color:#ffe957'>请求认证···</span>";
+        }
     }
     function doSearch(value){
         $('#data_grid').datagrid('load',{
