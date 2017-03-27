@@ -32,7 +32,7 @@ public class LoginController {
         Map<String,String > map = new HashMap<String,String >();
         User user = frontService.regist(registForm);
         if (user != null) {
-            httpSession.setAttribute("role",user);
+            httpSession.setAttribute("user",user);
             map.put("msg","success");
         } else {
             map.put("msg","error");
@@ -48,7 +48,7 @@ public class LoginController {
         if (loginForm.getIsAdm() == 0) {
             User user = frontService.loginUser(loginForm);
             if (user != null) {
-                httpSession.setAttribute("role",user);
+                httpSession.setAttribute("user",user);
                 map.put("msg","success");
                 map.put("roleName","user");
             } else {
@@ -57,7 +57,7 @@ public class LoginController {
         } else {
             Admin admin = frontService.loginAdmin(loginForm);
             if (admin != null) {
-                httpSession.setAttribute("role",admin);
+                httpSession.setAttribute("admin",admin);
                 map.put("msg","success");
                 map.put("roleName","admin");
             } else {
@@ -70,7 +70,6 @@ public class LoginController {
 
     @RequestMapping("/logout")
     public String logout(HttpSession httpSession)  {
-        httpSession.removeAttribute("role");
         httpSession.invalidate();
         return "/front-end/index";
     }
