@@ -21,12 +21,12 @@
             <form role="form" id="myform">
                 <div class="form-group">
                     <br><br>
-                    <label for="username">用户名</label><input type="text" class="form-control" id="username" name="username" readonly value="${sessionScope.role.username}" />
+                    <label for="username">用户名</label><input type="text" class="form-control" id="username" name="username" readonly value="${sessionScope.user.username}" />
                     <br><br>
-                    <label for="username">姓名</label><input type="text" class="form-control" id="name" name="name"  value="${sessionScope.role.name}" />
+                    <label for="username">姓名</label><input type="text" class="form-control" id="name" name="name"  value="${sessionScope.user.name}" />
                 </div>
                 出生日期
-                <input class="datainp form-control" name="birthday" id="datebut" type="text" placeholder="未选择" value="${sessionScope.role.birthday}" readonly onClick="jeDate({dateCell:'#datebut',isTime:true,format:'YYYY-MM-DD'})" />
+                <input class="datainp form-control" name="birthday" id="datebut" type="text" placeholder="未选择" value="${sessionScope.user.birthday}" readonly onClick="jeDate({dateCell:'#datebut',isTime:true,format:'YYYY-MM-DD'})" />
                 </br>
                 <%--<button type="button" class="btn btn-default btn-block btn-success " class="w-control" onClick="jeDate({dateCell:'#datebut',isTime:true,format:'YYYY-MM-DD'})">选择日期</button>--%>
                 <br>
@@ -35,7 +35,7 @@
                 </a>
                 <br><br>
                 <%
-                    int identityflag = ((User)session.getAttribute("role")).getIdentityFlag();
+                    int identityflag = ((User)session.getAttribute("user")).getIdentityFlag();
                     if( identityflag == 0 ) {  //经过判断没有实名认证
                         out.print("<a href='#authentication' data-toggle='modal' id='nameConfirm'><button type='button' class='btn btn-default btn-block  btn-danger' id='authenticationBtn' readonly='readonly'>实名认证</button></a><span id='control'></span>");
                     } else if (identityflag == 1) {
