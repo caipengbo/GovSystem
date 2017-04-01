@@ -22,8 +22,6 @@ public interface FrontService {
      */
     User regist(RegistForm registForm);
 
-    //TODO: 验证码
-
     /**
      * 用户登录
      * @param loginForm

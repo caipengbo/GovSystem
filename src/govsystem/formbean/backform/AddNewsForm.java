@@ -7,7 +7,7 @@ package govsystem.formbean.backform;
 public class AddNewsForm {
     private String title;
     private String digest;
-    private String context;
+    private String content;
     private int isPublic;
 
     public String getTitle() {
@@ -27,11 +27,11 @@ public class AddNewsForm {
     }
 
     public String getContext() {
-        return context;
+        return content;
     }
 
     public void setContext(String context) {
-        this.context = context;
+        this.content = context;
     }
 
     public int getIsPublic() {

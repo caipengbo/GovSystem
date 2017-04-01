@@ -4,13 +4,22 @@ import govsystem.domain.*;
 import govsystem.formbean.backform.*;
 import govsystem.service.BackService;
 import net.sf.json.JSONObject;
+import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -74,9 +83,22 @@ public class BackEndJsonController {
     }
     @RequestMapping("/addNews")
     @ResponseBody
-    public Map<String,String> addNews(AddNewsForm addNewsForm) {
+    public Map<String,String> addNews(AddNewsForm addNewsForm, HttpSession httpSession) {
         Map<String,String > map = new HashMap<String,String >();
-        if (backService.addNews(addNewsForm)) {
+        News news = new News();
+        int aid;
+        try {
+            BeanUtils.copyProperties(news,addNewsForm);
+        } catch (Exception e) {
+            e.printStackTrace();
+            map.put("msg","error");
+            return map;
+        }
+        news.setApplyNum(0);
+        news.setLookedNum(0);
+        news.setMessageNum(0);
+        news.setAid(((Admin)httpSession.getAttribute("admin")).getAid());
+        if (backService.addNews(news)) {
             map.put("msg","success");
         } else {
             map.put("msg","error");
@@ -100,9 +122,18 @@ public class BackEndJsonController {
     }
     @RequestMapping("/modifyNews")
     @ResponseBody
-    public Map<String,String> modifyNews(ModifyNewsForm modifyNewsForm) {
+    public Map<String,String> modifyNews(ModifyNewsForm modifyNewsForm,HttpSession httpSession) {
         Map<String,String > map = new HashMap<String,String >();
-        if (backService.modifyNews(modifyNewsForm)) {
+        News news = new News();
+        try {
+            BeanUtils.copyProperties(news,modifyNewsForm);
+        } catch (Exception e) {
+            e.printStackTrace();
+            map.put("msg","error");
+            return map;
+        }
+        news.setAid(((Admin)httpSession.getAttribute("admin")).getAid());
+        if (backService.modifyNews(news)) {
             map.put("msg","success");
         } else {
             map.put("msg","error");
@@ -231,9 +262,9 @@ public class BackEndJsonController {
         return map;
     }
 
-    @RequestMapping("/getQuetionToJson")
+    @RequestMapping("/getQuestionToJson")
     @ResponseBody
-    public Object getQuetionToJson () {
+    public Object getQuestionToJson () {
         List<Question> userList = backService.listQuestion();
         Map<String, Object> jsonMap = new HashMap<String, Object>();
         jsonMap.put("rows", userList);
@@ -284,9 +315,13 @@ public class BackEndJsonController {
     }
     @RequestMapping("/addQuestion")
     @ResponseBody
-    public Map<String,String> addQuestion(AddQuestionForm addQuestionForm) {
+    public Map<String,String> addQuestion(AddQuestionForm addQuestionForm,HttpSession httpSession) {
         Map<String,String > map = new HashMap<String,String >();
-        if (backService.addQuestion(addQuestionForm)) {
+        Question question = new Question();
+        question.setAvailable(addQuestionForm.getAvailable());
+        question.setTitle(addQuestionForm.getTitle());
+        question.setAid(((Admin)httpSession.getAttribute("admin")).getAid());
+        if (backService.addQuestion(question)) {
             map.put("msg","success");
         } else {
             map.put("msg","error");
@@ -316,5 +351,46 @@ public class BackEndJsonController {
         }
         return map;
     }
+    @RequestMapping("/addVideo")
+    @ResponseBody
+    public Map<String,String> addVideo(AddVideoForm addVideoForm,HttpServletRequest request) throws IllegalStateException, IOException
+    {
+        Map<String,String > map = new HashMap<String,String >();
+        Video video = new Video();
+        video.setTitle(addVideoForm.getTitle());
+        video.setDescription(addVideoForm.getDescription());
+        video.setAid(((Admin)request.getSession().getAttribute("admin")).getAid());
+        //将当前上下文初始化给  CommonsMutipartResolver （多部分解析器）
+        CommonsMultipartResolver multipartResolver=new CommonsMultipartResolver(
+                request.getSession().getServletContext());
+        //检查form中是否有enctype="multipart/form-data"
+        if(multipartResolver.isMultipart(request))
+        {
+            //将request变成多部分request
+            MultipartHttpServletRequest multiRequest=(MultipartHttpServletRequest)request;
+            //获取multiRequest 中所有的文件名
+            Iterator iter=multiRequest.getFileNames();
 
+            if(iter.hasNext())
+            {
+                //一次遍历所有文件
+                MultipartFile file=multiRequest.getFile(iter.next().toString());
+                if(file!=null)
+                {
+                    // 文件保存路径
+                    String filePath = request.getSession().getServletContext().getRealPath("/") + "mp4/"
+                            + file.getOriginalFilename();
+                    // 转存文件
+                    file.transferTo(new File(filePath));
+                    video.setFileName(file.getOriginalFilename());
+                }
+            }
+        }
+        if (backService.addVideo(video)) {
+            map.put("msg","success");
+        } else {
+            map.put("msg","error");
+        }
+        return map;
+    }
 }

@@ -197,7 +197,7 @@
     function dgReload(){
         $('#data_grid').datagrid('reload');
     }
-    <%--对话框关闭时候，自动刷新新闻数据--%>
+    <%--对话框关闭时候，自动刷新信息数据--%>
     $("#applydlg").dialog({
         onClose: function() {
             dgReload();

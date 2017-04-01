@@ -34,6 +34,7 @@ public class QuestionDaoImpl implements QuestionDao {
             question.setcNum(rs.getInt("c_num"));
             question.setdNum(rs.getInt("d_num"));
             question.setAvailable(rs.getInt("available"));
+            question.setName(rs.getString("name"));
             return question;
         }
     }
@@ -50,7 +51,7 @@ public class QuestionDaoImpl implements QuestionDao {
     @Override
     public List<Question> list() {
         List<Question> questionList;
-        String sql = "select * from tb_question";
+        String sql = "select * from tb_question,tb_admin where tb_question.aid=tb_admin.aid";
         try {
             questionList = jdbcTemplate.query(sql, new QuestionRowMapper());
         } catch (Exception e) {
@@ -77,11 +78,10 @@ public class QuestionDaoImpl implements QuestionDao {
 
     @Override
     public boolean add(Question question) {
-        //TODO aid
-        String sql = "insert into tb_question(title,aid,posttime,available) values(?,1,now(),?)";
+        String sql = "insert into tb_question(title,aid,posttime,available) values(?,?,now(),?)";
         int affectedNum = 0;
         try {
-            affectedNum = jdbcTemplate.update(sql,question.getTitle(),question.getAvailable());
+            affectedNum = jdbcTemplate.update(sql,question.getTitle(),question.getAid(),question.getAvailable());
         } catch (Exception e) {
             e.printStackTrace();
         }

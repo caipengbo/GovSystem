@@ -2,7 +2,8 @@ package govsystem.service.impl;
 
 import govsystem.dao.*;
 import govsystem.domain.*;
-import govsystem.formbean.backform.*;
+import govsystem.formbean.backform.AddQuestionItemForm;
+import govsystem.formbean.backform.ModifyUserForm;
 import govsystem.service.BackService;
 import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.stereotype.Service;
@@ -67,19 +68,7 @@ public class BackServiceImpl implements BackService {
     }
 
     @Override
-    public boolean addNews(AddNewsForm addNewsForm) {
-        News news = new News();
-        try {
-            BeanUtils.copyProperties(news,addNewsForm);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
-        news.setApplyNum(0);
-        news.setLookedNum(0);
-        news.setMessageNum(0);
-        //TODO 发布人外键
-        news.setAid(1);
+    public boolean addNews(News news) {
         return newsDao.add(news);
     }
 
@@ -91,14 +80,7 @@ public class BackServiceImpl implements BackService {
     }
 
     @Override
-    public boolean modifyNews(ModifyNewsForm modifyNewsForm) {
-        News news = new News();
-        try {
-            BeanUtils.copyProperties(news,modifyNewsForm);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
+    public boolean modifyNews(News news) {
         return newsDao.update(news);
     }
 
@@ -216,10 +198,7 @@ public class BackServiceImpl implements BackService {
     }
 
     @Override
-    public boolean addQuestion(AddQuestionForm addQuestionForm) {
-        Question question = new Question();
-        question.setAvailable(addQuestionForm.getAvailable());
-        question.setTitle(addQuestionForm.getTitle());
+    public boolean addQuestion(Question question) {
         return questionDao.add(question);
     }
 
@@ -234,5 +213,10 @@ public class BackServiceImpl implements BackService {
     @Override
     public boolean modifyQuestion(Question question) {
         return questionDao.modifyQuestion(question);
+    }
+
+    @Override
+    public boolean addVideo(Video video) {
+        return false;
     }
 }

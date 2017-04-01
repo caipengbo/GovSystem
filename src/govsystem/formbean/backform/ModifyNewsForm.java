@@ -8,10 +8,8 @@ public class ModifyNewsForm {
     private int nid;
     private String title;
     private String digest;
-    private String context;
+    private String content;
     private String postTime;
-    //TODO 添加发表人(管理员)外键，每次修改时候都要改变aid,与时间
-    //private int aid;
     private int isPublic; //1公开  0非公开
 
     public int getNid() {
@@ -38,12 +36,12 @@ public class ModifyNewsForm {
         this.digest = digest;
     }
 
-    public String getContext() {
-        return context;
+    public String getContent() {
+        return content;
     }
 
-    public void setContext(String context) {
-        this.context = context;
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public String getPostTime() {

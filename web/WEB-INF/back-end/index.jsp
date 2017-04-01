@@ -53,8 +53,8 @@
         <div title="用户管理" data-options="iconCls:'icon-production'" style="padding:0px;">
             <li><a href="javascript:addTab('用户管理','${pageContext.request.contextPath }/toUser.action')">用户管理</a></li>
         </div>
-        <div title="新闻信息管理" data-options="iconCls:'icon-sale'" style="padding:0px;">
-            <li><a href="javascript:addTab('新闻管理','${pageContext.request.contextPath }/toNews.action')">新闻管理</a></li>
+        <div title="信息管理" data-options="iconCls:'icon-sale'" style="padding:0px;">
+            <li><a href="javascript:addTab('信息管理','${pageContext.request.contextPath }/toNews.action')">信息管理</a></li>
         </div>
         <div title="政民互动管理" data-options="iconCls:'icon-search'" style="padding:0px;">
             <li><a href="javascript:addTab('问卷调查','${pageContext.request.contextPath }/toQuestion.action')">问卷调查</a></li>

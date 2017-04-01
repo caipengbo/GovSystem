@@ -103,9 +103,9 @@ public class NewsDaoImpl implements NewsDao {
     public boolean update(News news) {
         String sql = "";
         int effectedNum = 0;
-        sql = "update tb_news set title=?,digest=?,content=?,postTime=now(),isPublic=? where nid=?";
+        sql = "update tb_news set title=?,digest=?,content=?,postTime=now(),isPublic=?,aid=? where nid=?";
         try {
-            effectedNum = jdbcTemplate.update(sql,news.getTitle(),news.getDigest(),news.getContent(),news.getIsPublic(),news.getNid());
+            effectedNum = jdbcTemplate.update(sql,news.getTitle(),news.getDigest(),news.getContent(),news.getIsPublic(),news.getAid(),news.getNid());
         } catch (Exception e) {
             e.printStackTrace();
         }

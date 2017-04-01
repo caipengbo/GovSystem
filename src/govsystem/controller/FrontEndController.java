@@ -82,7 +82,6 @@ public class FrontEndController {
     public ModelAndView toNewsView(){
         ModelAndView mav = new ModelAndView();
         List<News> newsList = frontService.listAllNews();
-
         mav.addObject("newsList",newsList);
         mav.setViewName("/front-end/news_view");
         return mav;

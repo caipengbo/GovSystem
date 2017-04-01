@@ -17,14 +17,14 @@ import java.util.List;
 public class BackEndController {
     @Resource
     private BackService backService;
-    @RequestMapping("/getNewsContext")
-    public ModelAndView getNewsContext(int nid) {
+    @RequestMapping("/getNewsContent")
+    public ModelAndView getNewsContent(int nid) {
         ModelAndView mav = new ModelAndView();
         News news = new News();
         List<News> newsList = backService.listNews(nid);
         if (newsList.size() > 0) {
             mav.addObject("news", newsList.get(0));
-            mav.setViewName("back-end/news_context");
+            mav.setViewName("back-end/news_content");
         } else {
             mav.setViewName("back-end/error");
         }

@@ -42,10 +42,10 @@ public interface BackService {
 
     /**
      * 添加新闻
-     * @param addNewsForm
+     * @param news
      * @return
      */
-    boolean addNews(AddNewsForm addNewsForm);
+    boolean addNews(News news);
 
     /**
      * 根据id删除新闻
@@ -56,10 +56,10 @@ public interface BackService {
 
     /**
      * 根据提交的表单内容修改新闻信息
-     * @param modifyNewsForm
+     * @param news
      * @return
      */
-    boolean modifyNews(ModifyNewsForm modifyNewsForm);
+    boolean modifyNews(News news);
 
     /**
      * 列出新闻对应的留言
@@ -167,10 +167,10 @@ public interface BackService {
 
     /**
      * 添加问卷
-     * @param addQuestionForm
+     * @param question
      * @return
      */
-    boolean addQuestion(AddQuestionForm addQuestionForm);
+    boolean addQuestion(Question question);
 
     /**
      * 添加问卷 的问题
@@ -186,4 +186,10 @@ public interface BackService {
      */
     boolean modifyQuestion(Question question);
 
+    /**
+     * 添加 听证视频
+     * @param video
+     * @return
+     */
+    boolean addVideo(Video video);
 }

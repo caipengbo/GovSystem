@@ -14,7 +14,7 @@
                 <th field="qid" width="20" hidden="true">问卷编号</th>
                 <th field="title" width="90">标题</th>
                 <th data-options="field:'available',width:'15', formatter:showAvailable">是否公开</th>
-                <th field="aid"  width="15">发布人</th>
+                <th field="name"  width="15">发布人</th>
                 <th field="postTime"  width="30">发布时间</th>
                 <th field="allNum" width="15">参与人数</th>
                 <th data-options="field:'aNum',width:'20', formatter:statisticA">选A次数</th>
@@ -105,7 +105,7 @@
     $(function(){
         $('#data_grid').datagrid({
             view: detailview,
-            url:"getQuetionToJson.action",
+            url:"getQuestionToJson.action",
             toolbar:'#toolbar',
             method:'post',
             title:"具体问题",

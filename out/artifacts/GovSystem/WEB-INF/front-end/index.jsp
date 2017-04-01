@@ -101,7 +101,7 @@
     <div class="col-md-12 column">
       <nav class="navbar navbar-fixed-top   navbar-default" role="navigation" id="nav1">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">here</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="toNewsView.action" target="mainIframe">主页</a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">here</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="${pageContext.request.contextPath }/toNewsView.action" target="mainIframe">主页</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav" id="nav">
@@ -157,7 +157,7 @@
       <!--上面是导航栏---->
 
       <!-----下面是内联框架------->
-      <iframe id="Iframe1" src="/GovSystem/toNewsView.action" name="mainIframe">
+      <iframe id="Iframe1" src="${pageContext.request.contextPath }/toNewsView.action" name="mainIframe">
 
       </iframe>
       <!--------上面是内联框架-------->
