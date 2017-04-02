@@ -86,7 +86,7 @@
                         location.href = "toBackEndIndex.action";
                       }
                   } else {
-                    alert("登录失败");
+                    alert("登录失败,用户名或密码错误！");
                   }
               }
           })

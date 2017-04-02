@@ -59,7 +59,6 @@ public class TestController {
                 if(file!=null)
                 {
                     //" ‘/’相对于项目GovSystem"
-
                     // 文件保存路径
                     String filePath = request.getSession().getServletContext().getRealPath("/") + "mp4/"
                             + file.getOriginalFilename();

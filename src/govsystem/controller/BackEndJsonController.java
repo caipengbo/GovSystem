@@ -370,7 +370,6 @@ public class BackEndJsonController {
             MultipartHttpServletRequest multiRequest=(MultipartHttpServletRequest)request;
             //获取multiRequest 中所有的文件名
             Iterator iter=multiRequest.getFileNames();
-
             if(iter.hasNext())
             {
                 //一次遍历所有文件
@@ -387,6 +386,39 @@ public class BackEndJsonController {
             }
         }
         if (backService.addVideo(video)) {
+            map.put("msg","success");
+        } else {
+            map.put("msg","error");
+        }
+        return map;
+    }
+
+    @RequestMapping("/getVideoToJson")
+    @ResponseBody
+    public Object getVideoToJson () {
+        List<Video> videos = backService.listVideo();
+        Map<String, Object> jsonMap = new HashMap<String, Object>();
+        jsonMap.put("rows", videos);
+        jsonMap.put("total", videos.size());
+        JSONObject jsonObject = JSONObject.fromObject(jsonMap);
+        return jsonObject;
+    }
+    @RequestMapping("/modifyVideo")
+    @ResponseBody
+    public Map<String,String> modifyVideo(Video video) {
+        Map<String,String > map = new HashMap<String,String >();
+        if (backService.updateVideo(video)) {
+            map.put("msg","success");
+        } else {
+            map.put("msg","error");
+        }
+        return map;
+    }
+    @RequestMapping("/deleteVideo")
+    @ResponseBody
+    public Map<String,String> deleteVideo(Video video) {
+        Map<String,String > map = new HashMap<String,String >();
+        if (backService.deleteVideo(video.getVid())) {
             map.put("msg","success");
         } else {
             map.put("msg","error");

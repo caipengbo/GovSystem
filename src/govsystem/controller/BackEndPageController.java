@@ -29,4 +29,12 @@ public class BackEndPageController {
     public String toQuestion(){
         return "/back-end/question";
     }
+    @RequestMapping("/toAdmin")
+    public String toAdmin() {
+        return "/back-end/admin_manage";
+    }
+    @RequestMapping("/toVideoManage")
+    public String toVideoManage() {
+        return "/back-end/video";
+    }
 }

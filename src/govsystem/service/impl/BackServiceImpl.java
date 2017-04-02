@@ -28,6 +28,8 @@ public class BackServiceImpl implements BackService {
     private AdminDao adminDao;
     @Resource
     private QuestionDao questionDao;
+    @Resource
+    private VideoDao videoDao;
 
 
     @Override
@@ -217,6 +219,23 @@ public class BackServiceImpl implements BackService {
 
     @Override
     public boolean addVideo(Video video) {
-        return false;
+        return videoDao.add(video);
+    }
+
+    @Override
+    public boolean deleteVideo(int vid) {
+        Video video = new Video();
+        video.setVid(vid);
+        return videoDao.delete(video);
+    }
+
+    @Override
+    public boolean updateVideo(Video video) {
+        return videoDao.update(video);
+    }
+
+    @Override
+    public List<Video> listVideo() {
+        return videoDao.list();
     }
 }

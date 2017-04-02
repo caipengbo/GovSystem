@@ -192,4 +192,25 @@ public interface BackService {
      * @return
      */
     boolean addVideo(Video video);
+
+    /**
+     * 根据vid删除Video
+     * @param vid
+     * @return
+     */
+    boolean deleteVideo(int vid);
+
+    /**
+     * 更新Video内容（但是不可更改商品内容）
+     * @param video
+     * @return
+     */
+    boolean updateVideo(Video video);
+
+    /**
+     * 列出所有Video
+     * @return
+     */
+    List<Video> listVideo();
+
 }
