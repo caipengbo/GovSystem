@@ -40,13 +40,12 @@
             <div class="list-group">
                 <a href="#" class="list-group-item active">信息</a>
                 <%
-                    String href="news.jsp";
+                    String href="";
                     String imgSrc="img/myface.jpg";
                     List<News> newsList = (List<News>)request.getAttribute("newsList");
-                    News news;
-                    for(int i=0; i<newsList.size(); i++) {
-                        news = newsList.get(i);
-                        out.print("<a href=\""+href+"\">");
+                    for(News news:newsList) {
+                        href="toNewsDetail.action?nid=" + news.getNid();
+                        out.print("<a href=\"" + href + "\" target=\"_blank\">");
                         out.print("<div class=\"list-group-item\">");
                         out.print("<div class='row clearfix h_contral' >");
                         out.print("<div class='col-md-2 column'>");

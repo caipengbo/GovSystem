@@ -416,9 +416,9 @@ public class BackEndJsonController {
     }
     @RequestMapping("/deleteVideo")
     @ResponseBody
-    public Map<String,String> deleteVideo(Video video) {
+    public Map<String,String> deleteVideo(int vid) {
         Map<String,String > map = new HashMap<String,String >();
-        if (backService.deleteVideo(video.getVid())) {
+        if (backService.deleteVideo(vid)) {
             map.put("msg","success");
         } else {
             map.put("msg","error");

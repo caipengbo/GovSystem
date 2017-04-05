@@ -140,6 +140,23 @@ public class NewsDaoImpl implements NewsDao {
     }
 
     @Override
+    public List<News> list(int publicChoice) {
+        if (publicChoice!=0 && publicChoice!=1) {
+            return null;
+        }
+        List<News> newsList;
+        String sql = null;
+        sql = "select * from tb_news,tb_admin where tb_news.aid=tb_admin.aid and ispublic=" + publicChoice;
+        try {
+            newsList = jdbcTemplate.query(sql, new NewsRowMapper());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+        return  newsList;
+    }
+
+    @Override
     public List<User> listLookedUsers(News news) {
         if (news == null) {
             return null;

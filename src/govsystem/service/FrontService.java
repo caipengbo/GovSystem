@@ -3,6 +3,7 @@ package govsystem.service;
 import govsystem.domain.Admin;
 import govsystem.domain.News;
 import govsystem.domain.User;
+import govsystem.domain.Video;
 import govsystem.formbean.frontform.LoginForm;
 import govsystem.formbean.frontform.RegistForm;
 
@@ -47,7 +48,23 @@ public interface FrontService {
      *  列出所有新闻
      */
     List<News> listAllNews();
-//
-//    void listPublicNews();
-//    void listPrivateNews();
+
+    /**
+     * 根据条件列出新闻
+     * @param publicChoice 0列出非公开News，1列出公开News
+     */
+    List<News> listNews(int publicChoice);
+
+
+    /**
+     * 列出所有听证视频
+     * @return
+     */
+    List<Video> listAllVideo();
+
+    /**
+     * 根据Nid获得News
+     * @return
+     */
+    News getNews(int nid);
 }

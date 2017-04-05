@@ -3,9 +3,11 @@ package govsystem.service.impl;
 import govsystem.dao.AdminDao;
 import govsystem.dao.NewsDao;
 import govsystem.dao.UserDao;
+import govsystem.dao.VideoDao;
 import govsystem.domain.Admin;
 import govsystem.domain.News;
 import govsystem.domain.User;
+import govsystem.domain.Video;
 import govsystem.formbean.frontform.LoginForm;
 import govsystem.formbean.frontform.RegistForm;
 import govsystem.service.FrontService;
@@ -28,6 +30,8 @@ public class FrontServiceImpl implements FrontService {
     private AdminDao adminDao;
     @Resource
     private NewsDao newsDao;
+    @Resource
+    private VideoDao videoDao;
 
     @Override
     public User regist(RegistForm registForm) {
@@ -76,6 +80,29 @@ public class FrontServiceImpl implements FrontService {
         News news = new News();
         news.setNid(-1);
         return newsDao.list(news);
+    }
+
+    @Override
+    public List<News> listNews(int publicChoice) {
+        return newsDao.list(publicChoice);
+    }
+
+    @Override
+    public List<Video> listAllVideo() {
+        return videoDao.list();
+    }
+
+    @Override
+    public News getNews(int nid) {
+        News news = new News();
+        news.setNid(nid);
+        List<News> newsList = newsDao.list(news); //根据nid获得news list
+        if (newsList.isEmpty()) {
+            news = null;
+        } else {
+            news = newsList.get(0); //获取第一个news
+        }
+        return news;
     }
 
 

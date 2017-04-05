@@ -86,7 +86,7 @@
                         location.href = "toBackEndIndex.action";
                       }
                   } else {
-                    alert("登录失败");
+                    alert("登录失败,用户名或密码错误！");
                   }
               }
           })
@@ -109,8 +109,8 @@
               <strong class='caret'>
               </strong></a>
               <ul class='dropdown-menu'>
-                <li> <a href="setting.jsp" target="mainIframe" id='myDiy'>公开</a> </li>
-                <li> <a href="addWarm.jsp"  target="mainIframe">未公开</a> </li>
+                <li> <a href="toPublicNews.action?ispublic=1" target="mainIframe" id='myDiy'>公开</a> </li>
+                <li> <a href="toPublicNews.action?ispublic=0"  target="mainIframe">未公开</a> </li>
                 <li class='divider'>
                 </li>
               </ul>
@@ -129,7 +129,7 @@
               <strong class='caret'>
               </strong></a>
               <ul class='dropdown-menu'>
-                <li> <a href="toVideo.action" target="mainIframe" id='myDiy'>所有视频</a> </li>
+                <li> <a href="toVideoView.action" target="mainIframe" id='myDiy'>听证视频</a> </li>
                 <li class='divider'>
                 </li>
               </ul>

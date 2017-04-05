@@ -2,6 +2,7 @@ package govsystem.controller;
 
 import govsystem.domain.News;
 import govsystem.domain.User;
+import govsystem.domain.Video;
 import govsystem.service.FrontService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -86,4 +87,34 @@ public class FrontEndController {
         mav.setViewName("/front-end/news_view");
         return mav;
     }
+    @RequestMapping("/toVideoView")
+    public ModelAndView toVideoView(){
+        ModelAndView mav = new ModelAndView();
+        List<Video> videoList  = frontService.listAllVideo();
+        mav.addObject("videoList",videoList);
+        mav.setViewName("/front-end/video_view");
+        return mav;
+    }
+
+    @RequestMapping("/toNewsDetail")
+    public ModelAndView toNewsDetail(int nid){
+        ModelAndView mav = new ModelAndView();
+        News news = frontService.getNews(nid);
+        mav.addObject("news",news);
+        mav.setViewName("/front-end/news_detail");
+        return mav;
+    }
+    @RequestMapping("/toPublicNews")
+    public ModelAndView toPublicNews(int ispublic){
+        ModelAndView mav = new ModelAndView();
+        if (ispublic != 0 && ispublic!= 1) {
+            mav.setViewName("/front-end/error");
+            return mav;
+        }
+        List<News> newsList = frontService.listNews(ispublic);
+        mav.addObject("newsList",newsList);
+        mav.setViewName("/front-end/news_view");
+        return mav;
+    }
+
 }

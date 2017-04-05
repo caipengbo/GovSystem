@@ -39,6 +39,13 @@ public interface NewsDao {
     List<News> list(News news);
 
     /**
+     * 根据 ispublic 0,1列出 News
+     * @param publicChoice 0列出非公开News，1列出公开News
+     * @return
+     */
+    List<News> list(int publicChoice);
+
+    /**
      * 根据新闻，列出可以查看该新闻的用户
      * @param news
      * @return

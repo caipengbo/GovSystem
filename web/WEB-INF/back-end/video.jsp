@@ -149,19 +149,17 @@
     function deleteVideo(){
         var row = $('#data_grid').datagrid('getSelected');
         if (row){
-            $.messager.confirm('删除', '确定删除该管理员吗?', function(r){
+            $.messager.confirm('删除', '确定删除该听证视频吗?', function(r){
                 if (r){
                     $.ajax({
                         type:'POST',
-                        url:'deleteVideo.action',
-                        data:JSON.stringify(row),
-                        dataType:'json',
+                        url:'deleteVideo.action?vid='+row.vid,
                         contentType:'application/json',
                         success:function(result){
                             //  接收的是json对象
                             if (result.msg == 'success'){
                                 $('#data_grid').datagrid('reload');
-                                $.messager.alert('成功','该管理员已经成功删除！','info');
+                                $.messager.alert('成功','该听证视频已经成功删除！','info');
                             } else {
                                 $.messager.alert('失败','删除失败！','error');
                             }
