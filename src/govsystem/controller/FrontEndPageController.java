@@ -17,9 +17,6 @@ public class FrontEndPageController {
     public String toSetting(){
         return "/front-end/setting";
     }
-    @RequestMapping("/toVote")
-    public String toVote(){
-        return "/front-end/vote";
-    }
+
 
 }

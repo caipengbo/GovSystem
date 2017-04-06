@@ -7,7 +7,7 @@ package govsystem.domain;
 public class QuestionItem {
     private int qid;
     private int no;
-    private String  content; //具体的问题内容 ，选项默认是四个：非常满意、比较满意、一般、不满意
+    private String  content; //具体的问题内容，选项默认是四个：非常满意、比较满意、一般、不满意
 
     public int getQid() {
         return qid;

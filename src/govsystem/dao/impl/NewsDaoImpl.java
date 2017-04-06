@@ -190,7 +190,6 @@ public class NewsDaoImpl implements NewsDao {
 
     @Override
     public boolean allowApply(News news,User user) {
-        String sql = "";
         int effectedNum1 = 0;
         int effectedNum2 = 0;
         String sql1 = "update tb_user_news set look=look+1,apply=apply-1 where nid=? and uid=?";

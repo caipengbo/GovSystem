@@ -116,5 +116,17 @@ public class FrontEndController {
         mav.setViewName("/front-end/news_view");
         return mav;
     }
+    //如果已经填写问卷，那么跳转到统计界面；如果没填写，跳到填写页面
+    @RequestMapping("/toVote")
+    public ModelAndView toVote(){
+        ModelAndView mav = new ModelAndView();
+        if (ispublic != 0 && ispublic!= 1) {
+            mav.setViewName("/front-end/error");
+            return mav;
+        }
+        List<News> newsList = frontService.listNews(ispublic);
+        mav.addObject("newsList",newsList);
+        mav.setViewName("/front-end/vote");
+    }
 
 }
