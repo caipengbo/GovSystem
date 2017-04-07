@@ -46,6 +46,13 @@ public interface NewsDao {
     List<News> list(int publicChoice);
 
     /**
+     * 筛选出非公开的、针对某用户的信息
+     * @param uid
+     * @return
+     */
+    List<News> listSelectedNews(int uid);
+
+    /**
      * 根据新闻，列出可以查看该新闻的用户
      * @param news
      * @return
@@ -58,6 +65,14 @@ public interface NewsDao {
      * @return
      */
     public List<User> listApplyUsers(News news);
+
+    /**
+     * 添加申请
+     * @param news
+     * @param user
+     * @return
+     */
+    public boolean addApply(News news,User user);
 
     /**
      * 允许用户的申请（需要修改tb_user_news和tb_news表中的）

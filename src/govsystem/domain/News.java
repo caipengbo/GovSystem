@@ -22,7 +22,9 @@ public class News {
         this.status = status;
     }
 
-
+    public News() {
+        this.status = 0; //默认是0
+    }
 
     public int getAid() {
         return aid;

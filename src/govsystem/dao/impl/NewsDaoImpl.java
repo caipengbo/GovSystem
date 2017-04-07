@@ -23,7 +23,23 @@ public class NewsDaoImpl implements NewsDao {
 
     //内部类，用于结果与News的映射
     class NewsRowMapper implements RowMapper<News> {
-        //rs为返回结果集，以每行为单位封装
+        public News mapRow(ResultSet rs, int rowNum) throws SQLException {
+            News news = new News();
+            news.setNid(rs.getInt("nid"));
+            news.setTitle(rs.getString("title"));
+            news.setDigest(rs.getString("digest"));
+            news.setContent(rs.getString("content"));
+            news.setPostTime(rs.getString("posttime"));
+            news.setApplyNum(rs.getInt("applynum"));
+            news.setLookedNum(rs.getInt("lookednum"));
+            news.setMessageNum(rs.getInt("messagenum"));
+            news.setIsPublic(rs.getInt("ispublic"));
+            news.setName(rs.getString("name"));
+            return news;
+        }
+    }
+    class NewsRowMapper2 implements RowMapper<News> {
+        //有status
         public News mapRow(ResultSet rs, int rowNum) throws SQLException {
             News news = new News();
             news.setNid(rs.getInt("nid"));
@@ -40,6 +56,7 @@ public class NewsDaoImpl implements NewsDao {
             return news;
         }
     }
+
 
     class UserRowMapper implements RowMapper<User> {
         //rs为返回结果集，以每行为单位封装着
@@ -127,9 +144,9 @@ public class NewsDaoImpl implements NewsDao {
         List<News> newsList;
         String sql = null;
         if (nid == -1) {
-            sql = "select * from tb_news,tb_admin,tb_user_news where tb_news.aid=tb_admin.aid ";
+            sql = "select * from tb_news,tb_admin where tb_news.aid=tb_admin.aid";
         } else {
-            sql = "select * from tb_news,tb_admin,tb_user_news where tb_news.aid=tb_admin.aid and nid="+ nid;
+            sql = "select * from tb_news,tb_admin where tb_news.aid=tb_admin.aid and nid="+ nid;
         }
         try {
             newsList = jdbcTemplate.query(sql, new NewsRowMapper());
@@ -147,13 +164,32 @@ public class NewsDaoImpl implements NewsDao {
         }
         List<News> newsList;
         String sql = null;
-        sql = "select * from tb_news,tb_admin,tb_user_news where tb_news.aid=tb_admin.aid and ispublic=" + publicChoice;
+        sql = "select * from tb_news,tb_admin where tb_news.aid=tb_admin.aid and ispublic=" + publicChoice;
         try {
             newsList = jdbcTemplate.query(sql, new NewsRowMapper());
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
+        return  newsList;
+    }
+
+    @Override
+    public List<News> listSelectedNews(int uid) {
+        List<News> newsList;
+        List<News> addList;
+        String sql1, sql2;
+        sql1 = "select * from tb_news,tb_admin where tb_news.aid=tb_admin.aid and ispublic=0 " +
+                "and nid not in (select nid from tb_user_news where uid=?)";
+        sql2 = "select * from tb_news,tb_user_news,tb_admin where tb_news.aid=tb_admin.aid and tb_news.nid=tb_user_news.nid and uid=?";
+        try {
+            newsList = jdbcTemplate.query(sql1, new NewsRowMapper(),uid);
+            addList = jdbcTemplate.query(sql2, new NewsRowMapper2(),uid);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+        newsList.addAll(addList);
         return  newsList;
     }
 
@@ -187,6 +223,26 @@ public class NewsDaoImpl implements NewsDao {
             return null;
         }
         return  userList;
+    }
+
+    @Override
+    public boolean addApply(News news, User user) {
+        String sql1 = "insert into tb_user_news(uid,nid,status) values(?,?,1)";
+        String sql2 = "update tb_news set applynum=applynum+1 where nid=?";
+        int affectedNum1 = 0;
+        int affectedNum2 = 0;
+        try {
+            affectedNum1 = jdbcTemplate.update(sql1,user.getUid(),news.getNid());
+            affectedNum2 = jdbcTemplate.update(sql2,news.getNid());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        if (affectedNum1 != 0 && affectedNum2!=0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override

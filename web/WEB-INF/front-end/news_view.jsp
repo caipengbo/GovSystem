@@ -38,7 +38,7 @@
 
         <div class="col-md-12 column">
             <div class="list-group">
-                <a href="#" class="list-group-item active">信息</a>
+                <a href="#" class="list-group-item active">所有公开信息</a>
                 <%
                     String href="";
                     String imgSrc="img/myface.jpg";

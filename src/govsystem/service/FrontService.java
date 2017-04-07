@@ -41,6 +41,7 @@ public interface FrontService {
      * @return
      */
     boolean modifyUser(User user);
+
     /**
      *  列出所有新闻
      */
@@ -52,6 +53,19 @@ public interface FrontService {
      */
     List<News> listNews(int publicChoice);
 
+    /**
+     * 列出符合特定用户的非公开信息
+     * @param uid
+     */
+    List<News> listUserNews(int uid);
+
+    /**
+     * 添加申请
+     * @param uid
+     * @param nid
+     * @return
+     */
+    boolean addApply(int uid,int nid);
     /**
      * 获得新闻对应的留言
      * @param nid 新闻编号

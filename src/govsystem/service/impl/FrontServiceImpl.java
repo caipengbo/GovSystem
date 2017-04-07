@@ -86,6 +86,20 @@ public class FrontServiceImpl implements FrontService {
     }
 
     @Override
+    public List<News> listUserNews(int uid) {
+        return newsDao.listSelectedNews(uid);
+    }
+
+    @Override
+    public boolean addApply(int uid, int nid) {
+        User user = new User();
+        News news = new News();
+        user.setUid(uid);
+        news.setNid(nid);
+        return newsDao.addApply(news,user);
+    }
+
+    @Override
     public List<Message> listMessage(int nid) {
         News news = new News();
         news.setNid(nid);

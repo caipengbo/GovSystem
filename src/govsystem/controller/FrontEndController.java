@@ -79,10 +79,11 @@ public class FrontEndController {
         }
         return map;
     }
+    //信息视图，默认是公开的信息
     @RequestMapping("/toNewsView")
     public ModelAndView toNewsView(){
         ModelAndView mav = new ModelAndView();
-        List<News> newsList = frontService.listAllNews();
+        List<News> newsList = frontService.listNews(1);
         mav.addObject("newsList",newsList);
         mav.setViewName("/front-end/news_view");
         return mav;
@@ -126,18 +127,31 @@ public class FrontEndController {
         return mav;
     }
 
-    @RequestMapping("/toPublicNews")
-    public ModelAndView toPublicNews(int ispublic){
+    @RequestMapping("/toPrivateNews")
+    public ModelAndView toPrivateNews(HttpSession httpSession){
         ModelAndView mav = new ModelAndView();
-        if (ispublic != 0 && ispublic!= 1) {
+        if (httpSession == null) {
             mav.setViewName("/front-end/error");
             return mav;
         }
-        List<News> newsList = frontService.listNews(ispublic);
+        int uid = ((User)httpSession.getAttribute("user")).getUid();
+        List<News> newsList = frontService.listUserNews(uid);
         mav.addObject("newsList",newsList);
-        mav.setViewName("/front-end/news_view");
+        mav.setViewName("/front-end/news_status");
         return mav;
     }
+    @RequestMapping("/applyViewNews")
+    public ModelAndView applyViewNews(int nid,HttpSession httpSession){
+        int uid = ((User)httpSession.getAttribute("user")).getUid();
+        ModelAndView mav = new ModelAndView();
+        if (frontService.addApply(uid,nid)) {
+            mav = toPrivateNews(httpSession);
+        } else {
+            mav.setViewName("/front-end/error");
+        }
+        return mav;
+    }
+
     @RequestMapping("/toQuestionView")
     public ModelAndView toQuestionView(){
         ModelAndView mav = new ModelAndView();

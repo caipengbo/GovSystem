@@ -101,7 +101,7 @@
     <div class="col-md-12 column">
       <nav class="navbar navbar-fixed-top   navbar-default" role="navigation" id="nav1">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">here</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="${pageContext.request.contextPath }/toNewsView.action" target="mainIframe">主页</a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">here</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="${pageContext.request.contextPath }/toPublicNews.action?ispublic=1" target="mainIframe">主页</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav" id="nav">
@@ -109,8 +109,8 @@
               <strong class='caret'>
               </strong></a>
               <ul class='dropdown-menu'>
-                <li> <a href="toPublicNews.action?ispublic=1" target="mainIframe" id='myDiy'>公开</a> </li>
-                <li> <a href="toPublicNews.action?ispublic=0"  target="mainIframe">未公开</a> </li>
+                <li> <a href="toNewsView.action" target="mainIframe" >公开</a> </li>
+                <li> <a href="toPrivateNews.action"  target="mainIframe">未公开</a> </li>
                 <li class='divider'>
                 </li>
               </ul>
@@ -119,7 +119,7 @@
               <strong class='caret'>
               </strong></a>
               <ul class='dropdown-menu'>
-                <li> <a href="toQuestionView.action" target="mainIframe" id='myDiy'>查看问卷</a> </li>
+                <li> <a href="toQuestionView.action" target="mainIframe" >查看问卷</a> </li>
                 <%--<li> <a href="uploadFile_dMyFile"  target="mainIframe">问卷</a> </li>--%>
                 <li class='divider'>
                 </li>

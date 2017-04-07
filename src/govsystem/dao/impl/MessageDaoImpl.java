@@ -38,15 +38,18 @@ public class MessageDaoImpl implements MessageDao {
 
     @Override
     public boolean add(Message message) {
-        String sql = "insert into tb_message(content,posttime,uid,nid)values(?,now(),?,?)";
-        int affectedNum = 0;
+        String sql1 = "insert into tb_message(content,posttime,uid,nid)values(?,now(),?,?)";
+        String sql2 = "update tb_news set messagenum=messagenum+1 where nid=?";
+        int affectedNum1 = 0;
+        int affectedNum2 = 0;
         try {
-            affectedNum = jdbcTemplate.update(sql,message.getContent(),message.getUid(),message.getNid());
+            affectedNum1 = jdbcTemplate.update(sql1,message.getContent(),message.getUid(),message.getNid());
+            affectedNum2 = jdbcTemplate.update(sql2,message.getNid());
         } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
-        if (affectedNum != 0) {
+        if (affectedNum1 != 0 && affectedNum2 != 0) {
             return true;
         } else {
             return false;
