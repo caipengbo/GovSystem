@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * Description: 前端页面的跳转
+ * Description: 单纯的页面跳转（无数据处理内容）
  * Created by Myth on 3/20/2017.
  */
 @Controller

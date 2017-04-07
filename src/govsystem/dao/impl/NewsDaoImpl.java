@@ -36,6 +36,7 @@ public class NewsDaoImpl implements NewsDao {
             news.setMessageNum(rs.getInt("messagenum"));
             news.setIsPublic(rs.getInt("ispublic"));
             news.setName(rs.getString("name"));
+            news.setStatus(rs.getInt("status"));
             return news;
         }
     }
@@ -126,9 +127,9 @@ public class NewsDaoImpl implements NewsDao {
         List<News> newsList;
         String sql = null;
         if (nid == -1) {
-            sql = "select * from tb_news,tb_admin where tb_news.aid=tb_admin.aid";
+            sql = "select * from tb_news,tb_admin,tb_user_news where tb_news.aid=tb_admin.aid ";
         } else {
-            sql = "select * from tb_news,tb_admin where tb_news.aid=tb_admin.aid and nid="+ nid;
+            sql = "select * from tb_news,tb_admin,tb_user_news where tb_news.aid=tb_admin.aid and nid="+ nid;
         }
         try {
             newsList = jdbcTemplate.query(sql, new NewsRowMapper());
@@ -146,7 +147,7 @@ public class NewsDaoImpl implements NewsDao {
         }
         List<News> newsList;
         String sql = null;
-        sql = "select * from tb_news,tb_admin where tb_news.aid=tb_admin.aid and ispublic=" + publicChoice;
+        sql = "select * from tb_news,tb_admin,tb_user_news where tb_news.aid=tb_admin.aid and ispublic=" + publicChoice;
         try {
             newsList = jdbcTemplate.query(sql, new NewsRowMapper());
         } catch (Exception e) {
@@ -162,7 +163,7 @@ public class NewsDaoImpl implements NewsDao {
             return null;
         }
         List<User> userList;
-        String sql = "select * from tb_user_news,tb_user where tb_user_news.uid=tb_user.uid and look=1 and apply=0  and nid=" + news.getNid();
+        String sql = "select * from tb_user_news,tb_user where tb_user_news.uid=tb_user.uid and status=2 and nid=" + news.getNid();
         try {
             userList = jdbcTemplate.query(sql, new UserRowMapper());
         } catch (Exception e) {
@@ -178,7 +179,7 @@ public class NewsDaoImpl implements NewsDao {
             return null;
         }
         List<User> userList;
-        String sql = "select * from tb_user_news,tb_user where tb_user_news.uid=tb_user.uid and apply=1 and look=0 and nid=" + news.getNid();
+        String sql = "select * from tb_user_news,tb_user where tb_user_news.uid=tb_user.uid and status=1 and nid=" + news.getNid();
         try {
             userList = jdbcTemplate.query(sql, new UserRowMapper());
         } catch (Exception e) {
@@ -192,7 +193,7 @@ public class NewsDaoImpl implements NewsDao {
     public boolean allowApply(News news,User user) {
         int effectedNum1 = 0;
         int effectedNum2 = 0;
-        String sql1 = "update tb_user_news set look=look+1,apply=apply-1 where nid=? and uid=?";
+        String sql1 = "update tb_user_news set status=2 where nid=? and uid=?";
         String sql2 = "update tb_news set lookednum=lookednum+1,applynum=applynum-1 where nid=?";
         try {
             effectedNum1 = jdbcTemplate.update(sql1,news.getNid(),user.getUid());

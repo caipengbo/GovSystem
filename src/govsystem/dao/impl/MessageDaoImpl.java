@@ -30,6 +30,7 @@ public class MessageDaoImpl implements MessageDao {
             message.setContent(rs.getString("content"));
             message.setPostTime(rs.getString("posttime"));
             message.setUid(rs.getInt("uid"));
+            message.setName(rs.getString("name"));
             message.setNid(rs.getInt("nid"));
             return message;
         }
@@ -37,8 +38,19 @@ public class MessageDaoImpl implements MessageDao {
 
     @Override
     public boolean add(Message message) {
-
-        return false;
+        String sql = "insert into tb_message(content,posttime,uid,nid)values(?,now(),?,?)";
+        int affectedNum = 0;
+        try {
+            affectedNum = jdbcTemplate.update(sql,message.getContent(),message.getUid(),message.getNid());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        if (affectedNum != 0) {
+            return true;
+        } else {
+            return false;
+        }
 
     }
 
@@ -73,7 +85,7 @@ public class MessageDaoImpl implements MessageDao {
         if (news == null) {
             return null;
         } else {
-            sql = "select * from tb_message where nid="+ news.getNid();
+            sql = "select * from tb_message,tb_user where tb_message.uid=tb_user.uid and nid="+ news.getNid();
         }
         try {
             messageList = jdbcTemplate.query(sql, new MessageRowMapper());

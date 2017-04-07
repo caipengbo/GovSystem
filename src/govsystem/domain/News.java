@@ -13,6 +13,16 @@ public class News {
     private String postTime;    //发表时间
     private String name;  //外键，发表人
     private int aid;
+    private int status; //查看状态 0 申请查看 1：申请中 2：可查看 仅供用户查看使用
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+
 
     public int getAid() {
         return aid;

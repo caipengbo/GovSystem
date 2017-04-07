@@ -9,7 +9,18 @@ public class Message {
     private String content; // 内容
     private String postTime;    //发表时间
     private int uid;  //外键，发表人
+    private String name;  //发表人名字
     private int nid;  //对应的新闻
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
 
     public int getMid() {
         return mid;

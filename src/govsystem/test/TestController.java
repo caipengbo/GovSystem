@@ -75,4 +75,11 @@ public class TestController {
         System.out.println("方法三的运行时间："+String.valueOf(endTime-startTime)+"ms");
         return "testpages/success";
     }
+
+    @RequestMapping("/radio")
+    String radio() {
+        return "testpages/testradio";
+    }
+
+
 }

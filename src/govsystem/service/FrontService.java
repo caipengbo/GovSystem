@@ -1,9 +1,6 @@
 package govsystem.service;
 
-import govsystem.domain.Admin;
-import govsystem.domain.News;
-import govsystem.domain.User;
-import govsystem.domain.Video;
+import govsystem.domain.*;
 import govsystem.formbean.frontform.LoginForm;
 import govsystem.formbean.frontform.RegistForm;
 
@@ -55,7 +52,19 @@ public interface FrontService {
      */
     List<News> listNews(int publicChoice);
 
+    /**
+     * 获得新闻对应的留言
+     * @param nid 新闻编号
+     * @return
+     */
+    List<Message> listMessage(int nid);
 
+    /**
+     * 留言
+     * @param message
+     * @return
+     */
+    boolean addMessage(Message message);
     /**
      * 列出所有听证视频
      * @return
@@ -67,4 +76,45 @@ public interface FrontService {
      * @return
      */
     News getNews(int nid);
+
+    /**
+     * 列出所有问卷
+     * @return
+     */
+    List<Question> listAllQuestion();
+
+    /**
+     * 列出问卷对应的问题
+     * @param question
+     * @return
+     */
+    public List<QuestionItem> listAllQuestionItem(Question question);
+
+    /**
+     * 根据qid 获得Question
+     * @param qid
+     * @return
+     */
+    public  Question getQuestion(int qid);
+
+
+    /**
+     * 检查用户是否填写了问卷
+     * @param uid
+     * @param qid
+     * @return 填写了 true
+     */
+    boolean checkCompleteQuestion(int uid,int qid);
+
+    /**
+     * 用户完成问卷调查
+     * @param uid
+     * @param qid
+     * @param a
+     * @param b
+     * @param c
+     * @param d
+     * @return
+     */
+    boolean completeQuestion(int uid,int qid,int a,int b,int c,int d);
 }

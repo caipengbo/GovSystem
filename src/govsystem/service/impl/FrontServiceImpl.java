@@ -1,13 +1,7 @@
 package govsystem.service.impl;
 
-import govsystem.dao.AdminDao;
-import govsystem.dao.NewsDao;
-import govsystem.dao.UserDao;
-import govsystem.dao.VideoDao;
-import govsystem.domain.Admin;
-import govsystem.domain.News;
-import govsystem.domain.User;
-import govsystem.domain.Video;
+import govsystem.dao.*;
+import govsystem.domain.*;
 import govsystem.formbean.frontform.LoginForm;
 import govsystem.formbean.frontform.RegistForm;
 import govsystem.service.FrontService;
@@ -32,6 +26,10 @@ public class FrontServiceImpl implements FrontService {
     private NewsDao newsDao;
     @Resource
     private VideoDao videoDao;
+    @Resource
+    private QuestionDao questionDao;
+    @Resource
+    private MessageDao messageDao;
 
     @Override
     public User regist(RegistForm registForm) {
@@ -88,6 +86,18 @@ public class FrontServiceImpl implements FrontService {
     }
 
     @Override
+    public List<Message> listMessage(int nid) {
+        News news = new News();
+        news.setNid(nid);
+        return messageDao.list(news);
+    }
+
+    @Override
+    public boolean addMessage(Message message) {
+        return messageDao.add(message);
+    }
+
+    @Override
     public List<Video> listAllVideo() {
         return videoDao.list();
     }
@@ -103,6 +113,35 @@ public class FrontServiceImpl implements FrontService {
             news = newsList.get(0); //获取第一个news
         }
         return news;
+    }
+
+    @Override
+    public List<Question> listAllQuestion() {
+        return questionDao.list();
+    }
+
+    @Override
+    public List<QuestionItem> listAllQuestionItem(Question question) {
+        return questionDao.listItem(question);
+    }
+
+    @Override
+    public Question getQuestion(int qid) {
+        return questionDao.get(qid);
+    }
+
+    @Override
+    public boolean checkCompleteQuestion(int uid,int qid) {
+        return questionDao.isComplete(uid,qid);
+    }
+
+    @Override
+    public boolean completeQuestion(int uid, int qid, int a, int b, int c, int d) {
+        if (questionDao.modifyQuestionNum(qid,a,b,c,d) && questionDao.addUserCompleteItem(uid,qid)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 

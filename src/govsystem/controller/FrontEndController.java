@@ -1,8 +1,6 @@
 package govsystem.controller;
 
-import govsystem.domain.News;
-import govsystem.domain.User;
-import govsystem.domain.Video;
+import govsystem.domain.*;
 import govsystem.service.FrontService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,7 +9,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -100,10 +100,32 @@ public class FrontEndController {
     public ModelAndView toNewsDetail(int nid){
         ModelAndView mav = new ModelAndView();
         News news = frontService.getNews(nid);
+        List<Message> messageList = frontService.listMessage(nid);
+        mav.addObject("messageList",messageList);
         mav.addObject("news",news);
         mav.setViewName("/front-end/news_detail");
         return mav;
     }
+
+    @RequestMapping("/addMessage")
+    public ModelAndView addMessage(int nid,String comment,HttpSession httpSession) {
+        ModelAndView mav = new ModelAndView();
+        if (httpSession == null ) {
+            mav.setViewName("/front-end/error");
+            return mav;
+        }
+        Message message = new Message();
+        message.setContent(comment);
+        message.setNid(nid);
+        message.setUid(((User)httpSession.getAttribute("user")).getUid());
+        if (frontService.addMessage(message)) {
+            mav = toNewsDetail(nid);
+        } else {
+            mav.setViewName("/front-end/error");
+        }
+        return mav;
+    }
+
     @RequestMapping("/toPublicNews")
     public ModelAndView toPublicNews(int ispublic){
         ModelAndView mav = new ModelAndView();
@@ -116,17 +138,82 @@ public class FrontEndController {
         mav.setViewName("/front-end/news_view");
         return mav;
     }
-    //如果已经填写问卷，那么跳转到统计界面；如果没填写，跳到填写页面
-    @RequestMapping("/toVote")
-    public ModelAndView toVote(){
+    @RequestMapping("/toQuestionView")
+    public ModelAndView toQuestionView(){
         ModelAndView mav = new ModelAndView();
-        if (ispublic != 0 && ispublic!= 1) {
-            mav.setViewName("/front-end/error");
+        List<Question> questionList = frontService.listAllQuestion();
+        mav.addObject("questionList",questionList);
+        mav.setViewName("/front-end/question_view");
+        return mav;
+    }
+    //如果已经填写问卷，那么跳转到统计界面；如果没填写，跳到填写页面
+    @RequestMapping("/toQuestionDetail")
+    public ModelAndView toQuestionDetail(int qid,HttpSession httpSession){
+        int uid = ((User)httpSession.getAttribute("user")).getUid();
+        ModelAndView mav = new ModelAndView();
+        //检查一下，该用户是否填写了该问卷
+        if (frontService.checkCompleteQuestion(uid,qid)) {
+            //跳到统计页面
+            return mav;
+        } else {
+            //填写页面
+            Question question = new Question();
+            question.setQid(qid);
+            List<QuestionItem> questionItemList = frontService.listAllQuestionItem(question);
+            question = frontService.getQuestion(qid);
+            mav.addObject("question",question);
+            mav.addObject("questionItemList",questionItemList);
+            mav.setViewName("/front-end/question_detail");
             return mav;
         }
-        List<News> newsList = frontService.listNews(ispublic);
-        mav.addObject("newsList",newsList);
-        mav.setViewName("/front-end/vote");
-    }
 
+
+    }
+    //提交投票表单（radio的处理）
+    @RequestMapping("/radioSubmit")
+    public ModelAndView radioSubmit(int qid, HttpServletRequest httpServletRequest){
+        ModelAndView mav = new ModelAndView();
+        int parm_count = Integer.parseInt(httpServletRequest.getParameter("count"));
+        String itemName = "";
+        int val;
+        int a_count = 0;
+        int b_count = 0;
+        int c_count = 0;
+        int d_count = 0;
+        int uid = ((User)httpServletRequest.getSession().getAttribute("user")).getUid();
+        List<Integer> integerList = new ArrayList<>();
+        for (int i=0; i<parm_count; i++) {
+            itemName = "item" + i;
+            if (httpServletRequest.getParameter(itemName) != null) {
+                val = Integer.parseInt(httpServletRequest.getParameter(itemName));
+            } else {
+                val = 0;
+            }
+            switch (val) {
+                case 0: {
+                    a_count++;
+                    break;
+                }
+                case 1: {
+                    b_count++;
+                    break;
+                }
+                case 2: {
+                    c_count++;
+                    break;
+                }
+                case 3: {
+                    d_count++;
+                    break;
+                }
+            }
+        }
+        if (frontService.completeQuestion(uid,qid,a_count,b_count,c_count,d_count)) {
+            //统计页面
+            mav.setViewName("");
+        } else {
+            mav.setViewName("/front-end/error");
+        }
+        return mav;
+    }
 }

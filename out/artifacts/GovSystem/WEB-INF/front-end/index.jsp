@@ -119,7 +119,7 @@
               <strong class='caret'>
               </strong></a>
               <ul class='dropdown-menu'>
-                <li> <a href="uploadFile_up" target="mainIframe" id='myDiy'>查看问卷</a> </li>
+                <li> <a href="toQuestionView.action" target="mainIframe" id='myDiy'>查看问卷</a> </li>
                 <%--<li> <a href="uploadFile_dMyFile"  target="mainIframe">问卷</a> </li>--%>
                 <li class='divider'>
                 </li>

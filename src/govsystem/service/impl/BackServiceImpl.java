@@ -214,7 +214,7 @@ public class BackServiceImpl implements BackService {
 
     @Override
     public boolean modifyQuestion(Question question) {
-        return questionDao.modifyQuestion(question);
+        return questionDao.modifyQuestionTitle(question);
     }
 
     @Override

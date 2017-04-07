@@ -15,7 +15,7 @@ public class Question {
     private int cNum;  //选C
     private int dNum;  //选D
     private int available;  //是否开放（是否还可以回答）
-    private String name; //(仅供)查询时使用
+    private String name; //发布者名字,(仅供)查询时使用
     public String getName() {
         return name;
     }

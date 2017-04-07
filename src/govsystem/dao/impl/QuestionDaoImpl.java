@@ -62,6 +62,19 @@ public class QuestionDaoImpl implements QuestionDao {
     }
 
     @Override
+    public Question get(int qid) {
+        Question question;
+        String sql = "select * from tb_question,tb_admin where tb_question.aid=tb_admin.aid and qid=?";
+        try {
+            question = jdbcTemplate.queryForObject(sql,Question.class,qid);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+        return  question;
+    }
+
+    @Override
     public List<QuestionItem> listItem(Question question) {
         if (question == null) return null;
         int qid = question.getQid();
@@ -154,7 +167,7 @@ public class QuestionDaoImpl implements QuestionDao {
     }
 
     @Override
-    public boolean modifyQuestion(Question question) {
+    public boolean modifyQuestionTitle(Question question) {
         String sql = "";
         int effectedNum = 0;
         sql = "update tb_question set available=?,title=?";
@@ -162,11 +175,64 @@ public class QuestionDaoImpl implements QuestionDao {
             effectedNum = jdbcTemplate.update(sql,question.getAvailable(),question.getTitle());
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
         }
         if (effectedNum == 0) {
             return false;
         } else {
             return true;
+        }
+    }
+
+    @Override
+    public boolean modifyQuestionNum(int qid,int a, int b, int c, int d) {
+        String sql = "";
+        int effectedNum = 0;
+        sql = "update tb_question set all_num=all_num+1,a_num=a_num+?,b_num=b_num+?,c_num=c_num+?,d_num=d_num+? where qid=?";
+        try {
+            effectedNum = jdbcTemplate.update(sql,a,b,c,d,qid);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        if (effectedNum == 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    @Override
+    public boolean isComplete(int uid, int qid) {
+        List<Question> questionList;
+        String sql = "select count(*) from tb_question_user where uid=? and qid=?";
+        int count = 0;
+        try {
+            count = jdbcTemplate.queryForObject(sql,Integer.class,uid,qid);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        if (count == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public boolean addUserCompleteItem(int uid, int qid) {
+        String sql = "insert into tb_question_user(uid,qid) values(?,?)";
+        int affectedNum = 0;
+        try {
+            affectedNum = jdbcTemplate.update(sql,uid,qid);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (affectedNum != 0) {
+            return true;
+        } else {
+            return false;
         }
     }
 }
