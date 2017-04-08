@@ -109,7 +109,7 @@
     <%--查看申请对话框--%>
     <div id="applydlg" class="easyui-dialog" style="padding:10px 20px"
          closed="true">
-        <table id="apply_data_grid" class="easyui-datagrid" style="width:500px;height:370px"
+        <table id="apply_data_grid" class="easyui-datagrid" style="width:570px;height:370px"
                data-options="
 		method:'post',
 		toolbar:'#appdg_toolbar',
@@ -121,12 +121,12 @@
 		">
             <thead>
             <tr>
-                <th field="uid" width="80">用户ID</th>
+                <th field="uid" width="40">用户ID</th>
                 <th field="username"  width="50">用户名</th>
-                <th field="name" width="60">姓名</th>
+                <th field="name" width="40">姓名</th>
                 <th field="birthday"  width="60">出生年月</th>
                 <th field="identityCode"  width="60">身份证</th>
-                <th data-options="field:'identityFlag',width:'30', formatter:format">是否实名</th>
+                <th data-options="field:'identityFlag',width:'45', formatter:format">是否实名</th>
             </tr>
             </thead>
         </table>
@@ -139,7 +139,7 @@
     <div id="userdlg" class="easyui-dialog" style="padding:10px 20px"
          closed="true">
 
-        <table id="user_data_grid" class="easyui-datagrid" style="width:500px;height:370px"
+        <table id="user_data_grid" class="easyui-datagrid" style="width:570px;height:370px"
                data-options="
 		method:'post',
 		toolbar:'#udg_toolbar',
@@ -151,12 +151,12 @@
 		">
             <thead>
             <tr>
-                <th field="uid" width="80">用户ID</th>
+                <th field="uid" width="40">用户ID</th>
                 <th field="username"  width="50">用户名</th>
-                <th field="name" width="60">姓名</th>
+                <th field="name" width="40">姓名</th>
                 <th field="birthday"  width="60">出生年月</th>
                 <th field="identityCode"  width="60">身份证</th>
-                <th data-options="field:'identityFlag',width:'30', formatter:format">是否实名</th>
+                <th data-options="field:'identityFlag',width:'45', formatter:format">是否实名</th>
             </tr>
             </thead>
         </table>
@@ -168,7 +168,7 @@
     <div id="msgdlg" class="easyui-dialog" style="padding:10px 20px"
          closed="true">
 
-        <table id="message_data_grid" class="easyui-datagrid" style="width:500px;height:370px"
+        <table id="message_data_grid" class="easyui-datagrid" style="width:570px;height:370px"
                data-options="
 		method:'post',
 		toolbar:'#mdg_toolbar',
@@ -358,7 +358,7 @@
                 return;
             }
             var urlstr = "getApplyUserToJson.action?nid=" + row.nid;
-            $('#applydlg').window('open').window('resize',{width:'400px',height:'300px',top: 100,left:300});
+            $('#applydlg').window('open').window('resize',{width:'620px',height:'430px',top: 50,left:200});
             $('#applydlg').dialog('setTitle','用户申请');
             $('#apply_data_grid').datagrid({
                 url: urlstr
@@ -378,7 +378,7 @@
                 return;
             }
             var urlstr = "getLookedUserToJson.action?nid=" + row.nid;
-            $('#userdlg').window('open').window('resize',{width:'400px',height:'300px',top: 100,left:300});
+            $('#userdlg').window('open').window('resize',{width:'620px',height:'430px',top: 50,left:200});
             $('#userdlg').dialog('setTitle','可查看的用户');
             $('#user_data_grid').datagrid({
                 url: urlstr
@@ -393,7 +393,7 @@
                 return;
             }
             var urlstr = "getMessageToJson.action?nid=" + row.nid;
-            $('#msgdlg').window('open').window('resize',{width:'400px',height:'300px',top: 100,left:300});
+            $('#msgdlg').window('open').window('resize',{width:'620px',height:'430px',top: 50,left:200});
             $('#msgdlg').dialog('setTitle','留言');
             $('#message_data_grid').datagrid({
                 url: urlstr

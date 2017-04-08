@@ -28,9 +28,9 @@
             </thead>
         </table>
         <div id="toolbar">
-            <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="popAddDlg()">添加店员</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="popAddDlg()">添加</a>
             <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="popUpdateDlg()">修改信息</a>
-            <a href="#" class="easyui-linkbutton" iconCls="icon-no" plain="true" onclick="deleteAdmin()">删除店员</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-no" plain="true" onclick="deleteAdmin()">删除</a>
         </div>
     </div> <!-- user_manage div end -->
     <!-- add dialog begin-->

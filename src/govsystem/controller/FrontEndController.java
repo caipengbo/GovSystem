@@ -165,13 +165,37 @@ public class FrontEndController {
     public ModelAndView toQuestionDetail(int qid,HttpSession httpSession){
         int uid = ((User)httpSession.getAttribute("user")).getUid();
         ModelAndView mav = new ModelAndView();
+        Question question = new Question();
         //检查一下，该用户是否填写了该问卷
         if (frontService.checkCompleteQuestion(uid,qid)) {
             //跳到统计页面
+            question = frontService.getQuestion(qid);
+            float a = question.getaNum();
+            float b = question.getbNum();
+            float c = question.getcNum();
+            float d = question.getdNum();
+            float num = a + b + c + d;
+            try {
+                a = a/num*100;
+                b = b/num*100;
+                c = c/num*100;
+                d = d/num*100;
+            } catch (Exception e) {
+                a = 0;
+                b = 0;
+                c = 0;
+                d = 0;
+            }
+            mav.addObject("a",a);
+            mav.addObject("b",b);
+            mav.addObject("c",c);
+            mav.addObject("d",d);
+            mav.addObject("title",question.getTitle());
+            mav.addObject("num",question.getAllNum());
+            mav.setViewName("/front-end/statistic_chart");
             return mav;
         } else {
             //填写页面
-            Question question = new Question();
             question.setQid(qid);
             List<QuestionItem> questionItemList = frontService.listAllQuestionItem(question);
             question = frontService.getQuestion(qid);
@@ -224,7 +248,8 @@ public class FrontEndController {
         }
         if (frontService.completeQuestion(uid,qid,a_count,b_count,c_count,d_count)) {
             //统计页面
-            mav.setViewName("");
+            mav = toQuestionDetail(qid,httpServletRequest.getSession());
+            mav.setViewName("/front-end/statistic_chart");
         } else {
             mav.setViewName("/front-end/error");
         }

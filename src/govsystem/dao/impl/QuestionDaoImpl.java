@@ -63,15 +63,19 @@ public class QuestionDaoImpl implements QuestionDao {
 
     @Override
     public Question get(int qid) {
-        Question question;
+        List<Question> questionList;
         String sql = "select * from tb_question,tb_admin where tb_question.aid=tb_admin.aid and qid=?";
         try {
-            question = jdbcTemplate.queryForObject(sql,Question.class,qid);
+            questionList = jdbcTemplate.query(sql,new QuestionRowMapper(),qid);
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
-        return  question;
+        if (questionList != null && questionList.size() == 1) {
+            return questionList.get(0);
+        } else {
+            return null;
+        }
     }
 
     @Override

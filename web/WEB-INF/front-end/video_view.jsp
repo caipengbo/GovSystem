@@ -33,7 +33,6 @@
                     List<Video> videoList = (List<Video>)request.getAttribute("videoList");
                     for(Video video : videoList) {
                         src="mp4/" + video.getFileName();
-
                             out.print("<div class=\"list-group-item\">");
                                 out.print("<div class='row clearfix h_contral' >");
                                     out.print("<div class='col-md-3 column'>");

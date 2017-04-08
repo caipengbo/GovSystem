@@ -17,10 +17,10 @@
                 <th field="name"  width="15">发布人</th>
                 <th field="postTime"  width="30">发布时间</th>
                 <th field="allNum" width="15">参与人数</th>
-                <th data-options="field:'aNum',width:'20', formatter:statisticA">选A次数</th>
-                <th data-options="field:'bNum',width:'20', formatter:statisticB">选B次数</th>
-                <th data-options="field:'cNum',width:'20', formatter:statisticC">选C次数</th>
-                <th data-options="field:'dNum',width:'20', formatter:statisticD">选D次数</th>
+                <th data-options="field:'aNum',width:'20', formatter:statisticA">非常满意</th>
+                <th data-options="field:'bNum',width:'20', formatter:statisticB">比较满意</th>
+                <th data-options="field:'cNum',width:'20', formatter:statisticC">一般</th>
+                <th data-options="field:'dNum',width:'20', formatter:statisticD">不满意</th>
             </tr>
             </thead>
         </table>

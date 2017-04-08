@@ -110,7 +110,16 @@
               </strong></a>
               <ul class='dropdown-menu'>
                 <li> <a href="toNewsView.action" target="mainIframe" >公开</a> </li>
-                <li> <a href="toPrivateNews.action"  target="mainIframe">未公开</a> </li>
+                <%--<li> <a href="toPrivateNews.action"  target="mainIframe">未公开</a> </li>--%>
+                <%--<li> <a href="javascript:alert('您未登陆,请先登录')"  target="mainIframe">未公开</a> </li>--%>
+                <%
+                  if(session.getAttribute("user") == null) { //未登录
+                    out.println("<li> <a href=\"javascript:alert('您未登陆,请先登录')\"  target=\"mainIframe\">未公开</a> </li>");
+                  } else {  //登录状态下
+                    out.println("<li> <a href=\"toPrivateNews.action\"  target=\"mainIframe\">未公开</a> </li>");
+                  }
+                %>
+
                 <li class='divider'>
                 </li>
               </ul>
@@ -119,8 +128,13 @@
               <strong class='caret'>
               </strong></a>
               <ul class='dropdown-menu'>
-                <li> <a href="toQuestionView.action" target="mainIframe" >查看问卷</a> </li>
-                <%--<li> <a href="uploadFile_dMyFile"  target="mainIframe">问卷</a> </li>--%>
+                <%
+                  if(session.getAttribute("user") != null) { //未登录
+                    out.println("<li> <a href=\"toQuestionView.action\" target=\"mainIframe\" >查看问卷</a> </li>");
+                  } else {  //登录状态下
+                    out.println("<li> <a href=\"javascript:alert('您未登陆,请先登录')\" target=\"mainIframe\" >查看问卷</a> </li>");
+                  }
+                %>
                 <li class='divider'>
                 </li>
               </ul>
@@ -129,7 +143,13 @@
               <strong class='caret'>
               </strong></a>
               <ul class='dropdown-menu'>
-                <li> <a href="toVideoView.action" target="mainIframe" id='myDiy'>听证视频</a> </li>
+                <%
+                  if(session.getAttribute("user") != null) { //未登录
+                    out.println("<li> <a href=\"toVideoView.action\" target=\"mainIframe\" id='myDiy'>听证视频</a> </li>");
+                  } else {  //登录状态下
+                    out.println("<li> <a href=\"javascript:alert('您未登陆,请先登录')\" target=\"mainIframe\" >听证视频</a> </li>");
+                  }
+                %>
                 <li class='divider'>
                 </li>
               </ul>
@@ -150,7 +170,6 @@
               out.println("<li id='log' class='dropdown'><a href='#' class='dropdown-toggle' data-toggle='dropdown'>"+((User)session.getAttribute("user")).getUsername()+"&nbsp;&nbsp;&nbsp;<strong class='caret'></strong></a><ul class='dropdown-menu'> <li> <a href='toSetting.action' target='mainIframe' id='myDiy'>个人设置</a> </li>    <li class='divider'> </li> <li> <a href='#concel' data-toggle='modal'>注销</a> </li> </ul></li>");
             }
             %>
-
           </ul>
         </div>
       </nav>

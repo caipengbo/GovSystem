@@ -75,7 +75,7 @@
 </div>
 <!-- 页脚底部 -->
 <div data-options="region:'south',border:false" style="height:30px;background:#A9FACD;padding:2px;text-align:center;font-size:12px;overflow:hidden">
-    Copyright © 2014 - 2018 All Rights Reserved<br>CaiPengbo Database project
+    Copyright © 2017 - 2018 All Rights Reserved<br>
 </div>
 <script>
     var loginuser = {"username":"${sessionScope.admin.username}","name":"${sessionScope.admin.name}","password":"${sessionScope.admin.password}"};
