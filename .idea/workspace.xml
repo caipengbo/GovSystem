@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ac1c8b1-5305-4e80-838f-00319e572fbe" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/mp4/001.mp4" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/govsystem/dao/NewsDao.class" afterPath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/govsystem/dao/NewsDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GovSystem/govsystem/dao/NewsDao.class" afterPath="$PROJECT_DIR$/out/production/GovSystem/govsystem/dao/NewsDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/front-end/news_view.jsp" afterPath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/front-end/news_view.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/govsystem/controller/FrontEndController.java" afterPath="$PROJECT_DIR$/src/govsystem/controller/FrontEndController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/govsystem/dao/impl/QuestionDaoImpl.java" afterPath="$PROJECT_DIR$/src/govsystem/dao/impl/QuestionDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/back-end/admin_manage.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/back-end/admin_manage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/back-end/index.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/back-end/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/back-end/news_manage.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/back-end/news_manage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/back-end/question.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/back-end/question.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/front-end/index.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/front-end/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/front-end/video_view.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/front-end/video_view.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/front-end/setting.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/front-end/setting.jsp" />
     </list>
     <ignored path="SpringMVC.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,6 +39,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="FrontEndController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/govsystem/controller/FrontEndController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="50" column="33" lean-forward="true" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="video_view.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/video_view.jsp">
           <provider selected="true" editor-type-id="text-editor">
@@ -84,17 +88,27 @@
       <file leaf-file-name="news_manage.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/news_manage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="117" column="26" lean-forward="true" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
+            <state relative-caret-position="428">
+              <caret line="139" column="23" lean-forward="true" selection-start-line="139" selection-start-column="23" selection-end-line="139" selection-end-column="23" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#table#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#table#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1491644994998" expanded="true" signature="9244:9257" ph="..." />
-                <marker date="1491644994998" expanded="true" signature="10419:10428" ph="..." />
-                <marker date="1491644994998" expanded="true" signature="10490:10501" ph="..." />
+                <marker date="1491652333959" expanded="true" signature="9252:9265" ph="..." />
+                <marker date="1491652333959" expanded="true" signature="10427:10436" ph="..." />
+                <marker date="1491652333959" expanded="true" signature="10498:10509" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setting.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/setting.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="59" column="30" lean-forward="true" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -149,6 +163,8 @@
       <find>from cai</find>
       <find>店</find>
       <find>userdlg</find>
+      <find>auth</find>
+      <find>失败</find>
     </findStrings>
     <replaceStrings>
       <replace>admin</replace>
@@ -172,8 +188,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/front-end/setting.jsp" />
         <option value="$PROJECT_DIR$/web/jdbc-config.properties" />
         <option value="$PROJECT_DIR$/src/govsystem/formbean/backform/ModifyNewsForm.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/springmvc-servlet.xml" />
@@ -222,6 +236,8 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/back-end/question.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/back-end/admin_manage.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/back-end/index.jsp" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/front-end/setting.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/back-end/news_manage.jsp" />
       </list>
     </option>
@@ -1100,7 +1116,7 @@
       <workItem from="1491483945888" duration="5930000" />
       <workItem from="1491540277491" duration="17632000" />
       <workItem from="1491558777993" duration="9197000" />
-      <workItem from="1491636028102" duration="8460000" />
+      <workItem from="1491636028102" duration="11858000" />
     </task>
     <task id="LOCAL-00001" summary="修改用户功能">
       <created>1489416762194</created>
@@ -1249,7 +1265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491577670041</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="完成1.0版本">
+      <created>1491645175984</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1491645175985</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1276,7 +1299,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="384225000" />
+    <option name="totallyTimeSpent" value="387623000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1288,7 +1311,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-10" y="0" width="1934" height="1030" extended-state="0" />
+    <frame x="-10" y="0" width="1934" height="1030" extended-state="1" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279503" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1299,7 +1322,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1384,7 +1407,8 @@
     <MESSAGE value="正在开发投票功能" />
     <MESSAGE value="接近完成..." />
     <MESSAGE value="前端基本完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="前端基本完成" />
+    <MESSAGE value="完成1.0版本" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成1.0版本" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1514,11 +1538,17 @@
           <properties />
           <option name="timeStamp" value="338" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/govsystem/controller/FrontEndController.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="368" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="368" />
+      <option name="time" value="369" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -1527,20 +1557,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/error.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-web-4.3.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/govsystem/controller/BackEndController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -1931,14 +1947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/controller/FrontEndController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="187" column="13" lean-forward="false" selection-start-line="187" selection-start-column="13" selection-end-line="187" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/question_detail.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
@@ -2021,6 +2029,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="336">
+            <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/govsystem/controller/FrontEndController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="50" column="33" lean-forward="true" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
@@ -2031,18 +2058,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/setting.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="59" column="30" lean-forward="true" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/news_manage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="117" column="26" lean-forward="true" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
+        <state relative-caret-position="428">
+          <caret line="139" column="23" lean-forward="true" selection-start-line="139" selection-start-column="23" selection-end-line="139" selection-end-column="23" />
           <folding>
             <element signature="n#style#0;n#table#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#table#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#table#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1491644994998" expanded="true" signature="9244:9257" ph="..." />
-            <marker date="1491644994998" expanded="true" signature="10419:10428" ph="..." />
-            <marker date="1491644994998" expanded="true" signature="10490:10501" ph="..." />
+            <marker date="1491652333959" expanded="true" signature="9252:9265" ph="..." />
+            <marker date="1491652333959" expanded="true" signature="10427:10436" ph="..." />
+            <marker date="1491652333959" expanded="true" signature="10498:10509" ph="..." />
           </folding>
         </state>
       </provider>

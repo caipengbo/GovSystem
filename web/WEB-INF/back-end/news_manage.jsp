@@ -126,7 +126,7 @@
                 <th field="name" width="40">姓名</th>
                 <th field="birthday"  width="60">出生年月</th>
                 <th field="identityCode"  width="60">身份证</th>
-                <th data-options="field:'identityFlag',width:'45', formatter:format">是否实名</th>
+                <th data-options="field:'identityFlag',width:'45', formatter:formatAuth">是否实名</th>
             </tr>
             </thead>
         </table>
@@ -156,7 +156,7 @@
                 <th field="name" width="40">姓名</th>
                 <th field="birthday"  width="60">出生年月</th>
                 <th field="identityCode"  width="60">身份证</th>
-                <th data-options="field:'identityFlag',width:'45', formatter:format">是否实名</th>
+                <th data-options="field:'identityFlag',width:'45', formatter:formatAuth">是否实名</th>
             </tr>
             </thead>
         </table>
@@ -256,6 +256,13 @@
             return "<span style='color:red'>非公开×</span>";
         else
             return "<span style='color:green'>公开√</span>";
+    }
+
+    function formatAuth(val,row,index){
+        if (row.identityFlag == 0)
+            return "<span style='color:red'>未认证×</span>";
+        else
+            return "<span style='color:green'>已认证√</span>";
     }
     //搜索栏实现
     function doSearch(value,name){

@@ -55,7 +55,6 @@
     </div>
 </div>
 
-
 <!--实名认证-->
 <div class="modal fade" id="authentication" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
     <div class="modal-dialog">
