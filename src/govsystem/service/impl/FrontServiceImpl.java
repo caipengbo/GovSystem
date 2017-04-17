@@ -69,6 +69,11 @@ public class FrontServiceImpl implements FrontService {
     }
 
     @Override
+    public boolean authenticate(String name, String identitycode) {
+        return userDao.authenticate(name,identitycode);
+    }
+
+    @Override
     public boolean modifyUser(User user) {
         return userDao.update(user);
     }
@@ -103,13 +108,14 @@ public class FrontServiceImpl implements FrontService {
     public List<Message> listMessage(int nid) {
         News news = new News();
         news.setNid(nid);
-        return messageDao.list(news);
+        return messageDao.listChecked(news);
     }
 
     @Override
     public boolean addMessage(Message message) {
         return messageDao.add(message);
     }
+
 
     @Override
     public List<Video> listAllVideo() {

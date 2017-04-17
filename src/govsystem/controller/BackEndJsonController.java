@@ -218,6 +218,20 @@ public class BackEndJsonController {
         }
         return map;
     }
+    @RequestMapping("/checkMessage")
+    @ResponseBody
+    public Map<String,String> checkMessage(@RequestBody Message message) {
+        Map<String,String > map = new HashMap<String,String>();
+        message.setState(1); //设置审核通过标记
+        if (backService.checkMessage(message)) {
+            map.put("msg","success");
+        } else {
+            map.put("msg","error");
+        }
+        return map;
+    }
+
+
     @RequestMapping("/getAdminToJson")
     @ResponseBody
     public Object getAdminToJson() {

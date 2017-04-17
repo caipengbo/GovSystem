@@ -61,13 +61,9 @@
                 </div>
 
                 <div style="margin-bottom:20px">
-                    <input id="identitycode"  class="easyui-textbox" label="身份证号" name="identityCode" style="width:75%;">
+                    <input id="identitycode"  class="easyui-textbox" label="身份证号" data-options="readonly:true" name="identityCode" style="width:75%;">
                 </div>
 
-                <div>
-                    <input type="radio" name="identityFlag" value="0">未认证</input>
-                    <input type="radio" name="identityFlag" value="1">认证</input>
-                </div>
             </div>
         </form>
     </div> <!-- 修改对话框结束-->
@@ -100,8 +96,6 @@
             return "<span style='color:red'>未认证×</span>";
         } else if (row.identityFlag == 1) {
             return "<span style='color:green'>已认证√</span>";
-        } else if (row.identityFlag == 2) {
-            return "<span style='color:#ffe957'>请求认证···</span>";
         }
     }
     function doSearch(value){

@@ -40,10 +40,7 @@
                         out.print("<a href='#authentication' data-toggle='modal' id='nameConfirm'><button type='button' class='btn btn-default btn-block  btn-danger' id='authenticationBtn' readonly='readonly'>实名认证</button></a><span id='control'></span>");
                     } else if (identityflag == 1) {
                         out.print("<button type='button' class='btn btn-default btn-block  btn-success' disabled='disabled'>已实名认证</button>");
-                    } else if (identityflag == 2) {
-                        out.print("<button type='button' class='btn btn-default btn-block  btn-warning' disabled='disabled'>认证中···</button>");
                     }
-
                 %>
                 <span id="control"></span>
                 <br><br><br><br>
@@ -54,7 +51,6 @@
         <div class="col-md-3 column"> </div>
     </div>
 </div>
-
 
 <!--实名认证-->
 <div class="modal fade" id="authentication" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
@@ -120,20 +116,21 @@
 </div>
 <script>
     //实名认证
-    function authentication(){
-        var identitycode=$("#idNum").val();
+    function authentication() {
+        var identitycode = $("#idNum").val();
         $("#nameConfirm").remove();
-        $("#control").append("<button type='button' class='btn btn-default btn-block  btn-warning' disabled='disabled'>认证中···</button>");
         $('#authentication').modal('hide');
         $.ajax({
-            type:"GET",
-            url:"authenticate.action?identitycode="+identitycode,
-            dataType:"json",
-            success:function(result){
-                if(result.msg == "success") {
-                    alert("您的认证已提交，正在审核");
+            type: "GET",
+            url: "authenticate.action?identitycode=" + identitycode,
+            dataType: "json",
+            success: function (result) {
+                if (result.msg == "success") {
+                    $("#control").append("<button type='button' class='btn btn-default btn-block  btn-success' disabled='disabled'>已实名认证</button>");
+                    alert("认证成功");
                 } else {
-                    alert("失败");
+                    $("#control").append("<a href='#authentication' data-toggle='modal' id='nameConfirm'><button type='button' class='btn btn-default btn-block  btn-danger' id='authenticationBtn' readonly='readonly'>实名认证</button></a><span id='control'></span>");
+                    alert("信息错误,认证失败");
                 }
             }
         })

@@ -98,6 +98,12 @@ public class BackServiceImpl implements BackService {
     }
 
     @Override
+    public boolean checkMessage(Message message) {
+        return messageDao.update(message);
+    }
+
+
+    @Override
     public List<User> listLookedUser(Integer nid) {
         News news = new News();
         if (nid == null) {

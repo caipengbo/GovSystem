@@ -32,6 +32,7 @@ public class MessageDaoImpl implements MessageDao {
             message.setUid(rs.getInt("uid"));
             message.setName(rs.getString("name"));
             message.setNid(rs.getInt("nid"));
+            message.setState(rs.getInt("state"));
             return message;
         }
     }
@@ -100,7 +101,36 @@ public class MessageDaoImpl implements MessageDao {
     }
 
     @Override
+    public List<Message> listChecked(News news) {
+        List<Message> messageList;
+        String sql = null;
+        if (news == null) {
+            return null;
+        } else {
+            sql = "select * from tb_message,tb_user where tb_message.uid=tb_user.uid and state=1 and nid="+ news.getNid();
+        }
+        try {
+            messageList = jdbcTemplate.query(sql, new MessageRowMapper());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+        return  messageList;
+    }
+
+    @Override
     public boolean update(Message message) {
-        return false;
+        int effectedNum = 0;
+        String sql = "update tb_message set state=? where mid=?";
+        try {
+            effectedNum = jdbcTemplate.update(sql,message.getState(),message.getMid());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (effectedNum == 0) {
+            return false;
+        } else {
+            return true;
+        }
     }
 }

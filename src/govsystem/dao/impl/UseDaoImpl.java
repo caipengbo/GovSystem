@@ -99,6 +99,23 @@ public class UseDaoImpl implements UserDao {
         }
     }
 
+    @Override
+    public boolean authenticate(String name, String identitycode) {
+        String sql = "select count(*) from tb_library where name=? and identitycode=?";
+        int count = 0;
+        try {
+            count = jdbcTemplate.queryForObject(sql,Integer.class,name,identitycode);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        if (count == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
     @Override
     public List<User> list(User user) {

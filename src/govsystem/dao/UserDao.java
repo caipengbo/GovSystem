@@ -44,5 +44,12 @@ public interface UserDao {
      */
     boolean update(User user);
 
+    /**
+     * 在tb_library 库中比对验证信息，如果存在，就实名认证成功
+     * @param name
+     * @param identitycode
+     * @return
+     */
+    boolean authenticate(String name,String identitycode);
 
 }

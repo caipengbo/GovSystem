@@ -25,14 +25,21 @@ public interface MessageDao {
     public boolean delete(Message message);
 
     /**
-     * 根据新闻，列出对应留言
+     * 根据新闻，列出对应所有留言
      * @param news
      * @return
      */
     public List<Message> list(News news);
 
     /**
-     * 更新留言
+     * 根据新闻，列出对应审核通过留言
+     * @param news
+     * @return
+     */
+    public List<Message> listChecked(News news);
+
+    /**
+     * 更新留言(需要更新的内容仅有state)
      * @param message
      * @return
      */

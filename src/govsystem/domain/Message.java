@@ -11,6 +11,15 @@ public class Message {
     private int uid;  //外键，发表人
     private String name;  //发表人名字
     private int nid;  //对应的新闻
+    private int state; //0待审核 1审核通过
+
+    public int getState() {
+        return state;
+    }
+
+    public void setState(int state) {
+        this.state = state;
+    }
 
     public String getName() {
         return name;

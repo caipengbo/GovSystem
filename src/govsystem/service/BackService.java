@@ -67,6 +67,13 @@ public interface BackService {
      * @return
      */
     List<Message> listMessage(Integer nid);
+    /**
+     * 审核留言
+     * @param message
+     * @return
+     */
+    boolean checkMessage(Message message);
+
 
     /**
      * 列出可以查看该新闻的用户

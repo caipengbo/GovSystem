@@ -34,6 +34,14 @@ public interface FrontService {
      */
     Admin loginAdmin(LoginForm loginForm);
 
+    /**
+     * 实名验证
+     * @param name
+     * @param identitycode
+     * @return
+     */
+    boolean authenticate(String name,String identitycode);
+
 
     /**
      * 个人设置，修改用户
@@ -79,6 +87,7 @@ public interface FrontService {
      * @return
      */
     boolean addMessage(Message message);
+
     /**
      * 列出所有听证视频
      * @return

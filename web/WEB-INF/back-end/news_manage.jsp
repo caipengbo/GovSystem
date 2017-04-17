@@ -180,14 +180,16 @@
 		">
             <thead>
             <tr>
-                <th field="mid" width="10">留言编号</th>
+                <th field="mid" width="18">留言编号</th>
                 <th field="content"  width="60">内容</th>
-                <th field="postTime"  width="30">留言时间</th>
+                <th field="postTime"  width="20">留言时间</th>
                 <th field="uid" width="10">留言人</th>
+                <th data-options="field:'state',width:'15', formatter:formatState">审核</th>
             </tr>
             </thead>
         </table>
         <div id="mdg_toolbar">
+            <a href="#" class="easyui-linkbutton" iconCls="icon-ok" plain="true" onclick="allowMessage()">通过</a>
             <a href="#" class="easyui-linkbutton" iconCls="icon-no" plain="true" onclick="deleteMessage()">删除留言</a>
         </div>
     </div>  <%--留言对话框结束--%>
@@ -263,6 +265,12 @@
             return "<span style='color:red'>未认证×</span>";
         else
             return "<span style='color:green'>已认证√</span>";
+    }
+    function formatState(val,row,index){
+        if (row.state == 0)
+            return "<span style='color:red'>未通过×</span>";
+        else
+            return "<span style='color:green'>已通过√</span>";
     }
     //搜索栏实现
     function doSearch(value,name){
@@ -427,7 +435,6 @@
                 }
             });
         }
-
     }
 //    拒绝用户申请
     function refuseApply() {
@@ -450,6 +457,8 @@
             });
         }
     }
+
+
 //    拒绝查看
     function refuseView() {
         var row1 = $('#data_grid').datagrid('getSelected');
@@ -464,6 +473,28 @@
                     if (result.msg == 'success') {
                         $('#user_data_grid').datagrid('reload');
                         $.messager.alert('成功','已拒绝该用户查看信息！','info');
+                    } else {
+                        $.messager.alert('失败','出错','error');
+                    }
+                }
+            });
+        }
+    }
+    //审核通过留言
+    function allowMessage() {
+        var row = $('#message_data_grid').datagrid('getSelected');
+        if (row) {
+            $.ajax({
+                type:'POST',
+                url:'checkMessage.action',
+                data:JSON.stringify(row),
+                dataType:'json',
+                contentType:'application/json',
+                success:function(result){
+                    //  接收的是json对象
+                    if (result.msg == 'success') {
+                        $('#apply_data_grid').datagrid('reload');
+                        $.messager.alert('成功','已经允许该用户查看信息！','info');
                     } else {
                         $.messager.alert('失败','出错','error');
                     }

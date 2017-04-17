@@ -8,7 +8,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-    <title>Title</title>
+    <title>${requestScope.get("news").title}</title>
 </head>
 <body>
 <div class="container">

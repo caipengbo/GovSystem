@@ -53,11 +53,16 @@ public class FrontEndController {
             return map;
         }
         User user = (User)httpSession.getAttribute("user");
-        user.setIdentityCode(identitycode);
-        user.setIdentityFlag(2);
-        if (frontService.modifyUser(user)) {
-            httpSession.setAttribute("user",user);
-            map.put("msg","success");
+
+        if (frontService.authenticate(user.getName(),identitycode)) {
+            user.setIdentityCode(identitycode);
+            user.setIdentityFlag(1); //设置成已经认证
+            if (frontService.modifyUser(user)) {
+                httpSession.setAttribute("user",user);
+                map.put("msg","success");
+            } else {
+                map.put("msg","error");
+            }
         } else {
             map.put("msg","error");
         }
@@ -126,6 +131,7 @@ public class FrontEndController {
         }
         return mav;
     }
+
 
     @RequestMapping("/toPrivateNews")
     public ModelAndView toPrivateNews(HttpSession httpSession){

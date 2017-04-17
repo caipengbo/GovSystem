@@ -32,7 +32,7 @@ public class LoginController {
         Map<String,String > map = new HashMap<String,String >();
         User user = frontService.regist(registForm);
         if (user != null) {
-            httpSession.setAttribute("user",user);
+            //httpSession.setAttribute("user",user);
             map.put("msg","success");
         } else {
             map.put("msg","error");
