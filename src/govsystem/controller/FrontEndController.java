@@ -116,7 +116,12 @@ public class FrontEndController {
     @RequestMapping("/addMessage")
     public ModelAndView addMessage(int nid,String comment,HttpSession httpSession) {
         ModelAndView mav = new ModelAndView();
-        if (httpSession == null ) {
+        if (httpSession == null) {
+            mav.setViewName("/front-end/error");
+            return mav;
+        }
+        String identityFlag = ((User)httpSession.getAttribute("user")).getIdentityCode();
+        if (!("1".equals(identityFlag))) {
             mav.setViewName("/front-end/error");
             return mav;
         }

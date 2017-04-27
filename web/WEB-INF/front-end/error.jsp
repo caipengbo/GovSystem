@@ -11,6 +11,6 @@
     <title>失败</title>
 </head>
 <body>
-    登录错误
+    请先进行登录，并且实名认证！
 </body>
 </html>

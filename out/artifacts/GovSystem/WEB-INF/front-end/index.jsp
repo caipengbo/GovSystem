@@ -113,7 +113,7 @@
                 <%--<li> <a href="toPrivateNews.action"  target="mainIframe">未公开</a> </li>--%>
                 <%--<li> <a href="javascript:alert('您未登陆,请先登录')"  target="mainIframe">未公开</a> </li>--%>
                 <%
-                  if(session.getAttribute("user") == null) { //未登录
+                  if(session.getAttribute("user") == null) {
                     out.println("<li> <a href=\"javascript:alert('您未登陆,请先登录')\"  target=\"mainIframe\">未公开</a> </li>");
                   } else {  //登录状态下
                     out.println("<li> <a href=\"toPrivateNews.action\"  target=\"mainIframe\">未公开</a> </li>");
@@ -129,10 +129,12 @@
               </strong></a>
               <ul class='dropdown-menu'>
                 <%
-                  if(session.getAttribute("user") != null) { //未登录
-                    out.println("<li> <a href=\"toQuestionView.action\" target=\"mainIframe\" >查看问卷</a> </li>");
-                  } else {  //登录状态下
+                  if(session.getAttribute("user") == null) {
                     out.println("<li> <a href=\"javascript:alert('您未登陆,请先登录')\" target=\"mainIframe\" >查看问卷</a> </li>");
+                  } else if (((User)session.getAttribute("user")).getIdentityFlag() != 1){
+                    out.println("<li> <a href=\"javascript:alert('您为进行实名认证，请先进行实名认证')\" target=\"mainIframe\" >查看问卷</a> </li>");
+                  } else {
+                    out.println("<li> <a href=\"toQuestionView.action\" target=\"mainIframe\" >查看问卷</a> </li>");
                   }
                 %>
                 <li class='divider'>
