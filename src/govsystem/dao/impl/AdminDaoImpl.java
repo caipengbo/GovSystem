@@ -66,8 +66,8 @@ public class AdminDaoImpl implements AdminDao {
     @Override
     public boolean delete(Admin admin) {
         int aid = admin.getAid();
-        //TODO 只删除了管理员，其发布的新闻没有删除
-        String sql = "delete from tb_admin where aid=?";
+        //TODO 在数据库中设置级联删除
+        String sql = "delete from tb_admin where aid=?"; //设置级联删除
         int affectedNum = 0;
         try {
             affectedNum = jdbcTemplate.update(sql,aid);

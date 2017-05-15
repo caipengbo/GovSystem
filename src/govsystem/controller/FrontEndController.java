@@ -58,7 +58,7 @@ public class FrontEndController {
             user.setIdentityCode(identitycode);
             user.setIdentityFlag(1); //设置成已经认证
             if (frontService.modifyUser(user)) {
-                httpSession.setAttribute("user",user);
+                httpSession.setAttribute("user",user);  //更新session中的user
                 map.put("msg","success");
             } else {
                 map.put("msg","error");
@@ -121,7 +121,7 @@ public class FrontEndController {
             return mav;
         }
         String identityFlag = ((User)httpSession.getAttribute("user")).getIdentityCode();
-        if (!("1".equals(identityFlag))) {
+        if (!("0".equals(identityFlag))) { //未认证
             mav.setViewName("/front-end/error");
             return mav;
         }

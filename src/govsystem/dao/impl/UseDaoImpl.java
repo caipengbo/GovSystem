@@ -55,8 +55,7 @@ public class UseDaoImpl implements UserDao {
     @Override
     public boolean delete(User user) {
         int uid = user.getUid();
-        String sql = "delete from tb_user where uid=?";
-
+        String sql = "delete from tb_user where uid=?"; //在数据库中设置级联删除
         int affectedNum = jdbcTemplate.update(sql,uid);
 
         if (affectedNum != 0) {
@@ -102,6 +101,7 @@ public class UseDaoImpl implements UserDao {
     @Override
     public boolean authenticate(String name, String identitycode) {
         String sql = "select count(*) from tb_library where name=? and identitycode=?";
+
         int count = 0;
         try {
             count = jdbcTemplate.queryForObject(sql,Integer.class,name,identitycode);

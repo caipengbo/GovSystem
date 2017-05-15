@@ -34,7 +34,7 @@ public class PageController {
     }
     @RequestMapping("/jsp4")
     public String toJsp4() {
-        return "back-end/admin_manage";
+        return "eback-end/admin_manag";
     }
     @RequestMapping("/jsp5")
     public String toFrontIndex(){
