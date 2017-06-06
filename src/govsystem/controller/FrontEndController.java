@@ -120,8 +120,8 @@ public class FrontEndController {
             mav.setViewName("/front-end/error");
             return mav;
         }
-        String identityFlag = ((User)httpSession.getAttribute("user")).getIdentityCode();
-        if (!("0".equals(identityFlag))) { //未认证
+        int identityFlag = ((User)httpSession.getAttribute("user")).getIdentityFlag();
+        if (identityFlag == 0) { //未认证
             mav.setViewName("/front-end/error");
             return mav;
         }
@@ -131,6 +131,7 @@ public class FrontEndController {
         message.setUid(((User)httpSession.getAttribute("user")).getUid());
         if (frontService.addMessage(message)) {
             mav = toNewsDetail(nid);
+            //TODO 跳转的页面
         } else {
             mav.setViewName("/front-end/error");
         }

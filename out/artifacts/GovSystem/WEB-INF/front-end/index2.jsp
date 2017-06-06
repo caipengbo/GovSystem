@@ -14,7 +14,6 @@
         .hidden.menu {
             display: none;
         }
-
         .masthead.segment {
             min-height: 700px;
             padding: 1em 0em;
@@ -35,7 +34,6 @@
             font-size: 1.7em;
             font-weight: normal;
         }
-
         .ui.vertical.stripe {
             padding: 8em 0em;
         }
@@ -55,7 +53,6 @@
         .ui.vertical.stripe .horizontal.divider {
             margin: 3em 0em;
         }
-
         .quote.stripe.segment {
             padding: 0em;
         }
@@ -106,8 +103,14 @@
             <div class="ui simple dropdown item">
                 所有信息
                 <div class="menu">
-                    <a class="item" href="www.baidu.com"><i class="checkmark icon"></i>公开</a>
-                    <a class="item"><i class="remove icon"></i>非公开</a>
+                    <a class="item" href="toNewsView.action"><i class="checkmark icon"></i>公开</a>
+                    <%
+                        if(session.getAttribute("user") == null) {
+                            out.println("<a class=\"item\" href=\"javascript:alert('您未登陆,请先登录')\"><i class=\"remove icon\"></i>非公开</a>");
+                        } else {  //登录状态下
+                            out.println("<a class=\"item\" href=\"toPrivateNews.action\"><i class=\"remove icon\"></i>非公开</a>");
+                        }
+                    %>
                 </div>
                 <i class="dropdown icon"></i>
             </div>
@@ -196,7 +199,7 @@
             </div>
             <div class="row">
                 <div class="center aligned column">
-                    <a class="ui huge orange button">更多</a>
+                    <a class="ui huge orange button" href="toNewsView.action">更多</a>
                 </div>
             </div>
         </div>
@@ -225,7 +228,7 @@
     <div class="ui middle aligned center aligned grid" style="padding-top: 70px;padding-bottom: 70px;padding-left: 10px;padding-right: 10px" >
         <div class="column" style="max-width:400px ">
             <h2 class="ui teal image header">
-                <!--<img src="../Semantic-UI-CSS-master/11.png" class="image"> -->
+                <img src="img/lambda_logo.png" class="image">
                 <div class="ui orange header">
                     新闻问卷调查用户登录
                 </div>
@@ -261,6 +264,7 @@
         <div class="ui middle aligned center aligned grid" style="padding-top: 70px;padding-bottom: 70px;padding-left: 10px;padding-right: 10px">
             <div class="column" style="max-width:400px ">
                 <h2 class="ui teal image header">
+                    <img src="img/lambda_logo.png" class="image">
                     <div class="ui orange header">
                         用户注册
                     </div>

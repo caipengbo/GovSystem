@@ -4,8 +4,7 @@
 <html>
 <head>
     <%@include file="/WEB-INF/front-end/header.jsp" %>
-    <!-- Custom Theme files -->
-    <!--//theme-style-->
+    <title>公开信息</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
     <style>

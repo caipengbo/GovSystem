@@ -17,7 +17,7 @@
     </a>
     <a class="item">
         <i class="smile icon"></i>
-        所有信息
+        公开信息
     </a>
     <a class="item">
         <i class="calendar icon"></i>
@@ -32,7 +32,6 @@
         视频
     </a>
 </div>
-
 
 <div id="nav" class="ui black big launch right attached fixed button" style="position:fixed;margin-top: 20px;"><i class="content icon"></i><span class="text">导航</span></div>
 <!--text container begin-->

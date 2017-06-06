@@ -4,6 +4,7 @@
   Created by Myth on 6/6/2017.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html>
 <head>
     <%@include file="/WEB-INF/front-end/header.jsp" %>
@@ -105,9 +106,9 @@
             <div class="field">
                 <textarea id="input" name="comment"></textarea>
             </div>
-            <div class="ui primary submit labeled icon button">
+            <button class="ui primary submit labeled icon button" type="submit">
                 <i class="icon edit"></i> 添加评论
-            </div>
+            </button>
         </form>
     </div>
 </div>
