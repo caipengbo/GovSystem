@@ -1,16 +1,22 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Myth
-  Date: 4/1/2017
-  Time: 3:53 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="govsystem.domain.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>测试成功</title>
+    <title>成功</title>
 </head>
 <body>
-测试通过！！！！
+
+<a href="${pageContext.request.contextPath }/logout.action">注销</a><br>
+Session里面的user${sessionScope.user.name} <br>
+Session里面的admin${sessionScope.admin.name} <br>
+-----------------------------------<br>
+<%
+    if (session.getAttribute("role") == null) {
+        out.print("session里面已经没有东西啦");
+    } else {
+        out.print("Jsp：Session："+((User)session.getAttribute("role")).toString());
+    }
+
+%>
 </body>
 </html>

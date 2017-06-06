@@ -109,7 +109,7 @@
               <strong class='caret'>
               </strong></a>
               <ul class='dropdown-menu'>
-                <li> <a href="toNewsView.action" target="mainIframe" >公开</a> </li>
+                <li> <a href="toNewsView.action" target="mainIframe" >公开</a></li>
                 <%--<li> <a href="toPrivateNews.action"  target="mainIframe">未公开</a> </li>--%>
                 <%--<li> <a href="javascript:alert('您未登陆,请先登录')"  target="mainIframe">未公开</a> </li>--%>
                 <%
@@ -119,7 +119,6 @@
                     out.println("<li> <a href=\"toPrivateNews.action\"  target=\"mainIframe\">未公开</a> </li>");
                   }
                 %>
-
                 <li class='divider'>
                 </li>
               </ul>
@@ -149,7 +148,7 @@
                   if(session.getAttribute("user") == null) {
                     out.println("<li> <a href=\"javascript:alert('您未登陆,请先登录')\" target=\"mainIframe\" >查看问卷</a> </li>");
                   } else if (((User)session.getAttribute("user")).getIdentityFlag() != 1){
-                    out.println("<li> <a href=\"javascript:alert('您为进行实名认证，请先进行实名认证')\" target=\"mainIframe\" >查看问卷</a> </li>");
+                    out.println("<li> <a href=\"javascript:alert('您未进行实名认证，请先进行实名认证')\" target=\"mainIframe\" >查看问卷</a> </li>");
                   } else {
                     out.println("<li> <a href=\"toQuestionView.action\" target=\"mainIframe\" >查看问卷</a> </li>");
                   }

@@ -1,60 +1,141 @@
-<%@ page import="govsystem.domain.News" %>
 <%@ page import="govsystem.domain.Message" %>
-<%@ page import="java.util.List" %>
+<%@ page import="java.util.List" %><%--
+  Description： 
+  Created by Myth on 6/6/2017.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <%@include file="/WEB-INF/front-end/header.jsp" %>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
     <title>${requestScope.get("news").title}</title>
+    <style type="text/css">
+        body {
+            background-color: #FFFFFF;
+        }
+        .main.container {
+            margin-top: 2em;
+        }
+
+        .main.menu {
+            margin-top: 4em;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+            transition:
+                    box-shadow 0.5s ease,
+                    padding 0.5s ease
+        ;
+        }
+        .main.menu .item img.logo {
+            margin-right: 1.5em;
+        }
+
+        .overlay {
+            float: left;
+            margin: 0em 3em 1em 0em;
+        }
+        .overlay .menu {
+            position: relative;
+            left: 0;
+            transition: left 0.5s ease;
+        }
+
+        .main.menu.fixed {
+            background-color: #FFFFFF;
+            border: 1px solid #DDD;
+            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+        }
+        .overlay.fixed .menu {
+            left: 800px;
+        }
+
+        .text.container .left.floated.image {
+            margin: 2em 2em 2em -4em;
+        }
+        .text.container .right.floated.image {
+            margin: 2em -4em 2em 2em;
+        }
+
+        .ui.footer.segment {
+            margin: 5em 0em 0em;
+            padding: 5em 0em;
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-    <div class="row clearfix">
-        <div class="col-md-12 column">
-            <div class="jumbotron">
-                <h2>
-                    ${requestScope.get("news").title}
-                </h2>
-                <br>
-                <p>
-                    ${requestScope.get("news").content}
-                </p>
-                <blockquote class='pull-right'>
-                    <p>
-                    ${requestScope.get("news").name}
-                    </p>
-                    <small >${requestScope.get("news").postTime}</small>
-                </blockquote>
-            </div>
-            <div class="list-group">
-                <a href="#" class="list-group-item active" id="comment">评论</a>
-                <%
-                    List<Message> messageList = (List<Message>)request.getAttribute("messageList");
-                    for(Message message:messageList) {
-                        String userName = message.getName();
-                        String comment = message.getContent();
-                        out.print("<div class=\"list-group-item\">");
-                        out.println(userName + ":" + comment);
-                        out.print("</div>");
-                    }
-                %>
-                <br><br>
-                <div id="comInput">
-                    <form action="addMessage.action?nid=${requestScope.get("news").nid}" method="POST">
-                         <textarea class="form-control " id="input" name="comment" >
-                         </textarea>
-                        <div class="col-md-10"></div>
-                        <div class="col-md-2">
-                            <button class="btn btn-default btn-info btn-block" type="submit">发表</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+<div class="ui main text container">
+    <h1>${requestScope.get("news").title}</h1>
+    <div class="metadata">
+        <div class="author">${requestScope.get("news").name}</div>
+        <div class="date">${requestScope.get("news").postTime}</div>
+    </div>
+    <div class="overlay">
+        <div class="ui labeled icon vertical menu">
+            <a class="item"><i class="unhide icon"></i>公开新闻</a>
+            <a class="item"><i class="ban icon"></i>非公开新闻</a>
+            <a class="item"><i class="edit icon"></i>问卷调查</a>
         </div>
     </div>
+    ${requestScope.get("news").content}
+    <div class="ui comments">
+            <%
+                List<Message> messageList = (List<Message>)request.getAttribute("messageList");
+                String imgSrc = "frontcss/themes/avatar/lambda.jpg";
+                for(Message message:messageList) {
+                    String userName = message.getName();
+                    String comment = message.getContent();
+                    String postTime = message.getPostTime();
+                    out.println("<div class=\"comment\">");
+                    out.println("<a class=\"avatar\">");
+                    out.println("<img src=\""+imgSrc+"\">");
+                    out.println("</a>");
+                    out.println("<div class=\"content\">\n" +
+                            "<div class=\"author\">"+userName+"</div>\n" +
+                            "<div class=\"metadata\">\n" +
+                            "<div class=\"date\">"+postTime+"</div>\n" +
+                            "</div>\n" +
+                            "<div class=\"text\">\n" +
+                            comment +
+                            "</div>\n" +
+                            "</div>");
+                    out.println("</div>");
+                }
+            %>
+        <form class="ui reply form" action="addMessage.action?nid=${requestScope.get("news").nid}" method="POST">
+            <div class="field">
+                <textarea id="input" name="comment"></textarea>
+            </div>
+            <div class="ui primary submit labeled icon button">
+                <i class="icon edit"></i> 添加评论
+            </div>
+        </form>
+    </div>
 </div>
+<%@include file="/WEB-INF/front-end/footer.jsp" %>
 </body>
+    <script>
+    $(document)
+        .ready(function() {
+            // fix main menu to page on passing
+            $('.main.menu').visibility({
+                type: 'fixed'
+            });
+            $('.overlay').visibility({
+                type: 'fixed',
+                offset: 80
+            });
+            // lazy load images
+            $('.image').visibility({
+                type: 'image',
+                transition: 'vertical flip in',
+                duration: 500
+            });
+
+            // show dropdown on hover
+            $('.main.menu  .ui.dropdown').dropdown({
+                on: 'hover'
+            });
+        });
+</script>
+
 </html>

@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ac1c8b1-5305-4e80-838f-00319e572fbe" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/front-end/login.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/front-end/regist.jsp" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/govsystem/controller/FrontEndController.class" afterPath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/govsystem/controller/FrontEndController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/govsystem/dao/impl/UseDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/classes/govsystem/dao/impl/UseDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GovSystem/govsystem/controller/FrontEndController.class" afterPath="$PROJECT_DIR$/out/production/GovSystem/govsystem/controller/FrontEndController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GovSystem/govsystem/dao/impl/UseDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/GovSystem/govsystem/dao/impl/UseDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/front-end/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/front-end/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/govsystem/controller/FrontEndController.java" afterPath="$PROJECT_DIR$/src/govsystem/controller/FrontEndController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/govsystem/controller/PageController.java" afterPath="$PROJECT_DIR$/src/govsystem/controller/PageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/govsystem/dao/impl/AdminDaoImpl.java" afterPath="$PROJECT_DIR$/src/govsystem/dao/impl/AdminDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/govsystem/dao/impl/UseDaoImpl.java" afterPath="$PROJECT_DIR$/src/govsystem/dao/impl/UseDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/govsystem/controller/FrontEndPageController.java" afterPath="$PROJECT_DIR$/src/govsystem/controller/FrontEndPageController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/front-end/header.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/front-end/header.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/front-end/index.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/front-end/index.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/WEB-INF/front-end/news_detail.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/front-end/news_detail3.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/WEB-INF/front-end/news_view.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/front-end/news_view3.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/WEB-INF/front-end/success.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/testpages/success.jsp" />
     </list>
     <ignored path="SpringMVC.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,23 +46,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="BackEndJsonController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/govsystem/controller/BackEndJsonController.java">
+      <file leaf-file-name="news_view.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/news_view.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="40" column="35" lean-forward="false" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+            <state relative-caret-position="329">
+              <caret line="51" column="42" lean-forward="true" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="news_detail.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="news_detail.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/news_detail.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="45" column="38" lean-forward="false" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="44" />
+            <state relative-caret-position="332">
+              <caret line="93" column="43" lean-forward="true" selection-start-line="93" selection-start-column="43" selection-end-line="93" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -63,98 +71,8 @@
       <file leaf-file-name="FrontEndController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/govsystem/controller/FrontEndController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="64" column="13" lean-forward="true" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_manage.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/user_manage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1992">
-              <caret line="83" column="33" lean-forward="false" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
-              <folding>
-                <marker date="1492440132125" expanded="true" signature="3976:3985" ph="..." />
-                <marker date="1492440132125" expanded="true" signature="4078:4089" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jdbc-config.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/jdbc-config.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/govsystem/dao/UserDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="47" column="40" lean-forward="false" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UseDaoImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/govsystem/dao/impl/UseDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="62" column="16" lean-forward="true" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
-              <folding>
-                <marker date="1494837434906" expanded="true" signature="1237:1315" ph="insert into tb_user... " />
-                <marker date="1494837434906" expanded="true" signature="1667:1698" ph="delete from " />
-                <marker date="1494837434906" expanded="true" signature="2063:2116" ph="select * fro... tb_user" />
-                <marker date="1494837434906" expanded="true" signature="2445:2545" ph="update tb_us... " />
-                <marker date="1494837434906" expanded="true" signature="3069:3132" ph="select count... tb_library" />
-                <marker date="1494837434906" expanded="true" signature="3692:3752" ph="select * fro... tb_user" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/govsystem/dao/impl/AdminDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="68" column="20" lean-forward="false" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
-              <folding>
-                <marker date="1494837411704" expanded="true" signature="1259:1313" ph="select * fro... tb_admin" />
-                <marker date="1494837411704" expanded="true" signature="1630:1732" ph="insert into tb_admin... " />
-                <marker date="1494837411704" expanded="true" signature="2136:2168" ph="delete from " />
-                <marker date="1494837411704" expanded="true" signature="2596:2636" ph="select * fro... tb_admin" />
-                <marker date="1494837411704" expanded="true" signature="3051:3122" ph="update tb_ad... " />
-                <marker date="1494837411704" expanded="true" signature="3339:3399" ph="update tb_ad... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FrontServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/govsystem/service/impl/FrontServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="71" column="19" lean-forward="false" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
-              <folding>
-                <element signature="e#1835#1836#0" expanded="true" />
-                <element signature="e#1897#1898#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FrontEndPageController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/govsystem/controller/FrontEndPageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+            <state relative-caret-position="244">
+              <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -175,7 +93,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>toNew</find>
       <find>mainIframe</find>
       <find>user</find>
       <find>exitSystem</find>
@@ -205,6 +122,7 @@
       <find>实名</find>
       <find>留言人</find>
       <find>留言</find>
+      <find>注册</find>
     </findStrings>
     <replaceStrings>
       <replace>admin</replace>
@@ -228,15 +146,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/WEB-INF/back-end/admin.jsp" />
-        <option value="$PROJECT_DIR$/src/govsystem/controller/BackEndPageController.java" />
-        <option value="$PROJECT_DIR$/src/govsystem/dao/impl/VideoDaoImpl.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/back-end/video.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/front-end/video.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/front-end/video_old.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/front-end/vote.jsp" />
         <option value="$PROJECT_DIR$/src/govsystem/domain/QuestionItem.java" />
-        <option value="$PROJECT_DIR$/src/govsystem/controller/FrontEndPageController.java" />
         <option value="$PROJECT_DIR$/src/govsystem/domain/Question.java" />
         <option value="$PROJECT_DIR$/src/govsystem/formbean/frontform/RadioForm.java" />
         <option value="$PROJECT_DIR$/src/govsystem/test/TestController.java" />
@@ -245,7 +156,6 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/front-end/question_view.jsp" />
         <option value="$PROJECT_DIR$/src/govsystem/test/TestDao.java" />
         <option value="$PROJECT_DIR$/src/govsystem/domain/News.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/front-end/news_view.jsp" />
         <option value="$PROJECT_DIR$/src/govsystem/dao/NewsDao.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/front-end/news_status.jsp" />
         <option value="$PROJECT_DIR$/src/govsystem/dao/impl/NewsDaoImpl.java" />
@@ -256,7 +166,6 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/front-end/statistic_chart.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/front-end/video_view.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/back-end/question.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/back-end/admin_manage.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/back-end/index.jsp" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/govsystem/controller/LoginController.java" />
@@ -272,13 +181,22 @@
         <option value="$PROJECT_DIR$/src/govsystem/service/FrontService.java" />
         <option value="$PROJECT_DIR$/src/govsystem/controller/BackEndJsonController.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/back-end/news_manage.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/front-end/news_detail.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/front-end/error.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/front-end/index.jsp" />
         <option value="$PROJECT_DIR$/src/govsystem/controller/PageController.java" />
         <option value="$PROJECT_DIR$/src/govsystem/controller/FrontEndController.java" />
         <option value="$PROJECT_DIR$/src/govsystem/dao/impl/AdminDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/govsystem/dao/impl/UseDaoImpl.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/back-end/admin_manage.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/front-end/header.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/front-end/index.jsp" />
+        <option value="$PROJECT_DIR$/src/govsystem/controller/FrontEndPageController.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/front-end/footer.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/front-end/index2.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/front-end/news_detail2.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/front-end/page_template.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/front-end/news_view2.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/front-end/news_view.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/front-end/news_detail.jsp" />
       </list>
     </option>
   </component>
@@ -301,7 +219,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-11" />
     <option name="y" value="-11" />
-    <option name="width" value="1934" />
+    <option name="width" value="1942" />
     <option name="height" value="1042" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -338,6 +256,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -392,6 +311,94 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front-end" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontcss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontcss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontcss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="avatar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -440,150 +447,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
+              <option name="myItemId" value="domain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FrontServiceImpl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GovSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GovSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="govsystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GovSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GovSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="govsystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GovSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GovSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="govsystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GovSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GovSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="govsystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UseDaoImpl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GovSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GovSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="govsystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminDaoImpl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -608,10 +473,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GovSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="govsystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FrontEndController" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -628,18 +518,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java\IntellijProjects\GovSystem\web\frontcss\themes\avatar" />
       <recent name="D:\Java\IntellijProjects\GovSystem\web\frontjs" />
+      <recent name="D:\Java\IntellijProjects\GovSystem\web\frontcss" />
       <recent name="D:\Java\IntellijProjects\GovSystem\web\WEB-INF\front-end" />
       <recent name="D:\Java\IntellijProjects\GovSystem\web\WEB-INF\lib" />
-      <recent name="D:\Java\IntellijProjects\GovSystem\web" />
-      <recent name="D:\Java\IntellijProjects\GovSystem\web\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Java\IntellijProjects\GovSystem\web\WEB-INF\testpages" />
       <recent name="D:\Java\IntellijProjects\GovSystem\web\WEB-INF\front-end" />
       <recent name="D:\Java\IntellijProjects\GovSystem\web" />
       <recent name="D:\Java\IntellijProjects\GovSystem\web\WEB-INF" />
       <recent name="D:\Java\IntellijProjects\SpringMVC\web\WEB-INF" />
-      <recent name="D:\Java\IntellijProjects\SpringMVC\web" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1148,7 +1038,11 @@
       <workItem from="1493261544835" duration="1205000" />
       <workItem from="1494066250790" duration="1719000" />
       <workItem from="1494227376712" duration="751000" />
-      <workItem from="1494836150419" duration="1263000" />
+      <workItem from="1494836150419" duration="1797000" />
+      <workItem from="1495443684367" duration="2539000" />
+      <workItem from="1495713954486" duration="105000" />
+      <workItem from="1496647892666" duration="5353000" />
+      <workItem from="1496731135208" duration="19243000" />
     </task>
     <task id="LOCAL-00001" summary="修改用户功能">
       <created>1489416762194</created>
@@ -1331,7 +1225,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="404166000" />
+    <option name="totallyTimeSpent" value="431940000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1343,7 +1237,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1934" height="1042" extended-state="0" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1354,25 +1248,26 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41118014" sideWeight="0.5021575" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32670808" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32670808" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26138827" sideWeight="0.48290598" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24352051" sideWeight="0.48290598" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51180124" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23156182" sideWeight="0.517094" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40983605" sideWeight="0.4978425" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2176026" sideWeight="0.5080745" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40983605" sideWeight="0.4978425" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972914" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1476,7 +1371,7 @@
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/WEB-INF/front-end/success.jsp</url>
+          <url>file://$PROJECT_DIR$/web/WEB-INF/testpages/success.jsp</url>
           <line>18</line>
           <properties />
           <option name="timeStamp" value="210" />
@@ -1575,7 +1470,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="369" />
+      <option name="time" value="371" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -1584,137 +1479,10 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/govsystem/domain/QuestionItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/formbean/frontform/RadioForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/testpages/testradio.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="70" column="94" lean-forward="false" selection-start-line="70" selection-start-column="94" selection-end-line="70" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/test/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/dao/QuestionDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/question_view.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="56" column="55" lean-forward="true" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/domain/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/test/TestDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/domain/News.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/news_view.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="46" column="72" lean-forward="false" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/news_status.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="69" column="88" lean-forward="false" selection-start-line="69" selection-start-column="88" selection-end-line="69" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/frontjs/highcharts-exporting.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/frontjs/highcharts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="38" column="120" lean-forward="false" selection-start-line="38" selection-start-column="120" selection-end-line="38" selection-end-column="120" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="93" lean-forward="true" selection-start-line="3" selection-start-column="80" selection-end-line="3" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/success.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/statistic_chart.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="16" column="46" lean-forward="true" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/question_detail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="51" column="51" lean-forward="true" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/video_view.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="34" column="57" lean-forward="false" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -1737,13 +1505,6 @@
             <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1848">
-          <caret line="77" column="51" lean-forward="false" selection-start-line="77" selection-start-column="51" selection-end-line="77" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -1773,27 +1534,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="210" column="8" lean-forward="false" selection-start-line="210" selection-start-column="8" selection-end-line="223" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/setting.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="131" column="259" lean-forward="false" selection-start-line="131" selection-start-column="259" selection-end-line="131" selection-end-column="259" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/domain/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/dao/MessageDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="41" column="26" lean-forward="false" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1860,34 +1600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/service/FrontService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="89" column="4" lean-forward="false" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/dao/impl/MessageDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2712">
-          <caret line="123" column="65" lean-forward="false" selection-start-line="123" selection-start-column="65" selection-end-line="123" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/news_manage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11712">
-          <caret line="488" column="33" lean-forward="false" selection-start-line="488" selection-start-column="33" selection-end-line="488" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/error.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/govsystem/domain/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="984">
@@ -1895,27 +1607,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1656">
-          <caret line="69" column="47" lean-forward="false" selection-start-line="69" selection-start-column="47" selection-end-line="69" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/admin_manage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4248">
-          <caret line="177" column="76" lean-forward="false" selection-start-line="177" selection-start-column="76" selection-end-line="177" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/govsystem/controller/BackEndPageController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1923,36 +1618,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
           <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-          <folding>
-            <element signature="e#924#925#0" expanded="true" />
-            <element signature="e#970#971#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/controller/FrontEndPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/govsystem/controller/BackEndJsonController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
+        <state relative-caret-position="960">
           <caret line="40" column="35" lean-forward="false" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/news_detail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="45" column="38" lean-forward="false" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1970,42 +1645,60 @@
     <entry file="file://$PROJECT_DIR$/web/jdbc-config.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-          <folding />
+          <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/govsystem/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
+        <state relative-caret-position="1080">
           <caret line="47" column="40" lean-forward="false" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/service/impl/FrontServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/govsystem/dao/impl/UseDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="71" column="19" lean-forward="false" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
+        <state relative-caret-position="1080">
+          <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
           <folding>
-            <element signature="e#1835#1836#0" expanded="true" />
-            <element signature="e#1897#1898#0" expanded="true" />
+            <marker date="1494837434906" expanded="true" signature="1237:1315" ph="insert into tb_user... " />
+            <marker date="1494837434906" expanded="true" signature="1667:1698" ph="delete from " />
+            <marker date="1494837434906" expanded="true" signature="2063:2116" ph="select * fro... tb_user" />
+            <marker date="1494837434906" expanded="true" signature="2445:2545" ph="update tb_us... " />
+            <marker date="1494837434906" expanded="true" signature="3069:3132" ph="select count... tb_library" />
+            <marker date="1494837434906" expanded="true" signature="3692:3752" ph="select * fro... tb_user" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/controller/FrontEndController.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/news_manage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="64" column="13" lean-forward="true" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+        <state relative-caret-position="958">
+          <caret line="488" column="33" lean-forward="false" selection-start-line="488" selection-start-column="33" selection-end-line="488" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/GovSystem/WEB-INF/back-end/news_manage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/admin_manage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3408">
+          <caret line="142" column="5" lean-forward="false" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/govsystem/dao/impl/AdminDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="68" column="20" lean-forward="false" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+        <state relative-caret-position="312">
+          <caret line="74" column="32" lean-forward="false" selection-start-line="74" selection-start-column="32" selection-end-line="74" selection-end-column="32" />
           <folding>
             <marker date="1494837411704" expanded="true" signature="1259:1313" ph="select * fro... tb_admin" />
             <marker date="1494837411704" expanded="true" signature="1630:1732" ph="insert into tb_admin... " />
@@ -2017,18 +1710,259 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/govsystem/dao/impl/UseDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/back-end/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="62" column="16" lean-forward="true" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+        <state relative-caret-position="96">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding>
-            <marker date="1494837434906" expanded="true" signature="1237:1315" ph="insert into tb_user... " />
-            <marker date="1494837434906" expanded="true" signature="1667:1698" ph="delete from " />
-            <marker date="1494837434906" expanded="true" signature="2063:2116" ph="select * fro... tb_user" />
-            <marker date="1494837434906" expanded="true" signature="2445:2545" ph="update tb_us... " />
-            <marker date="1494837434906" expanded="true" signature="3069:3132" ph="select count... tb_library" />
-            <marker date="1494837434906" expanded="true" signature="3692:3752" ph="select * fro... tb_user" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1491644051052" expanded="true" signature="4846:4869" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/frontcss/semantic.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/frontjs/semantic.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="207" column="83" lean-forward="true" selection-start-line="207" selection-start-column="70" selection-end-line="207" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/govsystem/controller/FrontEndPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+          <folding>
+            <element signature="e#344#345#0" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#573#574#0" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/regist.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/setting.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="134" column="13" lean-forward="true" selection-start-line="134" selection-start-column="13" selection-end-line="134" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/video_view.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="34" column="57" lean-forward="false" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/testpages/success.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/error.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/news_status.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="69" column="88" lean-forward="false" selection-start-line="69" selection-start-column="88" selection-end-line="69" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="95" lean-forward="false" selection-start-line="9" selection-start-column="95" selection-end-line="9" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/footer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="39" column="6" lean-forward="false" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/govsystem/domain/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="49" column="29" lean-forward="false" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="29" />
+          <folding>
+            <element signature="e#371#372#0" expanded="false" />
+            <element signature="e#399#400#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/index2.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="221" column="0" lean-forward="true" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/question_detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="65" column="47" lean-forward="false" selection-start-line="65" selection-start-column="47" selection-end-line="65" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/question_view.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/news_detail3.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/page_template.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="13" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/news_view3.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="61" column="78" lean-forward="false" selection-start-line="61" selection-start-column="74" selection-end-line="61" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/govsystem/domain/News.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="65" column="27" lean-forward="false" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/govsystem/dao/MessageDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/govsystem/dao/impl/MessageDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="103" column="25" lean-forward="false" selection-start-line="103" selection-start-column="25" selection-end-line="103" selection-end-column="25" />
+          <folding>
+            <marker date="1492445554327" expanded="true" signature="1280:1347" ph="insert into tb_message... " />
+            <marker date="1492445554327" expanded="true" signature="1373:1427" ph="update tb_ne... " />
+            <marker date="1492445554327" expanded="true" signature="2079:2133" ph="update tb_ne... " />
+            <marker date="1492445554327" expanded="true" signature="2159:2193" ph="delete from " />
+            <marker date="1492445554327" expanded="true" signature="2836:2910" ph="select * fro... tb_message" />
+            <marker date="1492445554327" expanded="true" signature="3378:3464" ph="select * fro... tb_message" />
+            <marker date="1492445554327" expanded="true" signature="3827:3868" ph="update tb_me... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/govsystem/service/impl/FrontServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="110" column="32" lean-forward="true" selection-start-line="110" selection-start-column="32" selection-end-line="110" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/govsystem/service/FrontService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="81" column="18" lean-forward="false" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/news_view.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="51" column="42" lean-forward="true" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/govsystem/controller/FrontEndController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/front-end/news_detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="93" column="43" lean-forward="true" selection-start-line="93" selection-start-column="43" selection-end-line="93" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>

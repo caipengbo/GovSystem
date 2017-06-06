@@ -18,5 +18,8 @@ public class FrontEndPageController {
         return "/front-end/setting";
     }
 
-
+    @RequestMapping("/toFrontEndIndex2")
+    public String toFrontEndIndex2(){
+        return "/front-end/index2";
+    }
 }
