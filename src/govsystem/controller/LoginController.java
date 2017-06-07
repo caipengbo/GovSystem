@@ -68,9 +68,4 @@ public class LoginController {
     }
 
 
-    @RequestMapping("/logout")
-    public String logout(HttpSession httpSession)  {
-        httpSession.invalidate();
-        return "/front-end/index";
-    }
 }

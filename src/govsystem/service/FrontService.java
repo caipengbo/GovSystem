@@ -95,6 +95,13 @@ public interface FrontService {
     List<Video> listAllVideo();
 
     /**
+     * 根据文件名，获得Video
+     * @param fileName
+     * @return
+     */
+    Video getVideo(String fileName);
+
+    /**
      * 根据Nid获得News
      * @return
      */

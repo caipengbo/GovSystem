@@ -167,7 +167,7 @@
                             out.println("<div id=\"sign2-button\" class=\"ui inverted button\">注册</div>");
                         } else {
                             out.println(
-                                    "<div class=\"item ui button\" onclick=\"toSetting.action\"><i class=\"checkmark icon\"></i>"+((User)session.getAttribute("user")).getUsername()+"</div>\n" +
+                                    "<a class=\"item ui button\" href=\"toSetting.action\"><i class=\"checkmark icon\"></i>"+((User)session.getAttribute("user")).getUsername()+"</a>\n" +
                                     "<div id=\"logout-button2\" class=\"item ui button\"><i class=\"remove icon\"></i>注销</div>\n"
                             );
                         }
@@ -219,11 +219,19 @@
                 for(int i=0; i<1 && i< questionList.size(); i++) {
                     out.println("<h3 class=\"ui header\" ><a name=\"survey\">"+questionList.get(i).getTitle()+"</a></h3>");
                 }
+                if(session.getAttribute("user") == null) {
+                    out.println("<a class=\"ui large orange button\" href=\"javascript:alert('您未登陆,请先登录')\">参与问卷</a>");
+                } else {  //登录状态下
+                    if(((User)session.getAttribute("user")).getIdentityFlag() == 0) {
+                        //未实名认证
+                        out.println("<a class=\"ui large orange button\" href=\"javascript:alert('您未实名认证,不能参与问卷调查,请先实名认证')\">参与问卷</a>");
+                    } else{
+                        out.println("<a class=\"ui large orange button\" href=\"toQuestionView.action\">参与问卷</a>");
+                    }
+                }
             %>
-
-            <a class="ui large orange button" href="toQuestionView.action">参与问卷</a>
             <h4 class="ui horizontal header divider">
-                <a href="#">——</a>
+                <a href="#"> </a>
             </h4>
             <%
                 List<Video> videoList = (List<Video>)request.getAttribute("videoList");
@@ -231,8 +239,12 @@
                     out.println("<h3 class=\"ui header\"><a name=\"discuss\">"+videoList.get(i).getTitle()+"</a></h3>");
                     out.println("<p>"+videoList.get(i).getDescription()+"</p>");
                 }
+                if(session.getAttribute("user") == null) {
+                    out.println("<a class=\"ui large orange button\" href=\"javascript:alert('您未登陆,请先登录')\">观看视频</a>");
+                } else {  //登录状态下
+                    out.println("<a class=\"ui large orange button\" href=\"toVideoView.action\">观看视频</a>");
+                }
             %>
-            <a class="ui large  orange button" href="toVideoView.action">观看视频</a>
         </div>
     </div>
 
@@ -390,7 +402,7 @@
             contentType:'application/json',
             success:function(result){
                 if (result.msg == "success") {
-                    location.href = "toFrontEndIndex2.action";
+                    location.href = "toFrontEndIndex.action";
                     alert("注册成功");
                 } else {
                     alert("注册失败");

@@ -108,12 +108,27 @@ public class FrontEndController {
         return mav;
     }
 
+    @RequestMapping("/logout")
+    public ModelAndView logout(HttpSession httpSession)  {
+        httpSession.invalidate();
+        return toFrontEndIndex();
+    }
+
     @RequestMapping("/toVideoView")
     public ModelAndView toVideoView(){
         ModelAndView mav = new ModelAndView();
         List<Video> videoList  = frontService.listAllVideo();
         mav.addObject("videoList",videoList);
         mav.setViewName("/front-end/video_view");
+        return mav;
+    }
+
+    @RequestMapping("/toVideoDetail")
+    public ModelAndView toVideoDetail(String fileName){
+        ModelAndView mav = new ModelAndView();
+        Video video = frontService.getVideo(fileName);
+        mav.addObject("video",video);
+        mav.setViewName("/front-end/video_detail");
         return mav;
     }
 
@@ -190,9 +205,14 @@ public class FrontEndController {
     //如果已经填写问卷，那么跳转到统计界面；如果没填写，跳到填写页面
     @RequestMapping("/toQuestionDetail")
     public ModelAndView toQuestionDetail(int qid,HttpSession httpSession){
-        int uid = ((User)httpSession.getAttribute("user")).getUid();
         ModelAndView mav = new ModelAndView();
         Question question = new Question();
+        if(httpSession == null) {
+            mav.setViewName("/front-end/error");
+            return mav;
+        }
+        int uid = ((User)httpSession.getAttribute("user")).getUid();
+
         //检查一下，该用户是否填写了该问卷
         if (frontService.checkCompleteQuestion(uid,qid)) {
             //跳到统计页面

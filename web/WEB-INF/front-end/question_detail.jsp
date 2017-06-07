@@ -4,17 +4,10 @@
 <html lang="en">
 <head>
     <head>
-        <%@include file="/WEB-INF/front-end/header.jsp" %>
-        <link href='frontcss/font.css' rel='stylesheet' type='text/css'>
-        <script type="text/javascript" src="frontjs/jquery.min.js"></script>
-        <script type="text/javascript" src="frontjs/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="frontjs/jquery.cookie.js"></script>
-        <script type="text/javascript" src="frontjs/bootstrap-3.1.1.min.js"></script>
-        <script type="text/javascript" src="frontjs/jedate/jedate.min.js"></script>
-        <!-- Custom Theme files -->
-        <!--//theme-style-->
+        <%@include file="/WEB-INF/front-end/header_old.jsp" %>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+        <title>填写问卷</title>
         <style>
             *{ font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
                 margin: 0;
@@ -74,7 +67,7 @@
                         }
                         out.print("<input type=\"hidden\" name=\"count\" value=\""+count+"\"/>");
                     %>
-                    <button class="btn btn-block btn-lg btn-info" type="submit">提交</button>
+                    <button class="btn btn-block btn-lg btn-warning" type="submit">提交</button>
                 </form>
             </div>
         </div>

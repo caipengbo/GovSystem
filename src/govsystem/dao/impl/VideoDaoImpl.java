@@ -87,4 +87,20 @@ public class VideoDaoImpl implements VideoDao {
         }
         return (effectedNum != 0);
     }
+
+    @Override
+    public Video get(String fileName) {
+        List<Video> videoList;
+        String sql = "select * from tb_video,tb_admin where tb_video.aid=tb_admin.aid and filename=?";
+        try {
+            videoList = jdbcTemplate.query(sql, new VideoRowMapper(),fileName);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+        if (videoList != null) {
+            return videoList.get(0);
+        }
+        return null;
+    }
 }

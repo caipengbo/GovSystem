@@ -35,4 +35,11 @@ public interface VideoDao {
      * @return
      */
     boolean update(Video video);
+
+    /**
+     * 获得Video对象
+     * @param fileName
+     * @return
+     */
+    Video get(String fileName);
 }

@@ -74,7 +74,7 @@
                         }
                         out.print("<input type=\"hidden\" name=\"count\" value=\""+count+"\"/>");
                     %>
-                    <button class="btn btn-block btn-lg btn-info" type="submit">提交</button>
+                    <button class="btn btn-block btn-lg btn-warning" type="submit">提交</button>
                 </form>
             </div>
         </div>

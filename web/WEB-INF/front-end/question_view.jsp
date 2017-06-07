@@ -1,84 +1,102 @@
-<%@ page import="com.sun.xml.internal.bind.v2.TODO" %>
 <%@ page import="govsystem.domain.Question" %>
-<%@ page import="java.util.List" %>
+<%@ page import="govsystem.domain.User" %>
+<%@ page import="java.util.List" %><%--
+  Description：
+  Created by Myth on 6/7/2017.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <%@include file="/WEB-INF/front-end/header.jsp" %>
-    <!-- Custom Theme files -->
-    <!--//theme-style-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-    <style>
-        *{ font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
-            margin: 0;
-            padding: 0;
-            border: 0;
+    <title>问卷调查</title>
+    <style type="text/css">
+        body {
+            background-color: #FFFFFF;
         }
-        .bottom{
-            margin-top: 80px;
+        .m{ width: 640px; height: 264; margin-left: auto; margin-right: auto; margin-top: 100px; }
+        .ui.menu .item img.logo {
+            margin-right: 1.5em;
         }
-        .h_contral{
+        .main.container {
+            margin-top: 7em;
         }
-        .text-center{
-            font-size: 30px;
+        .wireframe {
+            margin-top: 2em;
         }
-        blockquote{
-            position:relative;
-            bottom: 0px;
-
-        }
-        .state{
-            position: absolute;;
+        .ui.footer.segment {
+            margin: 5em 0em 0em;
+            padding: 5em 0em;
         }
     </style>
 </head>
 <body>
-<div class="container">
-    <div class="row clearfix">
 
-        <div class="col-md-12 column">
-            <div class="list-group">
-                <a href="#" class="list-group-item active">问卷调查</a>
-                <%
-                    String imgSrc="img/myface.jpg";
-                    List<Question> questionList = (List<Question>)request.getAttribute("questionList");
-                    String href;
-                    for(Question question:questionList) {
-                        href="toQuestionDetail.action?qid=" + question.getQid();
-                        out.print("<a href=\"" + href + "\" target=\"_blank\">");
-                        out.print("<div class=\"list-group-item\">");
-                        out.print("<div class='row clearfix h_contral' >");
-                        out.print("<div class='col-md-2 column'>");
-                        out.print("<img src='"+imgSrc+"' class='img-thumbnail'>");
-                        out.print("</div>");
-                        out.print("<div class='col-md-10 column' class='state'>");
-                        out.print("<p class='text-center'>");
-                        out.print(question.getTitle());
-                        out.print("</p>");
-                        out.print("<blockquote class='pull-right'>");
-                        out.print("<p>发布人:"+question.getName()+"</p> <small >"+question.getPostTime()+"</small>");
-                        out.print("</blockquote>");
-                        out.print("</div>");
-                        out.print("</div>");
-                        out.print("</div>");
-                        out.print("</a>");
-                    }
-                %>
-            </div> <a class="list-group-item active"></a>
-        </div>
+<%--顶部固定导航栏--%>
+<div class="ui fixed inverted menu">
+    <div class="ui container">
+        <a href="#" class="header item">
+            <img class="logo" src="img/lambda_logo.png">
+            Lambda
+        </a>
+        <a href="toFrontEndIndex.action" class="item">主页</a>
+        <a href="toNewsView.action" class="item">公开信息</a>
+        <%
+            if(session.getAttribute("user") == null) {
+                out.println("<a href=\"javascript:alert('您未登陆,请先登录')\" class=\"item\">未公开信息</a>");
+                out.println("<a href=\"javascript:alert('您未登陆,请先登录')\" class=\"item\">问卷</a>");
+                out.println("<a href=\"javascript:alert('您未登陆,请先登录')\" class=\"item\">视频</a>");
+            } else {
+                if(((User)session.getAttribute("user")).getIdentityFlag() == 0) {
+                    //未实名认证
+                    out.println("<a href=\"javascript:alert('您未实名认证,请先实名认证')\" class=\"item\">未公开信息</a>");
+                    out.println("<a href=\"javascript:alert('您未实名认证,请先实名认证')\" class=\"item\">问卷</a>");
+                } else {
+                    out.println("<a href=\"toPrivateNews.action\" class=\"item\">未公开信息</a>");
+                    out.println("<a href=\"toQuestionView.action\" class=\"item\">问卷</a>");
+                }
+                out.println("<a href=\"toVideoView.action\" class=\"item\">视频</a>");
+            }
+        %>
     </div>
 </div>
-<script>
-    for(var i=0;i<$(".h_contral").size();i++) {
-        var now=$(".h_contral").get(i);
-        //   console.log(now.children());
-        //  $(".h_contral").get(i).height(  $(".h_contral").get(i).children(':first').height());
-        $(".h_contral").get(i).height(  $(".h_contral").get(i).children(':first').height());
 
-        //  console.log($("#test").children().get(0));
-    }
+<!--text container begin-->
+<div class="pusher dimmed">
+    <div class="ui main text container">
+        <div class="ui divided items">
+                <%
+                    String href;
+                    String imgSrc="img/myface.jpg";
+                    List<Question> questionList = (List<Question>)request.getAttribute("questionList");
+                    for(Question question:questionList) {
+                        href="toQuestionDetail.action?qid=" + question.getQid();
+                        out.println("<div class=\"item\">");
+                        out.println("<div class=\"image\">");
+                        out.println("<img src=\""+imgSrc+"\">");
+                        out.println("</div>");
+                        out.println("<div class=\"content\">");
+                        out.println("<div class=\"header\">"+question.getTitle()+"</div>");
+                        out.println("<div class=\"meta\">");
+                        out.println("<span class=\"date\">"+question.getName() +"&nbsp&nbsp&nbsp"+ question.getPostTime() +"</span>");
+                        out.println("</div>");
+                        out.println(" <div class=\"description\">\n<p>" +
+                                "问卷调查" +
+                                "</div>");
+                        out.println("<div class=\"extra\">\n" + "<div class=\"ui label\">公开</div>");
+                        out.println("<a class=\"ui right floated orange button\" href=\""+href+"\">");
+                        out.println("查看\n" + "<i class=\"right chevron icon\"></i>\n" +
+                                "</a>\n" + "</div>\n" + "</div>\n" + "</div>");
+                    }
+                %>
+        </div>
+    </div>
+
+</div>  <!--text container end-->
+
+<%@include file="/WEB-INF/front-end/footer.jsp" %>
+<script>
+
 </script>
 </body>
-
+</html>
 </html>

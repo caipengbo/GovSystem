@@ -1,5 +1,6 @@
 <%@ page import="govsystem.domain.News" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="govsystem.domain.User" %><%--
   Description： 
   Created by Myth on 6/6/2017.
 --%>
@@ -8,6 +9,25 @@
 <head>
     <%@include file="/WEB-INF/front-end/header.jsp" %>
     <title>公开信息</title>
+    <style type="text/css">
+        body {
+            background-color: #FFFFFF;
+        }
+        .m{ width: 640px; height: 264; margin-left: auto; margin-right: auto; margin-top: 100px; }
+        .ui.menu .item img.logo {
+            margin-right: 1.5em;
+        }
+        .main.container {
+            margin-top: 7em;
+        }
+        .wireframe {
+            margin-top: 2em;
+        }
+        .ui.footer.segment {
+            margin: 5em 0em 0em;
+            padding: 5em 0em;
+        }
+    </style>
 </head>
 <body>
 <div id="leftsidebar" class="ui left vertical inverted labeled icon sidebar menu">
@@ -33,11 +53,41 @@
     </a>
 </div>
 
-<div id="nav" class="ui black big launch right attached fixed button" style="position:fixed;margin-top: 20px;"><i class="content icon"></i><span class="text">导航</span></div>
+<%--顶部固定导航栏--%>
+<div class="ui fixed inverted menu">
+    <div class="ui container">
+        <a href="#" class="header item">
+            <img class="logo" src="img/lambda_logo.png">
+            Lambda
+        </a>
+        <a href="toFrontEndIndex.action" class="item">主页</a>
+        <a href="toNewsView.action" class="item">公开信息</a>
+        <%
+            if(session.getAttribute("user") == null) {
+                out.println("<a href=\"javascript:alert('您未登陆,请先登录')\" class=\"item\">未公开信息</a>");
+                out.println("<a href=\"javascript:alert('您未登陆,请先登录')\" class=\"item\">问卷</a>");
+                out.println("<a href=\"javascript:alert('您未登陆,请先登录')\" class=\"item\">视频</a>");
+            } else {
+                if(((User)session.getAttribute("user")).getIdentityFlag() == 0) {
+                    //未实名认证
+                    out.println("<a href=\"javascript:alert('您未实名认证,请先实名认证')\" class=\"item\">未公开信息</a>");
+                    out.println("<a href=\"javascript:alert('您未实名认证,请先实名认证')\" class=\"item\">问卷</a>");
+                } else {
+                    out.println("<a href=\"toPrivateNews.action\" class=\"item\">未公开信息</a>");
+                    out.println("<a href=\"toQuestionView.action\" class=\"item\">问卷</a>");
+                }
+                out.println("<a href=\"toVideoView.action\" class=\"item\">视频</a>");
+            }
+        %>
+    </div>
+</div>
+
+</div>
+</div>
+
 <!--text container begin-->
 <div class="pusher dimmed">
-
-    <div class="ui text container">
+    <div class="ui main text container">
         <div class="ui divided items">
             <%
             String href;
@@ -67,7 +117,6 @@
     </div>
 
 </div>  <!--text container end-->
-
 <%@include file="/WEB-INF/front-end/footer.jsp" %>
 <script>
     $("#nav").click(function(){

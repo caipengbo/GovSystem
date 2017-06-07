@@ -123,6 +123,11 @@ public class FrontServiceImpl implements FrontService {
     }
 
     @Override
+    public Video getVideo(String fileName) {
+        return videoDao.get(fileName);
+    }
+
+    @Override
     public News getNews(int nid) {
         News news = new News();
         news.setNid(nid);

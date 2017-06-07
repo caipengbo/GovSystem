@@ -118,6 +118,7 @@
         </div>
     </div>
 </div>
+<%@include file="/WEB-INF/front-end/footer.jsp" %>
 <script>
     //实名认证
     function authentication() {
@@ -184,5 +185,6 @@
         })
     }
 </script>
+
 </body>
 </html>

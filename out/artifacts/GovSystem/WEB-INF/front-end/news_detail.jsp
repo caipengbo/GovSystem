@@ -1,4 +1,5 @@
 <%@ page import="govsystem.domain.Message" %>
+<%@ page import="govsystem.domain.User" %>
 <%@ page import="java.util.List" %><%--
   Description： 
   Created by Myth on 6/6/2017.
@@ -72,9 +73,22 @@
     </div>
     <div class="overlay">
         <div class="ui labeled icon vertical menu">
-            <a class="item"><i class="unhide icon"></i>公开新闻</a>
-            <a class="item"><i class="ban icon"></i>非公开新闻</a>
-            <a class="item"><i class="edit icon"></i>问卷调查</a>
+            <a class="item" href="toNewsView.action"><i class="unhide icon"></i>公开新闻</a>
+            <%
+                if(session.getAttribute("user") == null) {
+                    out.println("<a class=\"item\" href=\"javascript:alert('您未登陆,请先登录')\"><i class=\"ban icon\"></i>未公开信息</a>");
+                    out.println("<a class=\"item\" href=\"javascript:alert('您未登陆,请先登录')\"><i class=\"edit icon\"></i>问卷调查</a>");
+                } else {
+                    if(((User)session.getAttribute("user")).getIdentityFlag() == 0) {
+                        //未实名认证
+                        out.println("<a class=\"item\" href=\"javascript:alert('您未实名认证,请先实名认证')\"><i class=\"ban icon\"></i>未公开信息</a>");
+                        out.println("<a class=\"item\" href=\"javascript:alert('您未实名认证,请先实名认证')\"><i class=\"edit icon\"></i>问卷调查</a>");
+                    } else {
+                        out.println("<a class=\"item\" href=\"toPrivateNews.action\"><i class=\"ban icon\"></i>未公开信息</a>");
+                        out.println("<a class=\"item\" href=\"toQuestionView.action\"><i class=\"edit icon\"></i>问卷调查</a>");
+                    }
+                }
+            %>
         </div>
     </div>
     ${requestScope.get("news").content}
@@ -106,9 +120,19 @@
             <div class="field">
                 <textarea id="input" name="comment"></textarea>
             </div>
-            <button class="ui primary submit labeled icon button" type="submit">
-                <i class="icon edit"></i> 添加评论
-            </button>
+
+            <%
+                if(session.getAttribute("user") == null) {
+                    out.println("<a class=\"ui button\" href=\"javascript:alert('您未登陆,请先登录')\"><i class=\"icon edit\"></i>添加评论</a>");
+                } else {
+                    if(((User)session.getAttribute("user")).getIdentityFlag() == 0) {
+                        //未实名认证
+                        out.println("<a class=\"ui button\" href=\"javascript:alert('您未实名认证,请先实名认证')\"><i class=\"icon edit\"></i>添加评论</a>");
+                    } else {
+                        out.println("<button class=\"ui primary submit labeled icon button\" type=\"submit\"><i class=\"icon edit\"></i>添加评论</button>");
+                    }
+                }
+            %>
         </form>
     </div>
 </div>
