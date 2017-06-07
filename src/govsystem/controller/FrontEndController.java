@@ -93,6 +93,21 @@ public class FrontEndController {
         mav.setViewName("/front-end/news_view");
         return mav;
     }
+
+    @RequestMapping("/toFrontEndIndex")
+    public ModelAndView toFrontEndIndex(){
+        ModelAndView mav = new ModelAndView();
+        //在首页展示几条
+        List<News> newsList = frontService.listNews(1);
+        List<Question> questionList = frontService.listAllQuestion();
+        List<Video> videoList = frontService.listAllVideo();
+        mav.addObject("newsList",newsList);
+        mav.addObject("questionList",questionList);
+        mav.addObject("videoList",videoList);
+        mav.setViewName("/front-end/index");
+        return mav;
+    }
+
     @RequestMapping("/toVideoView")
     public ModelAndView toVideoView(){
         ModelAndView mav = new ModelAndView();

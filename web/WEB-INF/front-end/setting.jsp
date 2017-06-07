@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>个人设置</title>
-    <%@include file="/WEB-INF/front-end/header.jsp" %>
+    <%@include file="/WEB-INF/front-end/header_old.jsp" %>
     <style>
         *{ font-family: Microsoft YaHei, Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
             margin: 0;
@@ -16,7 +16,11 @@
 <body>
 <div class="container">
     <div class="row clearfix">
-        <div class="col-md-3 column"></div>
+        <div class="col-md-3 column">
+            <a href="javascript:window.location.href='toFrontEndIndex.action'" class="btn btn-info btn-lg">
+                返回
+            </a>
+        </div>
         <div class="col-md-6 column">
             <form role="form" id="myform">
                 <div class="form-group">
@@ -150,6 +154,7 @@
             success:function(result){
                 if(result.msg == "success") {
                     alert("成功");
+                    $('#foget').modal('hide');
                 } else {
                     alert("失败");
                 }

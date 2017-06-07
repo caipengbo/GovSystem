@@ -9,17 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class FrontEndPageController {
-    @RequestMapping("/toFrontEndIndex")
-    public String toFrontEndIndex(){
-        return "/front-end/index";
-    }
+
     @RequestMapping("/toSetting")
     public String toSetting(){
         return "/front-end/setting";
     }
 
-    @RequestMapping("/toFrontEndIndex2")
-    public String toFrontEndIndex2(){
-        return "/front-end/index2";
-    }
 }

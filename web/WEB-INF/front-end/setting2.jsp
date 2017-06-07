@@ -46,26 +46,26 @@
                 </h2>
                 <form class="ui large form">
                     <div class="ui stacked segment">
-                        <div class="field">
+                        <div class="disabled field">
                             <div class="ui left icon input">
                                 <i class="user icon"></i>
-                                <input type="text" id="username" name="username" readonly value="${sessionScope.user.username}">
+                                <input type="text" id="username" name="username" readonly="readonly" value="${sessionScope.user.username}">
                             </div>
                         </div>
-                        <div class="field">
+                        <div class="disabled field">
                             <div class="ui left icon input">
                                 <i class="user icon"></i>
-                                <input type="text" id="name" name="name"  value="${sessionScope.user.name}">
+                                <input type="text" id="name" name="name" readonly="readonly" value="${sessionScope.user.name}">
                             </div>
                         </div>
-                        <div class="field">
+                        <div class="required field">
                             <div class="ui left icon input">
                                 <i class="lock icon"></i>
                                 <input type="date" placeholder="未选择" value="${sessionScope.user.birthday}">
                             </div>
                         </div>
                         <div class="field">
-                            <div class="ui fluid large yellow submit button" id="set">修改密码</div>
+                            <div class="ui fluid large yellow button" id="set">修改密码</div>
                         </div>
 
                         <div class="field">
@@ -83,15 +83,15 @@
                             <div class="ui fluid large green submit button" id="realname">实名认证</div>
                         </div>
                         <div class="field">
-                            <div class="ui fluid large orange submit button">提交修改</div>
+                            <div class="ui fluid large orange button">提交修改</div>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-</div>
-<!--text container end-->
+</div><!--text container end-->
+<!--实名认证begin-->
 <div id="real" class="ui modal">
     <div class="ui middle aligned center aligned grid" style="padding-top: 70px;padding-bottom: 70px;padding-left: 10px;padding-right: 10px" >
         <div class="column" style="max-width:400px" >
@@ -116,7 +116,6 @@
             </form>
         </div>
     </div>
-
 </div>  <!--实名认证end-->
 <!-- 修改密码 begin-->
 <div id="setup" class="ui modal">
@@ -151,7 +150,6 @@
                     <div class="field">
                         <div class="ui fluid large yellow submit button">确认</div>
                     </div>
-
                 </div>
             </form>
         </div>
