@@ -3,13 +3,22 @@
 <html>
 <head>
     <title>问卷统计</title>
+    <%@include file="/WEB-INF/front-end/header.jsp" %>
     <script type="text/javascript" src="${pageContext.request.contextPath }/frontjs/jquery.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath }/frontjs/highcharts.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath }/frontjs/highcharts-exporting.js"></script>
 </head>
 <body>
     <div id="container" style="min-width: 400px;hight:400px"></div>
-    <h3>共有 ${requestScope.get("num")} 人参与此问卷</h3>
+    <%--<h3>共有  人参与此问卷</h3>--%>
+    <div class="ui orange statistic">
+        <div class="label">
+            参与此问卷人数
+        </div>
+        <div class="value">
+            ${requestScope.get("num")}
+        </div>
+    </div>
     <script>
         $(function () {
             $('#container').highcharts({

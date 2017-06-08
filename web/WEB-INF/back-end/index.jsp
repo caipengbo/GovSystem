@@ -159,7 +159,7 @@
         if(privilege == 0) {
             addTab('管理员管理','${pageContext.request.contextPath }/toAdmin.action');
         } else {
-            alert("您不是超级管理员，无次权限");
+            alert("您不是超级管理员，无此权限");
         }
     }
     function clearForm(){

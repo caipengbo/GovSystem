@@ -7,7 +7,7 @@
     <div class="ui container">
         <div class="ui stackable inverted divided equal height stackable grid">
             <div class="three wide column">
-                <h4 class="ui inverted header" style="color: Black">About Lambda</h4>
+                <h4 class="ui inverted header" style="color: Black">关于 Lambda</h4>
                 <div class="ui inverted link list">
                     <a href="#" class="item" style="color: Black">蔡鹏博</a>
                     <a href="#" class="item" style="color: Black">包晗</a>
@@ -19,9 +19,9 @@
                 </div>
             </div>
             <div class="three wide column">
-                <h4 class="ui inverted header" style="color: Black">Services</h4>
+                <h4 class="ui inverted header" style="color: Black">技术支持</h4>
                 <div class="ui inverted link list">
-                    <a href="http://www.semantic-ui.cn" class="item" style="color: Black">Semantic</a>
+                    <a href="http://www.semantic-ui.cn" class="item" style="color: Black">Semantic UI</a>
                     <a href="http://www.w3school.com.cn" class="item" style="color: Black">W3school</a>
                     <a href="http://www.runoob.com" class="item" style="color: Black">Runoob</a>
                     <a href="http://www.baidu.com" class="item" style="color: Black">Baidu</a>
