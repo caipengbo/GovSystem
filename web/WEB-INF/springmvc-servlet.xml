@@ -3,11 +3,11 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-		http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/mvc
-		http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd
 		http://www.springframework.org/schema/context
-		http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/aop
 		http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
 		http://www.springframework.org/schema/tx">
@@ -71,12 +71,18 @@
     </bean>
 
     <!--拦截器-->
-    <!--<mvc:interceptors>-->
-        <!--<mvc:interceptor>-->
-            <!--<mvc:mapping path="/interceptor.action"/>-->
-            <!--<bean class="cn.caipengbo.interceptor.ActionInterceptor"></bean>-->
-        <!--</mvc:interceptor>-->
-    <!--</mvc:interceptors>-->
+    <mvc:interceptors>
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" />
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/toFrontEndIndex.action"/>
+            <mvc:exclude-mapping path="/registUser.action"/>
+            <mvc:exclude-mapping path="/login.action"/>
+            <mvc:exclude-mapping path="/toNewsView.action"/>
+            <mvc:exclude-mapping path="/toNewsDetail.action"/>
+            <bean class="govsystem.interceptor.LoginInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
     
     <!-- 视图解析器 解析jsp视图-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
