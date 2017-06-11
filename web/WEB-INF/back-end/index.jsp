@@ -51,14 +51,14 @@
 <div data-options="region:'west',split:true,title:'管理目录'" style="width:18%;padding:0px;overflow:hidden">
     <div id="left_accordion" class="easyui-accordion" style="width:100%;height: 100%;padding:0">
         <div title="用户管理" data-options="iconCls:'icon-production'" style="padding:0px;">
-            <li><a href="javascript:addTab('用户管理','${pageContext.request.contextPath }/toUser.action')">用户管理</a></li>
+            <li><a href="javascript:addTab('用户管理','${pageContext.request.contextPath }/toUserManage.action')">用户管理</a></li>
             <li><a href="javascript:addAdminTab()">管理员管理</a></li>
         </div>
         <div title="信息管理" data-options="iconCls:'icon-sale'" style="padding:0px;">
-            <li><a href="javascript:addTab('信息管理','${pageContext.request.contextPath }/toNews.action')">信息管理</a></li>
+            <li><a href="javascript:addTab('信息管理','${pageContext.request.contextPath }/toNewsManage.action')">信息管理</a></li>
         </div>
         <div title="政民互动管理" data-options="iconCls:'icon-search'" style="padding:0px;">
-            <li><a href="javascript:addTab('问卷调查','${pageContext.request.contextPath }/toQuestion.action')">问卷调查</a></li>
+            <li><a href="javascript:addTab('问卷调查','${pageContext.request.contextPath }/toQuestionManage.action')">问卷调查</a></li>
             <li><a href="javascript:addTab('网上听证','${pageContext.request.contextPath }/toVideoManage.action')">网上听证</a></li>
         </div>
     </div>
@@ -157,7 +157,7 @@
     function addAdminTab() {
         var privilege = ${sessionScope.admin.privilege};
         if(privilege == 0) {
-            addTab('管理员管理','${pageContext.request.contextPath }/toAdmin.action');
+            addTab('管理员管理','${pageContext.request.contextPath }/toAdminManage.action');
         } else {
             alert("您不是超级管理员，无此权限");
         }

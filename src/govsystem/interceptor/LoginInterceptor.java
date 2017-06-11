@@ -17,11 +17,9 @@ public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
         HttpSession httpSession = httpServletRequest.getSession();
         String roleName = (String)httpSession.getAttribute("roleName");
-        System.out.println("执行---------");
         if ("user".equals(roleName)||"admin".equals(roleName)) {
             return true;
         }
-        System.out.println("执行完--");
         String projectName = httpServletRequest.getContextPath();
         httpServletResponse.sendRedirect(projectName + "/toFrontEndIndex.action");
         return false;

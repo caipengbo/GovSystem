@@ -49,6 +49,7 @@ public class LoginController {
             User user = frontService.loginUser(loginForm);
             if (user != null) {
                 httpSession.setAttribute("user",user);
+                httpSession.setAttribute("roleName","user");
                 map.put("msg","success");
                 map.put("roleName","user");
             } else {
@@ -58,6 +59,7 @@ public class LoginController {
             Admin admin = frontService.loginAdmin(loginForm);
             if (admin != null) {
                 httpSession.setAttribute("admin",admin);
+                httpSession.setAttribute("roleName","admin");
                 map.put("msg","success");
                 map.put("roleName","admin");
             } else {

@@ -82,6 +82,20 @@
             <mvc:exclude-mapping path="/toNewsDetail.action"/>
             <bean class="govsystem.interceptor.LoginInterceptor"></bean>
         </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/toBackEndIndex.action"/>
+            <mvc:mapping path="/toNewsManage.action"/>
+            <mvc:mapping path="/toUserManage.action"/>
+            <mvc:mapping path="/toHome.action"/>
+            <mvc:mapping path="/toQuestionManage.action"/>
+            <mvc:mapping path="/toAdminManage.action"/>
+            <mvc:mapping path="/toVideoManage.action"/>
+            <bean class="govsystem.interceptor.AdminInterceptor"></bean>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/toAdminManage.action"/>
+            <bean class="govsystem.interceptor.SuperAdminInterceptor"></bean>
+        </mvc:interceptor>
     </mvc:interceptors>
     
     <!-- 视图解析器 解析jsp视图-->

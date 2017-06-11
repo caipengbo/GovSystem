@@ -13,24 +13,24 @@ public class BackEndPageController {
     public String toBackEndIndex(){
         return "/back-end/index";
     }
-    @RequestMapping("/toNews")
-    public String toNews(){
+    @RequestMapping("/toNewsManage")
+    public String toNewsManage(){
         return "/back-end/news_manage";
     }
-    @RequestMapping("/toUser")
-    public String toUser(){
+    @RequestMapping("/toUserManage")
+    public String toUserManage(){
         return "/back-end/user_manage";
     }
     @RequestMapping("/toHome")
     public String toHome(){
         return "/back-end/home";
     }
-    @RequestMapping("/toQuestion")
-    public String toQuestion(){
+    @RequestMapping("/toQuestionManage")
+    public String toQuestionManage(){
         return "/back-end/question";
     }
-    @RequestMapping("/toAdmin")
-    public String toAdmin() {
+    @RequestMapping("/toAdminManage")
+    public String toAdminManage() {
         return "/back-end/admin_manage";
     }
     @RequestMapping("/toVideoManage")
