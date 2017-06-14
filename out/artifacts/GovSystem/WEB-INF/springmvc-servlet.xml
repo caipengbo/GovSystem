@@ -1,0 +1,110 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+		http://www.springframework.org/schema/tx">
+
+    <!-- 组件扫描  -->
+    <context:component-scan base-package="govsystem" />
+    <!--如果没有这个的话，在其他电脑上会没有url映射-->
+    <mvc:default-servlet-handler/>
+    <!--注解映射器 -->
+     <!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />-->
+    <!--注解适配器 -->
+    <!--<bean  class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">-->
+    <!--<property name="messageConverters">-->
+        <!--&lt;!&ndash; 添加对JSON的支持&ndash;&gt;-->
+        <!--<list>-->
+            <!--<bean-->
+                    <!--class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />-->
+        <!--</list>-->
+    <!--</property>-->
+    <!--</bean>-->
+    <!--  -->
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"></bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+    <mvc:annotation-driven/>
+    <!-- JDBC Template配置-->
+    <!--dbcp数据库连接池-->
+    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+    <context:property-placeholder location="/jdbc-config.properties"/>
+
+    <!--<bean id="dataSource"-->
+          <!--class="org.apache.commons.dbcp2.BasicDataSource"-->
+          <!--destroy-method="close">-->
+        <!--<property name="driverClassName" value="com.mysql.jdbc.Driver">-->
+        <!--</property>-->
+        <!--<property name="url" value="jdbc:mysql://localhost:3306/test"></property>-->
+        <!--<property name="username" value="root"></property>-->
+        <!--<property name="password" value="lenovo123"></property>-->
+    <!--</bean>-->
+
+    <!-- 配置JdbcTemplate-->
+    <bean id="jdbcTemplate"
+          class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="104857600" />
+        <property name="maxInMemorySize" value="4096" />
+        <property name="defaultEncoding" value="UTF-8"></property>
+    </bean>
+
+    <!--拦截器-->
+    <mvc:interceptors>
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" />
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/toFrontEndIndex.action"/>
+            <mvc:exclude-mapping path="/registUser.action"/>
+            <mvc:exclude-mapping path="/login.action"/>
+            <mvc:exclude-mapping path="/toNewsView.action"/>
+            <mvc:exclude-mapping path="/toNewsDetail.action"/>
+            <bean class="govsystem.interceptor.LoginInterceptor"></bean>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/toBackEndIndex.action"/>
+            <mvc:mapping path="/toNewsManage.action"/>
+            <mvc:mapping path="/toUserManage.action"/>
+            <mvc:mapping path="/toHome.action"/>
+            <mvc:mapping path="/toQuestionManage.action"/>
+            <mvc:mapping path="/toAdminManage.action"/>
+            <mvc:mapping path="/toVideoManage.action"/>
+            <bean class="govsystem.interceptor.AdminInterceptor"></bean>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/toAdminManage.action"/>
+            <bean class="govsystem.interceptor.SuperAdminInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+    
+    <!-- 视图解析器 解析jsp视图-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!-- 逻辑视图名 -->
+        <!-- 视图的前缀, 路径的前缀 -->
+        <property name="prefix" value="/WEB-INF/"/>
+        <!-- 视图的后缀 -->
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+</beans>

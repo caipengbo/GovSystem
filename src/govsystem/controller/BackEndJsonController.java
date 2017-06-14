@@ -255,9 +255,13 @@ public class BackEndJsonController {
     }
     @RequestMapping("/modifyAdmin")
     @ResponseBody
-    public Map<String,String> modifyAdmin(Admin admin) {
+    public Map<String,String> modifyAdmin(Admin admin,HttpSession httpSession) {
         Map<String,String > map = new HashMap<String,String >();
-        if (backService.modifyAdmin(admin)) {
+        Admin newAdmin = (Admin)httpSession.getAttribute("admin");
+        newAdmin.setName(admin.getName());
+        newAdmin.setPassword(admin.getPassword());
+        if (backService.modifyAdmin(newAdmin)) {
+            httpSession.setAttribute("admin",newAdmin);
             map.put("msg","success");
         } else {
             map.put("msg","error");

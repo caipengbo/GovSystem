@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="GovSystem">
+  <artifact type="exploded-war" name="GovSystem">
     <output-path>$PROJECT_DIR$/out/artifacts/GovSystem</output-path>
-    <root id="archive" name="GovSystem.war">
+    <root id="root">
       <element id="javaee-facet-resources" facet="GovSystem/web/Web" />
       <element id="javaee-facet-resources" facet="GovSystem/web/Web2" />
       <element id="directory" name="WEB-INF">

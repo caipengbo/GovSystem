@@ -174,9 +174,9 @@ public class QuestionDaoImpl implements QuestionDao {
     public boolean modifyQuestionTitle(Question question) {
         String sql = "";
         int effectedNum = 0;
-        sql = "update tb_question set available=?,title=?";
+        sql = "update tb_question set available=?,title=? where qid=?";
         try {
-            effectedNum = jdbcTemplate.update(sql,question.getAvailable(),question.getTitle());
+            effectedNum = jdbcTemplate.update(sql,question.getAvailable(),question.getTitle(),question.getQid());
         } catch (Exception e) {
             e.printStackTrace();
             return false;
